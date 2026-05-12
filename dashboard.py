@@ -1,0 +1,1746 @@
+import streamlit as st
+
+st.set_page_config(
+    page_title="AI Learning Path Generator", 
+    layout="wide",
+    initial_sidebar_state="expanded"
+
+)
+
+import requests
+import pandas as pd
+import matplotlib.pyplot as plt
+import json
+import numpy as np
+import copy
+import joblib
+df = pd.read_csv("data/student_clustered.csv")
+
+# -------------------------------
+# 📚 SUBJECT → TOPIC MAPPING
+# -------------------------------
+SUBJECT_TOPICS = {
+    "Python": ["OOP", "Functions", "Loops", "File Handling"],
+    "DSA": ["Queue", "Stack", "Arrays", "Linked List"],
+    "OS": ["Processes", "Scheduling", "Threads"],
+    "DBMS": ["SQL", "Joins", "Normalization"],
+    "CN": ["Routing", "OSI Model", "TCP/IP"]
+}
+
+NEXT_TOPIC_MAP = {
+    "OOP": "Functions",
+    "Functions": "Loops",
+    "Loops": "File Handling",
+    "File Handling": None,
+
+    "Queue": "Stack",
+    "Stack": "Arrays",
+    "Arrays": "Linked List",
+    "Linked List": None,
+
+    "Processes": "Scheduling",
+    "Scheduling": "Threads",
+    "Threads": None,
+
+    "SQL": "Joins",
+    "Joins": "Normalization",
+    "Normalization": None,
+
+    "Routing": "OSI Model",
+    "OSI Model": "TCP/IP",
+    "TCP/IP": None
+}
+
+# -------------------------------
+#  STUDENT DATA FUNCTIONS
+# -------------------------------
+STUDENT_FILE = "data/student_data.csv"
+
+def load_students():
+
+    try:
+        df = pd.read_csv(STUDENT_FILE)
+
+    except FileNotFoundError:
+
+        df = pd.DataFrame(columns=[
+            "student_id",
+            "subject",
+            "topic",
+            "score",
+            "time_spent",
+            "attempts",
+            "learning_style"
+        ])
+
+        # CREATE FILE AUTOMATICALLY
+        df.to_csv(STUDENT_FILE, index=False)
+
+    return df
+df = load_students()
+df["score"] = pd.to_numeric(df["score"], errors="coerce")
+
+students_df = df.copy()   #  NOW df exists
+students_df["score"] = pd.to_numeric(students_df["score"], errors="coerce")
+def save_students(df):
+    df.to_csv(STUDENT_FILE, index=False)
+
+st.markdown("""
+<style>
+
+/* -----------------------------------
+   🌈 MAIN APP BACKGROUND
+----------------------------------- */
+
+[data-testid="stAppViewContainer"] {
+    background: linear-gradient(
+        135deg,
+        #edf4ff 0%,
+        #f8fbff 40%,
+        #fffbea 100%
+    );
+    background-attachment: fixed;
+    color: #1e293b;
+}
+
+/* Remove white main container */
+
+.main {
+    background: transparent !important;
+}
+
+.block-container {
+    background: transparent !important;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* -----------------------------------
+   🧊 GLASSMORPHISM CARDS
+----------------------------------- */
+
+div[data-testid="stVerticalBlock"] > div:has(div.stMetric),
+div[data-testid="stExpander"],
+div[data-testid="stDataFrame"],
+div[data-testid="element-container"] {
+
+    background: rgba(255, 255, 255, 0.28) !important;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255,255,255,0.35);
+
+    padding: 18px;
+
+    box-shadow:
+        0 8px 32px rgba(31, 38, 135, 0.08);
+
+    margin-bottom: 16px;
+}
+
+/* -----------------------------------
+   📚 HEADINGS
+----------------------------------- */
+
+h1, h2, h3 {
+    color: #1e3a5f !important;
+    font-weight: 700 !important;
+}
+
+/* -----------------------------------
+   📝 TEXT
+----------------------------------- */
+
+p, label, div {
+    color: #334155;
+}
+
+/* -----------------------------------
+   🎛 SIDEBAR
+----------------------------------- */
+
+section[data-testid="stSidebar"] {
+
+    background: linear-gradient(
+        180deg,
+        rgba(219,234,254,0.95),
+        rgba(239,246,255,0.92)
+    );
+
+    backdrop-filter: blur(12px);
+
+    border-right: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Sidebar text */
+
+section[data-testid="stSidebar"] * {
+    color: #1e293b !important;
+}
+
+/* -----------------------------------
+   🧾 INPUTS
+----------------------------------- */
+
+.stTextInput input,
+.stNumberInput input,
+.stSelectbox div[data-baseweb="select"] {
+
+    background: rgba(255,255,255,0.65) !important;
+
+    border-radius: 12px !important;
+
+    border: 1px solid rgba(255,255,255,0.4) !important;
+
+    backdrop-filter: blur(6px);
+}
+
+/* -----------------------------------
+   📊 METRICS
+----------------------------------- */
+
+[data-testid="stMetric"] {
+
+    background: rgba(255,255,255,0.25);
+
+    border-radius: 16px;
+
+    padding: 15px;
+
+    backdrop-filter: blur(10px);
+}
+
+[data-testid="stMetricValue"] {
+    color: #2563eb !important;
+    font-weight: 700;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #475569 !important;
+}
+
+/* -----------------------------------
+   📑 TABS
+----------------------------------- */
+
+button[data-baseweb="tab"] {
+
+    background: rgba(255,255,255,0.25) !important;
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 12px 12px 0 0 !important;
+
+    margin-right: 6px;
+
+    padding: 10px 18px !important;
+
+    font-size: 17px !important;
+
+    font-weight: 600 !important;
+
+    color: #334155 !important;
+}
+
+/* Active tab */
+
+button[aria-selected="true"] {
+
+    background: rgba(191,219,254,0.6) !important;
+
+    color: #2563eb !important;
+}
+
+/* -----------------------------------
+   🔘 BUTTONS
+----------------------------------- */
+
+.stButton > button {
+
+    background: linear-gradient(
+        90deg,
+        #60a5fa,
+        #3b82f6
+    );
+
+    color: white;
+
+    border: none;
+
+    border-radius: 14px;
+
+    height: 3em;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+
+    box-shadow:
+        0 6px 18px rgba(59,130,246,0.25);
+}
+
+/* Hover effect */
+
+.stButton > button:hover {
+
+    transform: translateY(-2px);
+
+    opacity: 0.95;
+}
+
+/* -----------------------------------
+   📈 PROGRESS BAR
+----------------------------------- */
+
+div[data-testid="stProgressBar"] > div {
+
+    background: linear-gradient(
+        90deg,
+        #60a5fa,
+        #3b82f6
+    ) !important;
+}
+
+/* -----------------------------------
+   📋 DATAFRAME
+----------------------------------- */
+
+[data-testid="stDataFrame"] {
+
+    overflow: hidden;
+}
+
+/* -----------------------------------
+   🎯 ALERTS
+----------------------------------- */
+
+.stSuccess,
+.stInfo,
+.stWarning,
+.stError {
+
+    border-radius: 14px;
+
+    backdrop-filter: blur(8px);
+}
+
+/* -----------------------------------
+   ✨ Smooth Animation
+----------------------------------- */
+
+* {
+    transition: all 0.2s ease;
+}
+/* -----------------------------------
+   🎨 SELECTBOX / DROPDOWN FIX
+----------------------------------- */
+
+/* Selected value */
+
+div[data-baseweb="select"] > div {
+
+    background: rgba(255,255,255,0.75) !important;
+
+    color: #1e293b !important;
+
+    border-radius: 12px !important;
+
+    border: 1px solid rgba(255,255,255,0.45) !important;
+}
+
+/* Dropdown popup menu */
+
+div[role="listbox"] {
+
+    background: #f8fbff !important;
+
+    border-radius: 14px !important;
+
+    border: 1px solid #dbeafe !important;
+
+    backdrop-filter: blur(10px);
+}
+
+/* Dropdown options */
+
+div[role="option"] {
+
+    background: #f8fbff !important;
+
+    color: #1e293b !important;
+
+    font-weight: 500;
+}
+
+/* Hovered option */
+
+div[role="option"]:hover {
+
+    background: #dbeafe !important;
+
+    color: #2563eb !important;
+}
+
+/* Selected option */
+
+div[aria-selected="true"] {
+
+    background: #bfdbfe !important;
+
+    color: #1d4ed8 !important;
+
+    font-weight: 600;
+}
+
+/* Placeholder text */
+
+div[data-baseweb="select"] span {
+
+    color: #334155 !important;
+}
+
+/* Input labels */
+
+label {
+
+    color: #1e293b !important;
+
+    font-weight: 600;
+}
+</style>
+""", unsafe_allow_html=True)
+
+
+
+df["score"] = pd.to_numeric(df["score"], errors="coerce")
+with open("data/quiz_data.json") as f:
+    quiz_data = json.load(f)
+
+if "analyze" not in st.session_state:
+    st.session_state.analyze = False
+
+#  Initialize globally (FIX)
+weak_topics = pd.Series(dtype=float)
+strong_topics = pd.Series(dtype=float)
+
+# -------------------------------
+# CONFIG
+# -------------------------------
+
+
+API_URL = "http://127.0.0.1:5001"
+
+# -------------------------------
+# SIDEBAR
+# -------------------------------
+st.sidebar.markdown("""
+<h2 style='color:white;'>AI Dashboard</h2>
+<hr style='border:1px solid gray'>
+""", unsafe_allow_html=True)
+
+# -------------------------------
+# 👤 LOGIN SYSTEM
+# -------------------------------
+st.sidebar.subheader("Student Login")
+
+student_id = st.sidebar.text_input("Enter Student ID")
+
+students_df["score"] = pd.to_numeric(students_df["score"], errors="coerce")
+
+if student_id:
+    try:
+        student_id = int(student_id)
+        st.sidebar.success(f"Logged in as Student {student_id}")
+    except:
+        st.sidebar.error("Enter valid numeric ID")
+
+if student_id:
+    student_history = students_df[students_df["student_id"] == student_id]
+else:
+    student_history = pd.DataFrame()
+
+score = st.sidebar.slider("Score", 0, 100, 50)
+time_spent = st.sidebar.slider("Time Spent (mins)", 10, 180, 60)
+attempts = st.sidebar.slider("Attempts", 1, 5, 2)
+
+learning_style = st.sidebar.selectbox(
+    "Learning Style",
+    ["Visual", "Audio-Visual", "Kinesthetic"]
+)
+subject = st.sidebar.selectbox(
+    "Subject",
+    list(SUBJECT_TOPICS.keys())
+)
+
+topic = st.sidebar.selectbox(
+    "Topic",
+    ["All Topics"] + SUBJECT_TOPICS[subject]
+)
+
+if topic == "All Topics":
+    st.info("You are analyzing subject-level performance")
+
+
+if st.sidebar.button("Analyze Student", key="analyze_btn"):
+    st.session_state.analyze = True
+    
+
+if st.sidebar.button("Reset", key="reset_btn"):
+    st.session_state.analyze = False
+    
+
+
+# -------------------------------
+# TITLE
+# -------------------------------
+st.markdown("""
+<h1 style='text-align: center; color: #2563eb;'>
+AI Personalized Learning Path Generator
+</h1>
+<p style='text-align: center; color: gray;'>
+Smart AI system for adaptive learning & performance tracking
+</p>
+""", unsafe_allow_html=True)
+
+topic_scores = pd.Series(dtype=float)
+
+# -------------------------------
+# 📊 Topic Performance (USE USER DATA ONLY)
+# -------------------------------
+st.subheader(" Topic Performance")
+
+# ALWAYS DEFINE filtered_df FIRST
+if not students_df.empty and student_id:
+
+    if topic == "All Topics":
+        filtered_df = students_df[
+            (students_df["student_id"] == student_id) &
+            (students_df["subject"] == subject)
+        ]
+    else:
+        filtered_df = students_df[
+            (students_df["student_id"] == student_id) &
+            (students_df["subject"] == subject) &
+            (students_df["topic"] == topic)
+        ]
+else:
+    filtered_df = pd.DataFrame()
+
+# SAFE TO USE
+if not filtered_df.empty:
+    topic_performance = filtered_df.groupby("topic")["score"].mean()
+    st.bar_chart(topic_performance.sort_values(ascending=False))
+else:
+    st.info("No data available yet")
+
+st.markdown("<h2 style='text-align:center;'> Your Progress</h2>", unsafe_allow_html=True)
+
+if not student_history.empty:
+    progress = student_history.groupby("topic")["score"].mean()
+    st.line_chart(progress)
+else:
+    st.info("No past data available")
+
+# -------------------------------
+# LOAD KMEANS MODELS
+# -------------------------------
+kmeans = joblib.load("models/kmeans.pkl")
+scaler = joblib.load("models/scaler.pkl")
+
+# -------------------------------
+# CREATE LEARNER GROUPS
+# -------------------------------
+
+if not students_df.empty and len(students_df) > 0:
+
+    # Features needed for clustering
+    required_cols = [
+        "score",
+        "time_spent",
+        "attempts",
+        "learning_style"
+    ]
+
+    if all(col in students_df.columns for col in required_cols):
+
+        # Encode learning styles into numbers
+        learning_style_map = {
+            "Visual": 0,
+            "Audio-Visual": 1,
+            "Kinesthetic": 2
+        }
+
+        students_df["learning_style_encoded"] = (
+            students_df["learning_style"]
+            .map(learning_style_map)
+        )
+
+        # AI clustering features
+        X = students_df[[
+            "score",
+            "time_spent",
+            "attempts",
+            "learning_style_encoded"
+        ]]
+
+        X_scaled = scaler.transform(X)
+
+        students_df["cluster"] = kmeans.predict(X_scaled)
+
+
+        # -----------------------------------
+        # FIND CLUSTER MEAN SCORES
+        # -----------------------------------
+
+        cluster_means = (
+            students_df
+            .groupby("cluster")["score"]
+            .mean()
+            .sort_values()
+        )
+
+        sorted_clusters = cluster_means.index.tolist()
+
+        # Lowest score cluster -> Weak
+        # Middle score cluster -> Intermediate
+        # Highest score cluster -> Strong
+
+        cluster_name_map = {
+            sorted_clusters[0]: "Struggling Learner",
+            sorted_clusters[1]: "Consistent Learner",
+            sorted_clusters[2]: "Advanced Learner"
+        }
+
+        # -----------------------------------
+        # APPLY LEARNER LABELS
+        # -----------------------------------
+
+        students_df["learner_group"] = (
+            students_df["cluster"]
+            .map(cluster_name_map)
+        )
+
+       
+
+        # -------------------------------
+        # 📊 Average Score by Group
+        # -------------------------------
+
+        group_scores = students_df.groupby("learner_group")["score"].mean()
+
+        fig2, ax2 = plt.subplots()
+
+        group_scores.plot(kind="bar", ax=ax2)
+
+        ax2.set_title("Average Score by Learning Group")
+
+        st.pyplot(fig2)
+
+else:
+    st.info("No student data available yet")
+
+# -------------------------------
+# 🎨 Learning Style Distribution
+# -------------------------------
+
+st.subheader("Learning Style Distribution")
+
+if "learning_style" in students_df.columns:
+
+    # Pie Chart
+    style_counts = students_df["learning_style"].value_counts()
+
+    fig3, ax3 = plt.subplots()
+
+    ax3.pie(
+        style_counts,
+        labels=style_counts.index,
+        autopct='%1.1f%%'
+    )
+
+    ax3.set_title("Students by Learning Style")
+
+    st.pyplot(fig3)
+
+
+else:
+    st.warning("No learning_style data available")
+
+# -------------------------------
+#  Strength vs Weakness
+# -------------------------------
+if not student_history.empty:
+    weak = filtered_df[filtered_df["score"] < 40].shape[0]
+    strong = filtered_df[filtered_df["score"] >= 70].shape[0]
+else:
+    weak = 0
+    strong = 0
+
+st.subheader(" Strength vs Weakness")
+st.write(f"Weak: {weak} | Strong: {strong}")
+
+# -------------------------------
+# ANALYZE
+# -------------------------------
+if st.session_state.analyze:
+    
+    data = {
+        "score": score,
+        "time_spent": time_spent,
+        "attempts": attempts,
+        "learning_style": learning_style,
+        "subject": subject,
+        "topic": topic if topic != "All Topics" else "General"
+        }
+
+    # API CALL
+    try:
+        response = requests.post(f"{API_URL}/get_learning_path", json=data, timeout=5)
+    
+        if response.status_code == 200:
+            result = response.json()
+        else:
+            result = {}
+
+    except Exception as e:
+        st.error(f"API not working: {e}")
+        result = {}
+
+    if not result:
+        result = {
+            "level": "Intermediate" if score >= 40 else "Weak",
+            "next_topic": NEXT_TOPIC_MAP.get(topic, "N/A"),
+            "recommended_action": "Practice more questions",
+            "difficulty": "Medium",
+            "explanation": "Fallback logic used (API failed)"
+        }
+    # -------------------------------
+    # SAVE STUDENT DATA
+    # -------------------------------
+    if student_id:
+        
+        students_df = students_df[
+            ~((students_df["student_id"] == student_id) &
+              (students_df["subject"] == subject) &
+              (students_df["topic"] == (topic if topic != "All Topics" else "General")))
+    ]
+        
+        new_row = {
+            "student_id": student_id,
+             "subject": subject,
+             "topic": topic if topic != "All Topics" else "General",
+             "score": score,
+             "time_spent": time_spent,
+             "attempts": attempts,
+             "learning_style": learning_style
+        }
+
+        students_df = pd.concat([students_df, pd.DataFrame([new_row])], ignore_index=True)
+        save_students(students_df)
+
+    # 🔁 REFRESH FILTERED DATA AFTER SAVE
+    if student_id:
+        if topic == "All Topics":
+            filtered_df = students_df[
+                (students_df["student_id"] == student_id) &
+                (students_df["subject"] == subject)
+            ]
+        else:
+            filtered_df = students_df[
+                (students_df["student_id"] == student_id) &
+                (students_df["subject"] == subject) &
+                (students_df["topic"] == topic)
+            ]
+    # -------------------------------
+    # 🔍 WEAK TOPIC DETECTION 
+    # -------------------------------
+
+    if not filtered_df.empty:
+        topic_performance = filtered_df.groupby("topic")["score"].mean()
+        weak_topics = topic_performance[topic_performance < 40]
+        strong_topics = topic_performance[topic_performance >= 70]
+    else:
+        weak_topics = pd.Series(dtype=float)
+        strong_topics = pd.Series(dtype=float)
+
+
+
+    
+    # -------------------------------
+    # PRIORITY TOPICS FROM HISTORY
+    # -------------------------------
+
+    priority_topics = []
+
+    if not student_history.empty:
+
+        topic_avg_scores = (
+            student_history
+            .groupby("topic")["score"]
+            .mean()
+            .sort_values()
+        )
+
+        for topic_name, avg_score in topic_avg_scores.items():
+
+            if avg_score < 75:
+
+                priority_topics.append(
+                    (topic_name, round(avg_score, 2))
+                )
+
+    st.subheader("Priority Topics")
+
+    if priority_topics:
+
+        for topic_name, score_value in priority_topics:
+
+            st.warning(
+                f"{topic_name} → Score: {score_value}"
+            )
+
+    else:
+        st.success("No priority topics")
+
+
+    # -------------------------------
+    # 📊 KPI CARDS
+    # -------------------------------
+
+    # Safe defaults (avoid errors if not defined)
+    weak_topics = weak_topics if 'weak_topics' in locals() else []
+    strong_topics = strong_topics if 'strong_topics' in locals() else []
+
+    col1, col2, col3 = st.columns(3)
+
+    # Total Records
+    col1.markdown(f"""
+    <div class="card">
+    <h3>Total Records</h3>
+    <h2>{len(students_df)}</h2>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Weak Topics
+    col2.markdown(f"""
+    <div class="card">
+    <h3>Weak Topics</h3>
+    <h2>{len(weak_topics)}</h2>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Strong Topics
+    col3.markdown(f"""
+    <div class="card">
+    <h3>Strong Topics</h3>
+    <h2>{len(strong_topics)}</h2>
+    </div>
+    """, unsafe_allow_html=True)
+
+
+    st.subheader("Improvement Suggestions")
+
+    for topic in weak_topics.index:
+        st.warning(f"Focus more on {topic} - revise basics and practice questions")
+    
+    # -------------------------------
+    # 🎯 QUIZ RECOMMENDATION LOGIC
+    # -------------------------------
+    recommended_quizzes = []
+
+    for weak_topic in weak_topics.index:
+        for quiz in quiz_data:
+            if quiz["topic"].lower() == weak_topic.lower():
+                
+                # Dynamic difficulty adjustment
+                quiz_copy = copy.deepcopy(quiz)
+                if score < 40:
+                    quiz_copy["difficulty"] = "Easy"
+                    quiz_copy["questions"] = 5
+                elif score < 70:
+                    quiz_copy["difficulty"] = "Medium"
+                    quiz_copy["questions"] = 7
+                else:
+                    quiz_copy["difficulty"] = "Hard"
+                    quiz_copy["questions"] = 10
+
+                recommended_quizzes.append(quiz_copy)
+                
+    # -------------------------------
+    # 🔥 HEATMAP DATA
+    # -------------------------------
+    heatmap_data = filtered_df.pivot_table(
+        index="topic",
+        columns="learning_style",
+        values="score",
+        aggfunc="mean"
+    )
+    # -------------------------------
+    # 🔥 TABS
+    # -------------------------------
+    tab1, tab2, tab3, tab4 = st.tabs([
+        "Overview",
+        "Analytics",
+        "Learning Plan",
+        "Achievements & Badges"
+    ])
+
+    # -------------------------------
+    # 📊 TAB 1: OVERVIEW
+    # -------------------------------
+    with tab1:
+        
+
+        st.subheader("Student Overview")
+
+        col1, col2, col3 = st.columns(3)
+        col1.metric("Level", result.get("level", "N/A"))
+        col2.metric("Score", score)
+        col3.metric("Learning Style", learning_style)
+
+        
+
+        st.subheader("Performance Insight")
+
+        if score < 40:
+            st.error("Weak in fundamentals")
+        elif score < 70:
+            st.warning("Needs practice")
+        else:
+            st.success("Strong performance")
+
+        st.subheader("Progress")
+        st.progress(score / 100)
+
+    # -------------------------------
+    # 📈 TAB 2: ANALYTICS
+    # -------------------------------
+    with tab2:
+        st.markdown("""
+        <h1 style='text-align:center; color:#4f46e5; margin-bottom:20px;'>
+        Welcome to Your Analytics Dashboard
+        </h1>
+        """, unsafe_allow_html=True)
+        st.markdown("<h2 style='text-align:center;'> Performance Analytics</h2>", unsafe_allow_html=True)
+
+        # -------------------------------
+        # 🏆 TOP PERFORMERS
+        # -------------------------------
+        st.markdown("<h2 style='text-align:center;'>🏆 Top 5 Performers</h2>", unsafe_allow_html=True)
+
+        if not students_df.empty:
+            top_students = students_df.groupby("student_id")["score"].mean().nlargest(5)
+
+            fig, ax = plt.subplots(figsize=(5,3))
+
+            ax.bar(
+                top_students.index.astype(str),
+                top_students.values,
+                color=["#6366f1", "#22c55e", "#f59e0b", "#ef4444", "#3b82f6"]
+            )
+
+            ax.set_title("Top 5 Students", fontsize=10)
+            ax.set_xlabel("Student ID", fontsize=8)
+            ax.set_ylabel("Score", fontsize=8)
+
+            col1, col2, col3 = st.columns([1,2,1])
+            with col2:
+                st.pyplot(fig)
+        else:
+            st.info("No student data available")
+
+        st.markdown("<h2 style='text-align:center;'> Student Record</h2>", unsafe_allow_html=True)
+
+        if not students_df.empty:
+            top_topics = students_df.sort_values("score", ascending=False).groupby("student_id").head(3)
+
+            top_topics["score"] = pd.to_numeric(top_topics["score"], errors="coerce")
+            st.dataframe(top_topics)
+
+        # -------------------------------
+        # 📚 SUBJECT PERFORMANCE
+        # -------------------------------
+        st.markdown("<h2 style='text-align:center;'> Subject-wise Performance</h2>", unsafe_allow_html=True)
+
+        if not students_df.empty:
+            students_df["score"] = pd.to_numeric(students_df["score"], errors="coerce")
+            subject_avg = students_df.groupby(["student_id", "subject"])["score"].mean().unstack()
+
+            col1, col2, col3 = st.columns([1,2,1])
+            with col2:
+                st.bar_chart(subject_avg.fillna(0))
+        
+
+            safe_df = subject_avg.fillna(0)
+
+            # Ensure all values are numeric
+            safe_df = safe_df.apply(pd.to_numeric, errors="coerce")
+
+            st.dataframe(
+                safe_df.style.background_gradient(cmap="Purples")
+            )
+        else:
+            st.info("No subject data available")
+    
+
+        fig, ax = plt.subplots(figsize=(6,4))
+
+        if not students_df.empty:
+            x = np.arange(len(subject_avg.index))
+            width = 0.15
+
+        for i, col in enumerate(subject_avg.columns):
+            ax.bar(x + i*width, subject_avg[col].fillna(0), width, label=col)
+
+        ax.set_xticks(x + width * len(subject_avg.columns)/2)
+        ax.set_xticklabels(subject_avg.index.astype(str))
+
+        ax.set_xlabel("Student ID")
+        ax.set_ylabel("Score")
+        ax.set_title("Subject-wise Performance")
+
+        ax.legend()
+
+        col1, col2, col3 = st.columns([1,2,1])
+        with col2:
+            st.pyplot(fig)
+
+        # -------------------------------
+        # ⚖️ WEAK vs STRONG DISTRIBUTION
+        # -------------------------------
+        st.markdown("<h2 style='text-align:center;'> Weak vs Strong Distribution</h2>", unsafe_allow_html=True)
+
+        weak_count = len(weak_topics)
+        strong_count = len(strong_topics)
+
+        fig, ax = plt.subplots(figsize=(4,3))
+
+        ax.bar(
+            ["Weak", "Strong"],
+            [weak_count, strong_count],
+            color=["#ef4444", "#22c55e"]
+        )
+
+        ax.set_title("Weak vs Strong", fontsize=10)
+
+        col1, col2, col3 = st.columns([1,2,1])
+        with col2:
+            st.pyplot(fig)
+
+        
+
+        st.markdown("<h2 style='text-align:center;'>📊 Overall score by students</h2>", unsafe_allow_html=True)
+
+        avg_scores = students_df.groupby("student_id")["score"].mean()
+
+        st.bar_chart(avg_scores)
+
+        st.markdown("<h2 style='text-align:center;'>📋 Your Past Records</h2>", unsafe_allow_html=True)
+
+        if not student_history.empty:
+            st.dataframe(
+                student_history.style
+                .background_gradient(cmap="Oranges")
+            )
+        else:
+            st.warning("No records yet")
+
+        # -------------------------------
+        # 🔍 WEAK & STRONG TOPICS
+        # -------------------------------
+        st.subheader(" Weak Topics")
+
+        if not weak_topics.empty:
+            for topic in weak_topics.index:
+                st.markdown(f"""
+                <div class="card">
+                <b>{topic}</b> needs improvement
+                </div>
+                """, unsafe_allow_html=True)
+        else:
+            st.success("No weak topics 🎉")
+
+        st.subheader(" Strong Topics")
+
+        if not strong_topics.empty:
+            st.success(", ".join(strong_topics.index))
+        else:
+            st.warning("No strong topics yet")
+
+        # -------------------------------
+        # 📊 TOPIC COMPARISON
+        # -------------------------------
+        st.subheader(" Topic Strength Comparison")
+        if not filtered_df.empty:
+            st.bar_chart(topic_performance)
+        else:
+            st.warning("No topic data to display")
+
+        # -------------------------------
+        # 🔥 HEATMAP (Matplotlib)
+        # -------------------------------
+        st.subheader(" Performance Heatmap")
+
+        if not heatmap_data.empty:
+            fig, ax = plt.subplots()
+
+            cax = ax.imshow(heatmap_data.values)
+
+            ax.set_xticks(range(len(heatmap_data.columns)))
+            ax.set_yticks(range(len(heatmap_data.index)))
+
+            ax.set_xticklabels(heatmap_data.columns)
+            ax.set_yticklabels(heatmap_data.index)
+
+            plt.colorbar(cax)
+
+            col1, col2, col3 = st.columns([1,2,1])
+            with col2:
+                st.pyplot(fig)
+        else:
+            st.warning("Not enough data for heatmap")
+
+    # -----------------------------------
+    # AI LEARNING PATH GENERATOR
+    # -----------------------------------
+
+    def generate_ai_learning_plan(student_df):
+
+        latest = student_df.iloc[-1]
+
+        learning_style = latest["learning_style"]
+        learner_group = latest["learner_group"]
+
+        # -----------------------------------
+        # Identify Weak Topics
+        # -----------------------------------
+
+        topic_scores = (
+            student_df.groupby("topic")["score"]
+            .mean()
+            .sort_values()
+        )
+
+        weak_topics = topic_scores.index.tolist()
+
+        lowest_score = topic_scores.iloc[0]
+
+        # Weak topic = lowest scoring topic
+        weak_topic = weak_topics[0]
+
+        # Remove strong topics if needed
+        priority_topics = [
+            topic
+            for topic in weak_topics
+            if topic_scores[topic] < 75
+        ]
+
+        # If student is good in all topics
+        if len(priority_topics) == 0:
+
+            priority_topics = weak_topics[:3]
+
+        # -------------------------------
+        # Personalized Recommendations
+        # -------------------------------
+
+        recommendations = []
+
+        # -----------------------------------
+        # Score-Based Adaptive Learning
+        # -----------------------------------
+
+        average_score = student_df["score"].mean()
+
+        # LOW PERFORMERS
+        if average_score < 40:
+
+            recommendations = [
+                f"Start learning {weak_topic} from basic concepts",
+                "Study theory before problem solving",
+                "Spend 1 hour daily on concept building",
+                "Revise fundamentals regularly",
+                "Solve beginner-level questions first"
+            ]
+
+        # MEDIUM PERFORMERS
+        elif average_score < 70:
+
+            recommendations = [
+                f"Practice medium-level problems in {weak_topic}",
+                "Focus on accuracy improvement",
+                "Revise important concepts daily",
+                "Take topic-wise quizzes regularly"
+            ]
+
+        # HIGH PERFORMERS
+        else:
+
+            recommendations = [
+                f"Practice advanced questions in {weak_topic}",
+                "Attempt mock tests regularly",
+                "Focus on speed and accuracy",
+                "Move to next topic after 2-3 days of revision"
+            ]
+
+        # -----------------------------------
+        # Learning Style Adaptation
+        # -----------------------------------
+
+        if learning_style == "Visual":
+
+            recommendations.append(
+                "Use diagrams and flowcharts"
+            )
+
+        elif learning_style == "Audio-Visual":
+
+            recommendations.append(
+                "Watch animated lectures and tutorials"
+            )
+
+        elif learning_style == "Kinesthetic":
+
+            recommendations.append(
+                "Practice interactive exercises daily"
+            )
+
+        # -------------------------------
+        # AI Cluster-Based Suggestions
+        # -------------------------------
+
+        if learner_group == "Needs Support":
+
+            recommendations.append(
+                "Spend 30 minutes daily on revision"
+            )
+
+        elif learner_group == "Consistent Learners":
+
+            recommendations.append(
+                "Practice medium-level questions regularly"
+            )
+
+        elif learner_group == "High Performers":
+
+            recommendations.append(
+                "Try advanced-level problem solving"
+            )
+
+        # -------------------------------
+        # Weekly Plan
+        # -------------------------------
+
+        weekly_plan = {
+            "Monday": "Learn core concepts",
+            "Tuesday": "Practice beginner problems",
+            "Wednesday": "Revise important formulas",
+            "Thursday": "Solve quizzes and exercises",
+            "Friday": "Topic revision and mock test"
+        }
+
+        # -----------------------------------
+        # ML-BASED NEXT TOPIC PREDICTION
+        # -----------------------------------
+
+        latest_topic = latest["topic"]
+
+        latest_subject = latest["subject"]
+
+        latest_score = latest["score"]
+
+        latest_time_spent = latest["time_spent"]
+
+        latest_attempts = latest["attempts"]
+
+        latest_learning_style = latest["learning_style"]
+
+        try:
+
+            prediction_payload = {
+                "score": int(latest_score),
+                "time_spent": int(latest_time_spent),
+                "attempts": int(latest_attempts),
+                "learning_style": latest_learning_style,
+                "subject": latest_subject,
+                "topic": latest_topic
+            }
+
+            response = requests.post(
+                f"{API_URL}/get_learning_path",
+                json=prediction_payload,
+                timeout=5
+            )
+
+            if response.status_code == 200:
+
+                prediction_result = response.json()
+
+                next_topic = prediction_result.get(
+                    "next_topic",
+                    weak_topic
+                )
+
+            else:
+
+                next_topic = weak_topic
+
+        except:
+
+            next_topic = weak_topic
+
+
+        return {
+            "weak_topic": weak_topic,
+            "priority_topics": priority_topics,
+            "learning_style": learning_style,
+            "learner_group": learner_group,
+            "recommendations": recommendations,
+            "weekly_plan": weekly_plan,
+            "next_topic": next_topic,
+            "average_score": average_score,
+        }
+    
+    # -----------------------------------
+    # AI RESOURCE RECOMMENDATION ENGINE
+    # -----------------------------------
+
+    def generate_ai_resources(
+        weak_topic,
+        learning_style,
+        learner_group
+    ):
+
+        resources = []
+        videos = []
+
+        # -----------------------------------
+        # Visual Learners
+        # -----------------------------------
+
+        if learning_style == "Visual":
+
+            resources.extend([
+                f"Visual notes for {weak_topic}",
+                f"Flowcharts for {weak_topic}",
+                f"Diagram-based explanations"
+            ])
+
+            videos.extend([
+                f"{weak_topic} visual tutorial",
+                f"{weak_topic} animated explanation"
+            ])
+
+        elif learning_style == "Audio-Visual":
+
+            resources.extend([
+                f"Lecture videos for {weak_topic}",
+                f"Animated concept explanations",
+                f"Recorded summaries"
+            ])
+
+            videos.extend([
+                f"{weak_topic} lecture",
+                f"{weak_topic} explained step by step"
+            ])
+
+        else:
+
+            resources.extend([
+                f"Hands-on exercises for {weak_topic}",
+                f"Interactive worksheets",
+                f"Practice-based activities"
+            ])
+
+            videos.extend([
+                f"{weak_topic} practice questions",
+                f"{weak_topic} solved exercises"
+            ])
+
+        return {
+            "resources": resources,
+            "videos": videos
+        }
+
+    # -----------------------------------
+    # AI QUIZ RECOMMENDATION ENGINE
+    # -----------------------------------
+
+    def generate_ai_quizzes(
+        weak_topics,
+        average_score,
+        learning_style,
+        learner_group
+    ):
+
+        quizzes = []
+
+        for topic in weak_topics[:3]:
+
+            # -----------------------------------
+            # Difficulty Based on Score
+            # -----------------------------------
+
+            if average_score < 40:
+
+                difficulty = "Beginner"
+                questions = 5
+                focus = "Concept Building"
+
+            elif average_score < 70:
+
+                difficulty = "Intermediate"
+                questions = 10
+                focus = "Practice & Accuracy"
+
+            else:
+
+                difficulty = "Advanced"
+                questions = 15
+                focus = "Mock Tests & Speed"
+
+            # -----------------------------------
+            # Learning Style Adaptation
+            # -----------------------------------
+
+            if learning_style == "Visual":
+
+                style_tip = "Use diagram-based questions"
+
+            elif learning_style == "Audio-Visual":
+
+                style_tip = "Watch explanation before solving"
+
+            else:
+
+                style_tip = "Solve interactive exercises"
+
+            # -----------------------------------
+            # AI Quiz Object
+            # -----------------------------------
+
+            quizzes.append({
+
+                "topic": topic,
+
+                "difficulty": difficulty,
+
+                "questions": questions,
+
+                "focus": focus,
+
+                "style_tip": style_tip,
+
+                "link":
+                    f"https://www.google.com/search?q={topic}+quiz"
+            })
+
+        return quizzes
+
+
+
+    # -------------------------------
+    #  TAB 3: LEARNING PLAN
+    # -------------------------------
+    with tab3:
+        # -----------------------------------
+        # AI Personalized Learning Plan
+        # -----------------------------------
+
+        st.subheader("AI Personalized Learning Path")
+
+        selected_student = st.selectbox(
+            "Select Student",
+            students_df["student_id"].unique()
+        )
+
+        student_data = students_df[
+            students_df["student_id"] == selected_student
+        ]
+
+        ai_plan = generate_ai_learning_plan(student_data)
+    
+        # -----------------------------------
+        # AI Analysis
+        # -----------------------------------
+
+        st.write(f"### Student: {selected_student}")
+
+        st.write("### AI Analysis")
+
+        st.write(f"• Weak Topic: {ai_plan['weak_topic']}")
+        st.write(f"• Learning Style: {ai_plan['learning_style']}")
+        st.write(f"• Behavior Group: {ai_plan['learner_group']}")
+
+        st.markdown(f"""
+        <h3 style='color:#2563eb;'>
+        Recommended Next Topic:
+        <b>{ai_plan['next_topic']}</b>
+        </h3>
+        """, unsafe_allow_html=True)
+        # -----------------------------------
+        # Personalized Learning Path
+        # -----------------------------------
+
+        st.write("### Personalized Learning Path")
+
+        for rec in ai_plan["recommendations"]:
+            st.write(f"• {rec}")
+
+        # -----------------------------------
+        # Weekly Learning Plan
+        # -----------------------------------
+
+        st.write("### Weekly Learning Plan")
+
+        for day, task in ai_plan["weekly_plan"].items():
+            st.write(f"**{day}:** {task}")
+
+        # -----------------------------------
+        # Priority Topics
+        # -----------------------------------
+
+        st.write("### Priority Topics")
+
+        if len(ai_plan["priority_topics"]) > 0:
+
+            for topic in ai_plan["priority_topics"]:
+                st.write(f"• {topic}")
+
+        else:
+            st.write("No weak topics detected")
+
+        
+        # -----------------------------------
+        # AI SMART RESOURCES
+        # -----------------------------------
+
+        st.write("##Recommendations")
+
+        resource_data = generate_ai_resources(
+            ai_plan["weak_topic"],
+            ai_plan["learning_style"],
+            ai_plan["learner_group"]
+        )
+
+        # -----------------------------------
+        # Study Resources
+        # -----------------------------------
+
+        st.write("### Recommended Resources")
+
+        for resource in resource_data["resources"]:
+            st.write(f"• {resource}")
+
+        # -----------------------------------
+        # Recommended Videos
+        # -----------------------------------
+
+        st.write("### Recommended Videos")
+
+        video_links = {
+            "Arrays": "https://www.youtube.com/watch?v=QJNwK2uJyGs",
+            "Linked List": "https://www.youtube.com/watch?v=58YbpRDc4yw",
+            "Stack": "https://www.youtube.com/watch?v=wjI1WNcIntg",
+            "Queue": "https://www.youtube.com/watch?v=XuCbpw6Bj1U",
+            "Tree": "https://www.youtube.com/watch?v=oSWTXtMglKE",
+            "Graph": "https://www.youtube.com/watch?v=pcKY4hjDrxk"
+        }
+        weak_topic = ai_plan["weak_topic"]
+
+        if weak_topic in video_links:
+
+           st.video(video_links[weak_topic])
+
+        else:
+
+            youtube_link = (
+                "https://www.youtube.com/results?search_query="
+                + weak_topic.replace(" ", "+")
+           )
+
+            st.markdown(
+                f"[▶ Watch videos on {weak_topic}]({youtube_link})"
+            )
+
+
+        # -----------------------------------
+        # Recommended Quizzes
+        # -----------------------------------
+
+        st.write("### Recommended Quizzes")
+
+        # -----------------------------------
+        # AI Quiz Recommendations
+        # -----------------------------------
+
+        quiz_data = generate_ai_quizzes(
+
+            ai_plan["priority_topics"],
+            ai_plan["average_score"],
+            ai_plan["learning_style"],
+            ai_plan["learner_group"]
+        )
+
+        for quiz in quiz_data:
+
+            st.markdown(f"""
+            ### {quiz['topic']} Quiz
+
+            • Difficulty: **{quiz['difficulty']}**  
+            • Questions: **{quiz['questions']}**  
+            • Focus Area: **{quiz['focus']}**  
+            • AI Tip: **{quiz['style_tip']}**
+
+            [Start Quiz]({quiz['link']})
+            """)
+
+
+    # -------------------------------
+    # TAB 4: ACHIEVEMENTS & BADGES
+    # -------------------------------
+
+    with tab4:
+
+        st.subheader("Achievements & Badges")
+
+        # -----------------------------------
+        # Student Selection
+        # -----------------------------------
+
+        selected_student_badge = st.selectbox(
+            "Select Student for Achievements",
+            students_df["student_id"].unique(),
+            key="badge_student"
+        )
+
+        student_badge_data = students_df[
+            students_df["student_id"] == selected_student_badge
+        ]
+
+        # -----------------------------------
+        # Best Topic Detection
+        # -----------------------------------
+
+        best_topic_row = student_badge_data.loc[
+            student_badge_data["score"].idxmax()
+        ]
+
+        best_topic = best_topic_row["topic"]
+        best_score = best_topic_row["score"]
+
+        # -----------------------------------
+        # Achievement Section
+        # -----------------------------------
+
+        st.write("## Achievement Status")
+
+        if best_score >= 95:
+
+            st.balloons()
+
+            st.success(
+                f"🏅 Gold Top Performer in {best_topic} 🎉"
+            )
+
+        elif best_score >= 75:
+
+            st.success(
+                f"🥈 Silver Performer in {best_topic}"
+            )
+
+        elif best_score >= 50:
+
+            st.info(
+                f"👍 Good Progress in {best_topic}"
+            )
+
+        else:
+
+            st.warning(
+                f"🚀 Keep Improving in {best_topic}"
+            )
+
+        # -----------------------------------
+        # Badge System
+        # -----------------------------------
+
+        st.write("## Earned Badges")
+
+        badges = []
+
+        # Gold Badge
+        if best_score >= 95:
+            badges.append("🥇 Gold Excellence Badge")
+
+        # Silver Badge
+        if best_score >= 75:
+            badges.append("🥈 Silver Achievement Badge")
+
+        # Consistency Badge
+        average_score = student_badge_data["score"].mean()
+
+        if average_score >= 70:
+            badges.append("📚 Consistency Master Badge")
+
+        # Hardworking Badge
+        avg_attempts = student_badge_data["attempts"].mean()
+
+        if avg_attempts >= 3:
+            badges.append("🔥 Hardworking Learner Badge")
+
+        # Dedicated Learner Badge
+        avg_time = student_badge_data["time_spent"].mean()
+
+        if avg_time >= 60:
+            badges.append("⏳ Dedicated Learner Badge")
+
+        # -----------------------------------
+        # Display Badges
+        # -----------------------------------
+
+        if badges:
+
+            for badge in badges:
+                st.write(f"• {badge}")
+
+        else:
+
+            st.info("No badges earned yet")
+
+        # -----------------------------------
+        # Performance Summary
+        # -----------------------------------
+
+        st.write("## Performance Summary")
+
+        st.write(f"• Best Topic: {best_topic}")
+        st.write(f"• Highest Score: {best_score}")
+        st.write(f"• Average Score: {round(average_score, 2)}")
+
+        # -----------------------------------
+        # Motivational Insights
+        # -----------------------------------
+
+        st.write("##  Motivation")
+
+        if average_score >= 85:
+
+            st.success(
+                "Excellent consistency! Start solving advanced mock tests."
+            )
+
+        elif average_score >= 60:
+
+            st.info(
+                "You are improving steadily. Focus on weak topics regularly."
+            )
+
+        else:
+
+            st.warning(
+                "Build strong fundamentals before moving to advanced topics."
+            )

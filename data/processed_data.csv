@@ -1,0 +1,801 @@
+student_id,subject,topic,score,time_spent,attempts,learning_style,quiz_performance,cluster,level
+1,DSA,Queue,59,66,3,Kinesthetic,average,1,Intermediate
+2,Python,OOP,74,15,1,Kinesthetic,good,2,Advanced
+3,DBMS,SQL,85,10,5,Visual,good,2,Advanced
+4,DBMS,Joins,88,50,2,Kinesthetic,good,0,Beginner
+5,CN,Routing,86,102,2,Audio-Visual,good,0,Beginner
+6,OS,Processes,51,41,5,Kinesthetic,average,2,Advanced
+7,CN,OSI Model,38,57,5,Audio-Visual,poor,1,Intermediate
+8,CN,OSI Model,76,32,3,Visual,good,2,Advanced
+9,OS,Scheduling,56,51,4,Kinesthetic,average,2,Advanced
+10,CN,OSI Model,52,60,2,Audio-Visual,average,1,Intermediate
+11,CN,TCP/IP,45,53,4,Visual,average,1,Intermediate
+12,DBMS,Joins,61,42,1,Kinesthetic,average,2,Advanced
+13,OS,Scheduling,63,75,2,Audio-Visual,average,1,Intermediate
+14,CN,TCP/IP,42,64,1,Kinesthetic,average,1,Intermediate
+15,DSA,Stack,68,52,5,Audio-Visual,average,2,Advanced
+16,DBMS,SQL,84,56,1,Visual,good,0,Beginner
+17,OS,Threads,60,33,4,Kinesthetic,average,2,Advanced
+18,OS,Scheduling,33,51,1,Audio-Visual,poor,1,Intermediate
+19,OS,Scheduling,100,62,3,Visual,good,0,Beginner
+20,CN,Routing,56,90,5,Kinesthetic,average,1,Intermediate
+21,CN,Routing,83,79,3,Audio-Visual,good,0,Beginner
+22,DBMS,Joins,74,63,4,Visual,good,0,Beginner
+23,CN,TCP/IP,92,44,3,Visual,good,0,Beginner
+24,CN,OSI Model,38,78,4,Kinesthetic,poor,1,Intermediate
+25,DSA,Stack,38,85,5,Kinesthetic,poor,1,Intermediate
+26,Python,Functions,62,56,4,Audio-Visual,average,2,Advanced
+27,Python,OOP,50,59,3,Visual,average,1,Intermediate
+28,OS,Threads,70,84,3,Audio-Visual,good,0,Beginner
+29,OS,Scheduling,73,81,1,Kinesthetic,good,0,Beginner
+30,DSA,Arrays,54,73,3,Audio-Visual,average,1,Intermediate
+31,Python,Loops,42,47,2,Kinesthetic,average,2,Advanced
+32,DSA,Linked List,55,71,2,Kinesthetic,average,1,Intermediate
+33,CN,Routing,76,86,3,Visual,good,0,Beginner
+34,Python,File Handling,81,26,5,Kinesthetic,good,2,Advanced
+35,CN,TCP/IP,67,56,5,Visual,average,0,Beginner
+36,Python,OOP,43,74,3,Visual,average,1,Intermediate
+37,CN,Routing,60,81,2,Visual,average,1,Intermediate
+38,DSA,Queue,92,53,2,Visual,good,0,Beginner
+39,CN,TCP/IP,49,38,3,Audio-Visual,average,2,Advanced
+40,Python,File Handling,92,38,3,Audio-Visual,good,0,Beginner
+41,OS,Scheduling,100,44,4,Audio-Visual,good,0,Beginner
+42,Python,OOP,82,27,3,Visual,good,2,Advanced
+43,OS,Processes,55,60,1,Visual,average,1,Intermediate
+44,OS,Scheduling,96,37,1,Kinesthetic,good,0,Beginner
+45,Python,OOP,34,58,3,Visual,poor,1,Intermediate
+46,DSA,Stack,59,19,1,Visual,average,2,Advanced
+47,OS,Scheduling,54,32,5,Kinesthetic,average,2,Advanced
+48,CN,Routing,51,60,2,Visual,average,1,Intermediate
+49,OS,Scheduling,91,61,1,Audio-Visual,good,0,Beginner
+50,DBMS,Joins,55,19,3,Kinesthetic,average,2,Advanced
+51,Python,OOP,83,44,2,Visual,good,0,Beginner
+52,OS,Threads,61,19,1,Kinesthetic,average,2,Advanced
+53,DBMS,SQL,80,17,2,Kinesthetic,good,2,Advanced
+54,OS,Threads,29,23,5,Audio-Visual,poor,2,Advanced
+55,DBMS,SQL,74,95,3,Kinesthetic,good,0,Beginner
+56,DSA,Linked List,27,54,2,Kinesthetic,poor,1,Intermediate
+57,CN,TCP/IP,33,65,3,Visual,poor,1,Intermediate
+58,Python,File Handling,50,84,5,Visual,average,1,Intermediate
+59,CN,Routing,51,68,2,Visual,average,1,Intermediate
+60,Python,Loops,93,45,4,Visual,good,0,Beginner
+61,CN,OSI Model,60,85,5,Visual,average,1,Intermediate
+62,DBMS,Normalization,78,77,3,Visual,good,0,Beginner
+63,Python,Loops,66,59,3,Visual,average,0,Beginner
+64,Python,OOP,36,74,1,Kinesthetic,poor,1,Intermediate
+65,OS,Processes,31,85,1,Audio-Visual,poor,1,Intermediate
+66,DBMS,Normalization,79,23,1,Audio-Visual,good,2,Advanced
+67,DSA,Queue,84,57,3,Kinesthetic,good,0,Beginner
+68,OS,Threads,71,77,1,Kinesthetic,good,0,Beginner
+69,CN,Routing,32,96,4,Kinesthetic,poor,1,Intermediate
+70,OS,Processes,74,52,2,Visual,good,0,Beginner
+71,OS,Threads,56,44,4,Kinesthetic,average,2,Advanced
+72,DBMS,SQL,50,42,1,Audio-Visual,average,2,Advanced
+73,Python,Functions,99,50,2,Kinesthetic,good,0,Beginner
+74,CN,Routing,67,62,3,Audio-Visual,average,0,Beginner
+75,DBMS,SQL,78,38,5,Visual,good,2,Advanced
+76,DBMS,Normalization,41,68,1,Kinesthetic,average,1,Intermediate
+77,DBMS,Normalization,39,51,4,Audio-Visual,poor,1,Intermediate
+78,DSA,Arrays,48,59,5,Audio-Visual,average,1,Intermediate
+79,CN,Routing,60,61,2,Kinesthetic,average,1,Intermediate
+80,Python,File Handling,68,37,4,Kinesthetic,average,2,Advanced
+81,OS,Threads,66,63,4,Kinesthetic,average,0,Beginner
+82,DSA,Stack,94,51,2,Kinesthetic,good,0,Beginner
+83,OS,Processes,31,81,5,Kinesthetic,poor,1,Intermediate
+84,DBMS,Normalization,65,59,2,Visual,average,0,Beginner
+85,CN,Routing,70,26,5,Visual,good,2,Advanced
+86,DBMS,Joins,66,67,5,Visual,average,0,Beginner
+87,Python,Functions,57,98,5,Audio-Visual,average,1,Intermediate
+88,CN,Routing,58,67,1,Kinesthetic,average,1,Intermediate
+89,Python,File Handling,76,85,5,Audio-Visual,good,0,Beginner
+90,CN,Routing,40,81,4,Audio-Visual,average,1,Intermediate
+91,DSA,Queue,44,43,2,Kinesthetic,average,2,Advanced
+92,DSA,Stack,79,78,5,Visual,good,0,Beginner
+93,Python,Loops,84,70,5,Kinesthetic,good,0,Beginner
+94,Python,File Handling,44,10,4,Audio-Visual,average,2,Advanced
+95,DSA,Linked List,74,69,4,Audio-Visual,good,0,Beginner
+96,CN,OSI Model,36,39,2,Kinesthetic,poor,2,Advanced
+97,Python,File Handling,45,46,2,Audio-Visual,average,2,Advanced
+98,OS,Threads,85,35,3,Audio-Visual,good,2,Advanced
+99,CN,OSI Model,84,61,1,Audio-Visual,good,0,Beginner
+100,Python,File Handling,67,119,1,Kinesthetic,average,1,Intermediate
+101,CN,Routing,57,74,2,Audio-Visual,average,1,Intermediate
+102,CN,TCP/IP,49,59,1,Visual,average,1,Intermediate
+103,DBMS,SQL,10,59,2,Audio-Visual,poor,1,Intermediate
+104,Python,File Handling,64,52,1,Kinesthetic,average,2,Advanced
+105,DSA,Queue,15,72,4,Audio-Visual,poor,1,Intermediate
+106,DBMS,SQL,61,49,1,Audio-Visual,average,2,Advanced
+107,Python,OOP,38,74,2,Audio-Visual,poor,1,Intermediate
+108,OS,Processes,70,78,4,Kinesthetic,good,0,Beginner
+109,CN,OSI Model,43,58,5,Audio-Visual,average,1,Intermediate
+110,CN,Routing,61,66,2,Audio-Visual,average,1,Intermediate
+111,CN,OSI Model,45,39,1,Kinesthetic,average,2,Advanced
+112,Python,Functions,83,81,3,Kinesthetic,good,0,Beginner
+113,CN,OSI Model,45,66,3,Audio-Visual,average,1,Intermediate
+114,Python,OOP,47,78,1,Kinesthetic,average,1,Intermediate
+115,CN,Routing,69,89,5,Visual,average,0,Beginner
+116,CN,Routing,39,103,2,Visual,poor,1,Intermediate
+117,Python,Loops,56,52,4,Kinesthetic,average,2,Advanced
+118,CN,TCP/IP,83,48,3,Kinesthetic,good,0,Beginner
+119,DSA,Stack,79,38,1,Kinesthetic,good,2,Advanced
+120,OS,Processes,54,63,2,Visual,average,1,Intermediate
+121,DBMS,Normalization,61,67,4,Audio-Visual,average,1,Intermediate
+122,DBMS,Joins,54,60,2,Visual,average,1,Intermediate
+123,DSA,Arrays,39,73,2,Audio-Visual,poor,1,Intermediate
+124,DSA,Linked List,69,55,3,Audio-Visual,average,0,Beginner
+125,DBMS,Normalization,53,56,5,Kinesthetic,average,1,Intermediate
+126,CN,OSI Model,75,32,1,Visual,good,2,Advanced
+127,DSA,Arrays,71,60,5,Kinesthetic,good,0,Beginner
+128,CN,OSI Model,100,78,4,Kinesthetic,good,0,Beginner
+129,Python,File Handling,57,92,1,Visual,average,1,Intermediate
+130,Python,Loops,58,46,3,Kinesthetic,average,2,Advanced
+131,OS,Processes,61,45,1,Visual,average,2,Advanced
+132,CN,Routing,65,88,3,Visual,average,1,Intermediate
+133,DSA,Queue,93,60,2,Visual,good,0,Beginner
+134,CN,TCP/IP,54,92,1,Audio-Visual,average,1,Intermediate
+135,CN,TCP/IP,60,40,1,Visual,average,2,Advanced
+136,DBMS,SQL,86,43,1,Visual,good,0,Beginner
+137,DBMS,Joins,41,25,4,Visual,average,2,Advanced
+138,Python,Functions,42,38,3,Kinesthetic,average,2,Advanced
+139,Python,OOP,29,78,1,Kinesthetic,poor,1,Intermediate
+140,Python,Loops,92,16,4,Visual,good,2,Advanced
+141,DBMS,Normalization,77,33,2,Kinesthetic,good,2,Advanced
+142,CN,TCP/IP,31,49,3,Visual,poor,1,Intermediate
+143,DBMS,Joins,91,48,4,Audio-Visual,good,0,Beginner
+144,DSA,Stack,71,53,5,Visual,good,0,Beginner
+145,CN,OSI Model,94,38,4,Visual,good,0,Beginner
+146,OS,Threads,54,82,3,Audio-Visual,average,1,Intermediate
+147,DBMS,Normalization,82,50,1,Visual,good,0,Beginner
+148,CN,OSI Model,55,46,1,Kinesthetic,average,2,Advanced
+149,CN,OSI Model,48,78,1,Audio-Visual,average,1,Intermediate
+150,OS,Threads,42,80,3,Kinesthetic,average,1,Intermediate
+151,OS,Scheduling,76,62,1,Kinesthetic,good,0,Beginner
+152,DSA,Queue,62,66,5,Kinesthetic,average,1,Intermediate
+153,DSA,Arrays,58,44,2,Visual,average,2,Advanced
+154,CN,OSI Model,77,63,2,Kinesthetic,good,0,Beginner
+155,OS,Processes,65,39,4,Audio-Visual,average,2,Advanced
+156,CN,OSI Model,76,50,4,Visual,good,0,Beginner
+157,Python,Functions,51,61,2,Kinesthetic,average,1,Intermediate
+158,Python,Loops,36,81,1,Visual,poor,1,Intermediate
+159,DSA,Stack,72,69,3,Audio-Visual,good,0,Beginner
+160,DSA,Linked List,60,60,3,Kinesthetic,average,1,Intermediate
+161,Python,File Handling,60,43,4,Visual,average,2,Advanced
+162,Python,File Handling,64,35,5,Kinesthetic,average,2,Advanced
+163,CN,Routing,34,16,2,Audio-Visual,poor,2,Advanced
+164,DBMS,Joins,56,55,3,Audio-Visual,average,1,Intermediate
+165,Python,Functions,65,38,1,Audio-Visual,average,2,Advanced
+166,DSA,Queue,67,63,2,Visual,average,0,Beginner
+167,CN,TCP/IP,31,74,4,Audio-Visual,poor,1,Intermediate
+168,Python,Functions,75,27,3,Visual,good,2,Advanced
+169,OS,Scheduling,100,75,2,Visual,good,0,Beginner
+170,OS,Processes,56,81,1,Kinesthetic,average,1,Intermediate
+171,OS,Processes,43,49,3,Audio-Visual,average,2,Advanced
+172,CN,Routing,35,35,4,Visual,poor,2,Advanced
+173,DBMS,Joins,62,56,2,Audio-Visual,average,2,Advanced
+174,CN,OSI Model,68,49,1,Kinesthetic,average,2,Advanced
+175,CN,TCP/IP,57,56,1,Audio-Visual,average,1,Intermediate
+176,OS,Threads,100,67,2,Visual,good,0,Beginner
+177,CN,Routing,42,62,5,Audio-Visual,average,1,Intermediate
+178,DSA,Queue,44,56,5,Visual,average,1,Intermediate
+179,Python,Loops,27,93,2,Kinesthetic,poor,1,Intermediate
+180,DBMS,Normalization,96,80,2,Visual,good,0,Beginner
+181,DBMS,SQL,83,36,5,Audio-Visual,good,2,Advanced
+182,Python,OOP,55,52,3,Kinesthetic,average,2,Advanced
+183,Python,File Handling,45,78,3,Visual,average,1,Intermediate
+184,CN,Routing,66,41,5,Kinesthetic,average,2,Advanced
+185,DBMS,Normalization,64,60,3,Audio-Visual,average,0,Beginner
+186,OS,Scheduling,54,50,5,Kinesthetic,average,2,Advanced
+187,DSA,Stack,100,57,1,Visual,good,0,Beginner
+188,Python,Functions,37,55,4,Audio-Visual,poor,1,Intermediate
+189,OS,Processes,48,74,4,Visual,average,1,Intermediate
+190,DSA,Stack,69,54,4,Audio-Visual,average,0,Beginner
+191,DBMS,Joins,47,60,2,Kinesthetic,average,1,Intermediate
+192,OS,Processes,41,47,2,Audio-Visual,average,2,Advanced
+193,DSA,Queue,65,49,3,Kinesthetic,average,2,Advanced
+194,Python,File Handling,63,72,2,Kinesthetic,average,1,Intermediate
+195,CN,Routing,75,59,1,Audio-Visual,good,0,Beginner
+196,DSA,Arrays,63,90,5,Visual,average,1,Intermediate
+197,OS,Threads,42,76,4,Kinesthetic,average,1,Intermediate
+198,Python,OOP,63,66,5,Visual,average,1,Intermediate
+199,DBMS,Normalization,47,47,1,Audio-Visual,average,2,Advanced
+200,CN,TCP/IP,49,54,5,Audio-Visual,average,1,Intermediate
+201,DBMS,Joins,71,76,5,Visual,good,0,Beginner
+202,OS,Threads,67,78,5,Visual,average,0,Beginner
+203,OS,Threads,86,51,1,Visual,good,0,Beginner
+204,DBMS,Normalization,64,28,2,Kinesthetic,average,2,Advanced
+205,Python,File Handling,70,106,4,Kinesthetic,good,1,Intermediate
+206,DSA,Queue,62,71,5,Audio-Visual,average,1,Intermediate
+207,Python,Loops,57,33,2,Kinesthetic,average,2,Advanced
+208,CN,OSI Model,70,44,2,Visual,good,2,Advanced
+209,DBMS,SQL,62,40,4,Kinesthetic,average,2,Advanced
+210,Python,OOP,80,53,2,Audio-Visual,good,0,Beginner
+211,Python,File Handling,58,83,2,Visual,average,1,Intermediate
+212,DSA,Linked List,64,59,5,Audio-Visual,average,0,Beginner
+213,OS,Scheduling,72,73,4,Kinesthetic,good,0,Beginner
+214,DBMS,Joins,18,45,4,Audio-Visual,poor,1,Intermediate
+215,DSA,Stack,73,58,3,Kinesthetic,good,0,Beginner
+216,DBMS,Normalization,26,63,3,Audio-Visual,poor,1,Intermediate
+217,DSA,Stack,73,75,1,Kinesthetic,good,0,Beginner
+218,DSA,Queue,71,26,3,Visual,good,2,Advanced
+219,CN,OSI Model,100,62,5,Visual,good,0,Beginner
+220,CN,Routing,61,47,2,Visual,average,2,Advanced
+221,Python,Functions,65,64,3,Kinesthetic,average,0,Beginner
+222,OS,Scheduling,78,56,2,Kinesthetic,good,0,Beginner
+223,DBMS,SQL,43,85,1,Kinesthetic,average,1,Intermediate
+224,DSA,Queue,72,18,1,Kinesthetic,good,2,Advanced
+225,OS,Processes,64,33,5,Visual,average,2,Advanced
+226,DSA,Arrays,74,96,5,Kinesthetic,good,0,Beginner
+227,DBMS,SQL,91,59,5,Visual,good,0,Beginner
+228,DBMS,Normalization,78,75,5,Kinesthetic,good,0,Beginner
+229,DSA,Linked List,63,73,4,Visual,average,1,Intermediate
+230,Python,Functions,46,43,4,Audio-Visual,average,2,Advanced
+231,OS,Processes,76,74,5,Visual,good,0,Beginner
+232,CN,TCP/IP,53,71,2,Visual,average,1,Intermediate
+233,OS,Threads,100,71,1,Audio-Visual,good,0,Beginner
+234,DBMS,Joins,84,68,1,Kinesthetic,good,0,Beginner
+235,CN,Routing,96,45,5,Kinesthetic,good,0,Beginner
+236,DBMS,SQL,66,46,1,Audio-Visual,average,2,Advanced
+237,OS,Processes,39,52,3,Audio-Visual,poor,1,Intermediate
+238,CN,Routing,77,27,3,Kinesthetic,good,2,Advanced
+239,CN,TCP/IP,61,39,3,Visual,average,2,Advanced
+240,Python,Loops,48,25,3,Kinesthetic,average,2,Advanced
+241,DSA,Arrays,61,50,3,Audio-Visual,average,2,Advanced
+242,DSA,Stack,23,62,5,Audio-Visual,poor,1,Intermediate
+243,DSA,Stack,95,66,1,Kinesthetic,good,0,Beginner
+244,OS,Processes,68,30,1,Audio-Visual,average,2,Advanced
+245,CN,Routing,46,71,1,Kinesthetic,average,1,Intermediate
+246,DBMS,Normalization,40,71,1,Kinesthetic,average,1,Intermediate
+247,DBMS,Normalization,65,22,2,Visual,average,2,Advanced
+248,DSA,Linked List,57,64,3,Kinesthetic,average,1,Intermediate
+249,Python,Loops,46,47,3,Visual,average,2,Advanced
+250,OS,Threads,44,63,3,Visual,average,1,Intermediate
+251,DSA,Queue,53,54,2,Visual,average,1,Intermediate
+252,Python,Functions,61,50,4,Visual,average,2,Advanced
+253,DSA,Arrays,99,24,1,Audio-Visual,good,2,Advanced
+254,DBMS,Normalization,66,35,4,Kinesthetic,average,2,Advanced
+255,DBMS,Normalization,42,26,1,Kinesthetic,average,2,Advanced
+256,CN,Routing,35,53,1,Kinesthetic,poor,1,Intermediate
+257,CN,Routing,36,57,4,Visual,poor,1,Intermediate
+258,OS,Threads,66,63,3,Audio-Visual,average,0,Beginner
+259,OS,Scheduling,42,28,4,Audio-Visual,average,2,Advanced
+260,DBMS,Joins,59,47,5,Kinesthetic,average,2,Advanced
+261,DBMS,Normalization,95,40,1,Visual,good,0,Beginner
+262,OS,Processes,84,83,5,Audio-Visual,good,0,Beginner
+263,OS,Threads,81,52,1,Audio-Visual,good,0,Beginner
+264,OS,Scheduling,62,82,1,Kinesthetic,average,1,Intermediate
+265,Python,Loops,41,102,4,Visual,average,1,Intermediate
+266,Python,Functions,39,46,3,Kinesthetic,poor,2,Advanced
+267,OS,Scheduling,64,43,2,Visual,average,2,Advanced
+268,CN,OSI Model,76,54,1,Visual,good,0,Beginner
+269,OS,Scheduling,37,68,1,Kinesthetic,poor,1,Intermediate
+270,DBMS,SQL,95,43,4,Kinesthetic,good,0,Beginner
+271,Python,Loops,57,10,4,Visual,average,2,Advanced
+272,CN,OSI Model,37,107,4,Visual,poor,1,Intermediate
+273,DSA,Queue,27,69,4,Audio-Visual,poor,1,Intermediate
+274,Python,File Handling,52,67,3,Visual,average,1,Intermediate
+275,CN,OSI Model,12,53,5,Kinesthetic,poor,1,Intermediate
+276,Python,File Handling,63,86,1,Kinesthetic,average,1,Intermediate
+277,DSA,Linked List,28,58,2,Visual,poor,1,Intermediate
+278,DSA,Arrays,84,50,2,Visual,good,0,Beginner
+279,CN,TCP/IP,62,68,3,Visual,average,1,Intermediate
+280,OS,Processes,69,71,1,Kinesthetic,average,0,Beginner
+281,DSA,Queue,46,62,1,Kinesthetic,average,1,Intermediate
+282,DBMS,Joins,80,62,1,Audio-Visual,good,0,Beginner
+283,CN,OSI Model,66,67,2,Audio-Visual,average,0,Beginner
+284,DBMS,Normalization,42,36,1,Kinesthetic,average,2,Advanced
+285,OS,Processes,62,59,3,Kinesthetic,average,1,Intermediate
+286,Python,Functions,52,73,2,Visual,average,1,Intermediate
+287,OS,Scheduling,99,46,5,Visual,good,0,Beginner
+288,DSA,Queue,72,39,3,Kinesthetic,good,2,Advanced
+289,DSA,Linked List,88,103,4,Audio-Visual,good,0,Beginner
+290,DSA,Queue,58,53,5,Audio-Visual,average,2,Advanced
+291,Python,Loops,64,56,5,Visual,average,0,Beginner
+292,Python,Loops,59,50,5,Kinesthetic,average,2,Advanced
+293,CN,OSI Model,42,56,5,Visual,average,1,Intermediate
+294,DSA,Linked List,43,85,1,Kinesthetic,average,1,Intermediate
+295,DBMS,Joins,38,25,4,Kinesthetic,poor,2,Advanced
+296,OS,Scheduling,35,85,4,Kinesthetic,poor,1,Intermediate
+297,DSA,Queue,58,54,2,Kinesthetic,average,2,Advanced
+298,OS,Processes,68,71,3,Visual,average,0,Beginner
+299,DBMS,Joins,67,54,4,Visual,average,0,Beginner
+300,DBMS,Joins,84,46,3,Kinesthetic,good,0,Beginner
+301,OS,Processes,95,37,1,Kinesthetic,good,0,Beginner
+302,DBMS,Joins,66,88,5,Kinesthetic,average,1,Intermediate
+303,DBMS,Joins,69,34,4,Kinesthetic,average,2,Advanced
+304,DBMS,Joins,58,60,2,Kinesthetic,average,1,Intermediate
+305,DSA,Stack,71,45,5,Kinesthetic,good,2,Advanced
+306,OS,Threads,78,61,5,Kinesthetic,good,0,Beginner
+307,DSA,Stack,49,62,3,Visual,average,1,Intermediate
+308,DSA,Arrays,62,55,3,Visual,average,2,Advanced
+309,DBMS,SQL,77,64,3,Audio-Visual,good,0,Beginner
+310,CN,Routing,35,83,4,Audio-Visual,poor,1,Intermediate
+311,CN,Routing,66,82,1,Visual,average,1,Intermediate
+312,OS,Scheduling,55,28,5,Visual,average,2,Advanced
+313,DSA,Linked List,50,55,4,Visual,average,1,Intermediate
+314,OS,Processes,75,70,3,Kinesthetic,good,0,Beginner
+315,CN,OSI Model,36,41,2,Visual,poor,2,Advanced
+316,Python,Loops,21,46,1,Audio-Visual,poor,1,Intermediate
+317,DSA,Queue,53,60,3,Kinesthetic,average,1,Intermediate
+318,OS,Scheduling,58,90,1,Audio-Visual,average,1,Intermediate
+319,OS,Threads,89,29,1,Audio-Visual,good,2,Advanced
+320,OS,Scheduling,39,25,4,Kinesthetic,poor,2,Advanced
+321,Python,File Handling,95,73,4,Kinesthetic,good,0,Beginner
+322,Python,Functions,75,57,3,Audio-Visual,good,0,Beginner
+323,DSA,Linked List,64,55,5,Audio-Visual,average,2,Advanced
+324,OS,Processes,88,109,2,Visual,good,0,Beginner
+325,Python,Functions,63,56,4,Visual,average,2,Advanced
+326,Python,Loops,51,38,1,Visual,average,2,Advanced
+327,DSA,Stack,47,56,1,Audio-Visual,average,1,Intermediate
+328,OS,Threads,65,58,5,Audio-Visual,average,0,Beginner
+329,CN,TCP/IP,41,27,1,Kinesthetic,average,2,Advanced
+330,Python,Loops,56,58,2,Kinesthetic,average,1,Intermediate
+331,DBMS,SQL,81,42,1,Visual,good,2,Advanced
+332,Python,OOP,63,51,1,Visual,average,2,Advanced
+333,DSA,Linked List,58,67,3,Audio-Visual,average,1,Intermediate
+334,Python,File Handling,50,18,2,Audio-Visual,average,2,Advanced
+335,CN,OSI Model,75,65,2,Visual,good,0,Beginner
+336,Python,Functions,76,69,4,Audio-Visual,good,0,Beginner
+337,CN,TCP/IP,76,45,4,Visual,good,2,Advanced
+338,Python,Loops,45,51,5,Kinesthetic,average,1,Intermediate
+339,Python,Functions,73,34,2,Kinesthetic,good,2,Advanced
+340,DBMS,Normalization,40,46,2,Audio-Visual,average,2,Advanced
+341,OS,Threads,71,36,3,Audio-Visual,good,2,Advanced
+342,CN,TCP/IP,72,79,4,Visual,good,0,Beginner
+343,DBMS,Normalization,21,56,2,Visual,poor,1,Intermediate
+344,DSA,Stack,85,69,4,Visual,good,0,Beginner
+345,DBMS,Normalization,54,52,4,Audio-Visual,average,2,Advanced
+346,Python,Functions,59,51,3,Kinesthetic,average,2,Advanced
+347,Python,Loops,43,62,1,Audio-Visual,average,1,Intermediate
+348,DSA,Arrays,57,47,4,Audio-Visual,average,2,Advanced
+349,DBMS,Joins,61,72,4,Audio-Visual,average,1,Intermediate
+350,CN,Routing,65,62,2,Kinesthetic,average,0,Beginner
+351,Python,File Handling,62,81,5,Kinesthetic,average,1,Intermediate
+352,CN,TCP/IP,59,58,3,Visual,average,1,Intermediate
+353,CN,TCP/IP,63,67,3,Audio-Visual,average,1,Intermediate
+354,DBMS,Joins,68,43,1,Audio-Visual,average,2,Advanced
+355,CN,TCP/IP,37,77,3,Kinesthetic,poor,1,Intermediate
+356,OS,Threads,63,128,2,Kinesthetic,average,1,Intermediate
+357,Python,OOP,61,14,4,Kinesthetic,average,2,Advanced
+358,CN,Routing,32,56,1,Visual,poor,1,Intermediate
+359,OS,Processes,27,37,2,Visual,poor,2,Advanced
+360,DSA,Stack,91,65,2,Kinesthetic,good,0,Beginner
+361,Python,Loops,65,60,2,Visual,average,0,Beginner
+362,DBMS,Joins,57,69,1,Kinesthetic,average,1,Intermediate
+363,CN,Routing,55,79,1,Audio-Visual,average,1,Intermediate
+364,DBMS,Joins,69,23,1,Audio-Visual,average,2,Advanced
+365,DSA,Queue,49,47,5,Audio-Visual,average,2,Advanced
+366,CN,OSI Model,69,37,5,Audio-Visual,average,2,Advanced
+367,DSA,Stack,59,76,5,Audio-Visual,average,1,Intermediate
+368,DBMS,SQL,56,47,5,Kinesthetic,average,2,Advanced
+369,OS,Processes,79,76,4,Visual,good,0,Beginner
+370,Python,File Handling,55,77,2,Audio-Visual,average,1,Intermediate
+371,Python,File Handling,80,43,5,Kinesthetic,good,2,Advanced
+372,OS,Threads,89,114,2,Audio-Visual,good,0,Beginner
+373,Python,OOP,66,101,1,Kinesthetic,average,1,Intermediate
+374,CN,OSI Model,67,25,3,Kinesthetic,average,2,Advanced
+375,Python,Loops,59,62,1,Audio-Visual,average,1,Intermediate
+376,CN,TCP/IP,48,47,3,Visual,average,2,Advanced
+377,DSA,Stack,85,83,2,Audio-Visual,good,0,Beginner
+378,OS,Processes,89,75,5,Audio-Visual,good,0,Beginner
+379,DSA,Stack,70,99,4,Kinesthetic,good,0,Beginner
+380,Python,OOP,71,58,3,Visual,good,0,Beginner
+381,OS,Threads,95,68,4,Audio-Visual,good,0,Beginner
+382,Python,Functions,73,49,5,Kinesthetic,good,2,Advanced
+383,OS,Scheduling,66,49,4,Visual,average,2,Advanced
+384,Python,File Handling,48,79,3,Visual,average,1,Intermediate
+385,DBMS,Joins,83,73,3,Audio-Visual,good,0,Beginner
+386,OS,Processes,76,95,2,Kinesthetic,good,0,Beginner
+387,CN,OSI Model,69,77,2,Kinesthetic,average,0,Beginner
+388,DBMS,SQL,69,64,4,Visual,average,0,Beginner
+389,DSA,Queue,86,43,4,Visual,good,0,Beginner
+390,CN,OSI Model,52,69,3,Audio-Visual,average,1,Intermediate
+391,Python,Loops,86,22,2,Visual,good,2,Advanced
+392,DBMS,Normalization,13,99,5,Kinesthetic,poor,1,Intermediate
+393,DBMS,Normalization,44,60,3,Visual,average,1,Intermediate
+394,Python,Functions,52,109,1,Visual,average,1,Intermediate
+395,OS,Processes,63,29,2,Audio-Visual,average,2,Advanced
+396,CN,TCP/IP,41,59,4,Visual,average,1,Intermediate
+397,DSA,Queue,100,33,5,Kinesthetic,good,0,Beginner
+398,Python,Functions,64,71,3,Kinesthetic,average,1,Intermediate
+399,DBMS,Normalization,72,32,3,Kinesthetic,good,2,Advanced
+400,Python,Functions,53,70,2,Audio-Visual,average,1,Intermediate
+401,DBMS,Normalization,60,46,1,Audio-Visual,average,2,Advanced
+402,DSA,Stack,62,52,2,Visual,average,2,Advanced
+403,CN,Routing,84,38,5,Visual,good,2,Advanced
+404,Python,Functions,74,82,1,Visual,good,0,Beginner
+405,Python,File Handling,64,81,1,Visual,average,1,Intermediate
+406,DBMS,Normalization,66,66,1,Kinesthetic,average,0,Beginner
+407,DSA,Queue,68,60,3,Audio-Visual,average,0,Beginner
+408,Python,OOP,75,39,2,Audio-Visual,good,2,Advanced
+409,CN,OSI Model,61,45,3,Visual,average,2,Advanced
+410,Python,Functions,72,45,5,Kinesthetic,good,2,Advanced
+411,CN,Routing,39,50,3,Visual,poor,1,Intermediate
+412,OS,Scheduling,92,49,4,Kinesthetic,good,0,Beginner
+413,CN,Routing,84,26,1,Visual,good,2,Advanced
+414,Python,Functions,73,10,2,Kinesthetic,good,2,Advanced
+415,OS,Threads,50,60,3,Visual,average,1,Intermediate
+416,DSA,Linked List,65,57,2,Audio-Visual,average,0,Beginner
+417,DSA,Linked List,34,56,3,Visual,poor,1,Intermediate
+418,DSA,Stack,62,63,4,Audio-Visual,average,1,Intermediate
+419,DBMS,Normalization,78,34,2,Audio-Visual,good,2,Advanced
+420,OS,Scheduling,43,47,5,Visual,average,2,Advanced
+421,DBMS,SQL,53,33,3,Kinesthetic,average,2,Advanced
+422,DBMS,SQL,38,38,3,Audio-Visual,poor,2,Advanced
+423,DBMS,Joins,39,79,3,Audio-Visual,poor,1,Intermediate
+424,DBMS,Joins,79,62,1,Kinesthetic,good,0,Beginner
+425,DSA,Arrays,66,81,5,Kinesthetic,average,1,Intermediate
+426,DSA,Queue,57,33,3,Kinesthetic,average,2,Advanced
+427,Python,OOP,69,69,1,Audio-Visual,average,0,Beginner
+428,Python,OOP,65,69,5,Kinesthetic,average,0,Beginner
+429,DBMS,Joins,56,46,3,Kinesthetic,average,2,Advanced
+430,OS,Processes,70,54,4,Visual,good,0,Beginner
+431,CN,Routing,59,36,3,Kinesthetic,average,2,Advanced
+432,CN,Routing,47,38,3,Visual,average,2,Advanced
+433,DBMS,SQL,43,99,4,Audio-Visual,average,1,Intermediate
+434,DSA,Queue,67,85,4,Visual,average,0,Beginner
+435,DSA,Linked List,91,60,1,Visual,good,0,Beginner
+436,DBMS,Joins,54,56,5,Visual,average,1,Intermediate
+437,CN,Routing,78,87,4,Audio-Visual,good,0,Beginner
+438,CN,OSI Model,50,50,2,Visual,average,2,Advanced
+439,OS,Scheduling,65,50,2,Visual,average,2,Advanced
+440,Python,Loops,79,63,3,Kinesthetic,good,0,Beginner
+441,OS,Processes,71,49,3,Kinesthetic,good,2,Advanced
+442,OS,Scheduling,38,61,3,Visual,poor,1,Intermediate
+443,DBMS,Normalization,83,61,4,Kinesthetic,good,0,Beginner
+444,CN,OSI Model,61,65,2,Visual,average,1,Intermediate
+445,DSA,Queue,70,72,3,Audio-Visual,good,0,Beginner
+446,DSA,Arrays,80,39,1,Audio-Visual,good,2,Advanced
+447,DSA,Queue,55,80,5,Audio-Visual,average,1,Intermediate
+448,DBMS,SQL,79,99,5,Visual,good,0,Beginner
+449,DBMS,Joins,76,38,1,Kinesthetic,good,2,Advanced
+450,DSA,Queue,48,44,2,Kinesthetic,average,2,Advanced
+451,CN,Routing,83,51,2,Kinesthetic,good,0,Beginner
+452,DSA,Stack,44,75,5,Visual,average,1,Intermediate
+453,DBMS,Normalization,61,62,1,Audio-Visual,average,1,Intermediate
+454,CN,TCP/IP,58,72,3,Kinesthetic,average,1,Intermediate
+455,Python,File Handling,58,43,5,Visual,average,2,Advanced
+456,DBMS,Normalization,95,66,1,Visual,good,0,Beginner
+457,OS,Scheduling,39,15,2,Visual,poor,2,Advanced
+458,CN,TCP/IP,74,70,3,Audio-Visual,good,0,Beginner
+459,DSA,Linked List,56,64,1,Visual,average,1,Intermediate
+460,Python,Functions,43,73,1,Audio-Visual,average,1,Intermediate
+461,DSA,Queue,78,43,1,Visual,good,2,Advanced
+462,CN,TCP/IP,67,45,3,Kinesthetic,average,2,Advanced
+463,CN,TCP/IP,83,66,5,Visual,good,0,Beginner
+464,OS,Threads,65,26,4,Audio-Visual,average,2,Advanced
+465,DBMS,Normalization,68,46,2,Audio-Visual,average,2,Advanced
+466,Python,OOP,67,32,2,Kinesthetic,average,2,Advanced
+467,CN,TCP/IP,57,75,2,Visual,average,1,Intermediate
+468,OS,Processes,100,70,1,Kinesthetic,good,0,Beginner
+469,OS,Scheduling,66,39,2,Audio-Visual,average,2,Advanced
+470,DBMS,SQL,100,85,2,Audio-Visual,good,0,Beginner
+471,CN,TCP/IP,47,66,2,Kinesthetic,average,1,Intermediate
+472,Python,Loops,75,32,4,Visual,good,2,Advanced
+473,OS,Threads,99,51,5,Kinesthetic,good,0,Beginner
+474,DSA,Stack,66,57,5,Kinesthetic,average,0,Beginner
+475,CN,TCP/IP,54,15,1,Audio-Visual,average,2,Advanced
+476,DSA,Queue,27,51,3,Visual,poor,1,Intermediate
+477,DSA,Queue,80,80,2,Visual,good,0,Beginner
+478,CN,Routing,78,102,4,Visual,good,0,Beginner
+479,Python,File Handling,73,66,1,Audio-Visual,good,0,Beginner
+480,Python,File Handling,52,56,5,Kinesthetic,average,1,Intermediate
+481,OS,Processes,76,56,5,Visual,good,0,Beginner
+482,OS,Processes,68,77,1,Audio-Visual,average,0,Beginner
+483,DSA,Stack,87,20,1,Visual,good,2,Advanced
+484,OS,Processes,40,59,3,Audio-Visual,average,1,Intermediate
+485,Python,OOP,97,44,4,Kinesthetic,good,0,Beginner
+486,CN,Routing,60,55,1,Visual,average,2,Advanced
+487,DBMS,Joins,55,93,4,Kinesthetic,average,1,Intermediate
+488,Python,Loops,30,50,5,Visual,poor,1,Intermediate
+489,Python,Loops,72,86,1,Kinesthetic,good,0,Beginner
+490,OS,Scheduling,91,72,1,Audio-Visual,good,0,Beginner
+491,Python,Loops,39,107,3,Kinesthetic,poor,1,Intermediate
+492,DSA,Queue,36,77,2,Visual,poor,1,Intermediate
+493,Python,Functions,66,28,1,Visual,average,2,Advanced
+494,OS,Processes,71,57,5,Kinesthetic,good,0,Beginner
+495,CN,OSI Model,40,61,1,Audio-Visual,average,1,Intermediate
+496,CN,OSI Model,100,37,1,Audio-Visual,good,0,Beginner
+497,DSA,Stack,42,54,4,Visual,average,1,Intermediate
+498,DSA,Linked List,61,27,1,Kinesthetic,average,2,Advanced
+499,CN,OSI Model,53,55,1,Audio-Visual,average,1,Intermediate
+500,OS,Threads,47,92,5,Visual,average,1,Intermediate
+501,DBMS,Normalization,73,68,3,Audio-Visual,good,0,Beginner
+502,DBMS,Normalization,53,74,4,Kinesthetic,average,1,Intermediate
+503,OS,Threads,50,67,2,Visual,average,1,Intermediate
+504,CN,TCP/IP,58,74,1,Visual,average,1,Intermediate
+505,DSA,Stack,46,61,2,Kinesthetic,average,1,Intermediate
+506,Python,Functions,73,75,2,Visual,good,0,Beginner
+507,OS,Processes,65,83,4,Audio-Visual,average,1,Intermediate
+508,DBMS,SQL,81,90,1,Visual,good,0,Beginner
+509,CN,OSI Model,36,58,2,Visual,poor,1,Intermediate
+510,OS,Scheduling,43,72,1,Visual,average,1,Intermediate
+511,OS,Threads,51,47,2,Audio-Visual,average,2,Advanced
+512,DBMS,SQL,34,76,2,Audio-Visual,poor,1,Intermediate
+513,Python,File Handling,44,68,5,Audio-Visual,average,1,Intermediate
+514,CN,TCP/IP,100,67,1,Audio-Visual,good,0,Beginner
+515,CN,Routing,58,63,2,Kinesthetic,average,1,Intermediate
+516,OS,Scheduling,57,94,1,Visual,average,1,Intermediate
+517,DBMS,Normalization,40,115,2,Visual,average,1,Intermediate
+518,CN,TCP/IP,71,78,1,Kinesthetic,good,0,Beginner
+519,DBMS,Normalization,100,48,1,Audio-Visual,good,0,Beginner
+520,OS,Scheduling,83,33,5,Kinesthetic,good,2,Advanced
+521,DSA,Arrays,94,60,2,Visual,good,0,Beginner
+522,Python,File Handling,47,79,5,Visual,average,1,Intermediate
+523,DBMS,Normalization,54,49,5,Visual,average,2,Advanced
+524,CN,TCP/IP,52,65,4,Kinesthetic,average,1,Intermediate
+525,DSA,Stack,80,28,3,Visual,good,2,Advanced
+526,DSA,Linked List,56,45,2,Visual,average,2,Advanced
+527,OS,Scheduling,64,58,1,Visual,average,0,Beginner
+528,OS,Processes,62,53,3,Visual,average,2,Advanced
+529,CN,Routing,71,85,2,Audio-Visual,good,0,Beginner
+530,DBMS,SQL,56,50,1,Visual,average,2,Advanced
+531,OS,Threads,90,66,3,Audio-Visual,good,0,Beginner
+532,DSA,Linked List,68,62,4,Kinesthetic,average,0,Beginner
+533,OS,Processes,81,45,2,Audio-Visual,good,0,Beginner
+534,Python,File Handling,78,55,3,Visual,good,0,Beginner
+535,CN,Routing,45,74,5,Audio-Visual,average,1,Intermediate
+536,DSA,Stack,45,74,3,Audio-Visual,average,1,Intermediate
+537,DSA,Stack,88,42,4,Visual,good,0,Beginner
+538,DBMS,Joins,82,81,1,Kinesthetic,good,0,Beginner
+539,DSA,Queue,68,56,2,Visual,average,0,Beginner
+540,Python,OOP,52,72,5,Audio-Visual,average,1,Intermediate
+541,DSA,Arrays,50,50,5,Visual,average,2,Advanced
+542,DBMS,Joins,73,17,3,Visual,good,2,Advanced
+543,OS,Scheduling,44,106,5,Visual,average,1,Intermediate
+544,CN,Routing,71,63,5,Kinesthetic,good,0,Beginner
+545,Python,Loops,55,77,4,Audio-Visual,average,1,Intermediate
+546,CN,OSI Model,55,32,2,Audio-Visual,average,2,Advanced
+547,CN,TCP/IP,97,71,5,Audio-Visual,good,0,Beginner
+548,Python,Functions,100,44,1,Audio-Visual,good,0,Beginner
+549,OS,Processes,70,68,3,Visual,good,0,Beginner
+550,CN,TCP/IP,66,76,4,Visual,average,0,Beginner
+551,CN,OSI Model,43,57,2,Visual,average,1,Intermediate
+552,CN,Routing,36,83,4,Kinesthetic,poor,1,Intermediate
+553,OS,Processes,72,61,5,Visual,good,0,Beginner
+554,DSA,Arrays,31,57,3,Audio-Visual,poor,1,Intermediate
+555,OS,Scheduling,77,72,5,Visual,good,0,Beginner
+556,OS,Processes,88,60,2,Kinesthetic,good,0,Beginner
+557,CN,OSI Model,92,47,2,Visual,good,0,Beginner
+558,DBMS,Joins,51,101,5,Kinesthetic,average,1,Intermediate
+559,Python,OOP,44,83,2,Kinesthetic,average,1,Intermediate
+560,OS,Processes,65,61,2,Visual,average,0,Beginner
+561,OS,Processes,48,75,4,Visual,average,1,Intermediate
+562,OS,Threads,62,81,5,Visual,average,1,Intermediate
+563,CN,Routing,69,45,1,Visual,average,2,Advanced
+564,DSA,Stack,51,77,3,Visual,average,1,Intermediate
+565,OS,Scheduling,51,70,4,Audio-Visual,average,1,Intermediate
+566,CN,OSI Model,75,52,4,Kinesthetic,good,0,Beginner
+567,Python,OOP,51,89,3,Visual,average,1,Intermediate
+568,DSA,Linked List,59,22,1,Visual,average,2,Advanced
+569,Python,File Handling,78,73,1,Kinesthetic,good,0,Beginner
+570,DSA,Linked List,62,78,1,Visual,average,1,Intermediate
+571,OS,Processes,56,78,5,Visual,average,1,Intermediate
+572,OS,Processes,57,44,5,Audio-Visual,average,2,Advanced
+573,OS,Threads,68,63,4,Visual,average,0,Beginner
+574,CN,Routing,76,45,3,Kinesthetic,good,2,Advanced
+575,OS,Scheduling,49,37,5,Audio-Visual,average,2,Advanced
+576,OS,Threads,73,62,4,Audio-Visual,good,0,Beginner
+577,OS,Processes,64,66,4,Kinesthetic,average,0,Beginner
+578,DSA,Stack,65,58,3,Audio-Visual,average,0,Beginner
+579,DSA,Stack,77,57,1,Kinesthetic,good,0,Beginner
+580,Python,Loops,73,56,2,Kinesthetic,good,0,Beginner
+581,DSA,Arrays,43,73,5,Audio-Visual,average,1,Intermediate
+582,DBMS,SQL,54,69,4,Visual,average,1,Intermediate
+583,DBMS,SQL,76,47,3,Kinesthetic,good,2,Advanced
+584,Python,OOP,48,66,3,Audio-Visual,average,1,Intermediate
+585,DBMS,Normalization,38,20,4,Visual,poor,2,Advanced
+586,DSA,Queue,100,25,2,Kinesthetic,good,2,Advanced
+587,Python,OOP,63,69,2,Kinesthetic,average,1,Intermediate
+588,DBMS,Joins,91,46,5,Audio-Visual,good,0,Beginner
+589,CN,TCP/IP,88,60,5,Audio-Visual,good,0,Beginner
+590,DBMS,SQL,73,79,5,Audio-Visual,good,0,Beginner
+591,OS,Processes,57,55,4,Audio-Visual,average,2,Advanced
+592,OS,Processes,64,93,3,Kinesthetic,average,1,Intermediate
+593,Python,File Handling,47,55,3,Kinesthetic,average,1,Intermediate
+594,DBMS,Joins,63,99,3,Visual,average,1,Intermediate
+595,Python,Loops,57,55,3,Audio-Visual,average,2,Advanced
+596,OS,Scheduling,67,50,1,Audio-Visual,average,2,Advanced
+597,DSA,Stack,66,30,3,Audio-Visual,average,2,Advanced
+598,OS,Scheduling,74,90,3,Visual,good,0,Beginner
+599,DSA,Queue,47,32,1,Visual,average,2,Advanced
+600,CN,TCP/IP,79,16,3,Audio-Visual,good,2,Advanced
+601,CN,TCP/IP,60,58,4,Kinesthetic,average,1,Intermediate
+602,Python,OOP,63,55,4,Audio-Visual,average,2,Advanced
+603,DSA,Arrays,100,63,5,Kinesthetic,good,0,Beginner
+604,DBMS,SQL,78,62,2,Audio-Visual,good,0,Beginner
+605,DBMS,Joins,67,36,1,Audio-Visual,average,2,Advanced
+606,OS,Processes,31,62,4,Audio-Visual,poor,1,Intermediate
+607,CN,OSI Model,74,103,3,Visual,good,0,Beginner
+608,DBMS,Joins,100,83,3,Audio-Visual,good,0,Beginner
+609,OS,Threads,81,59,5,Kinesthetic,good,0,Beginner
+610,CN,Routing,74,30,2,Kinesthetic,good,2,Advanced
+611,CN,OSI Model,34,66,3,Visual,poor,1,Intermediate
+612,DBMS,SQL,45,50,1,Visual,average,2,Advanced
+613,CN,OSI Model,92,44,4,Audio-Visual,good,0,Beginner
+614,CN,TCP/IP,68,43,5,Audio-Visual,average,2,Advanced
+615,OS,Threads,75,15,4,Audio-Visual,good,2,Advanced
+616,Python,Functions,67,63,5,Audio-Visual,average,0,Beginner
+617,DBMS,Normalization,100,57,2,Visual,good,0,Beginner
+618,CN,TCP/IP,84,40,1,Visual,good,2,Advanced
+619,Python,OOP,63,52,4,Kinesthetic,average,2,Advanced
+620,DBMS,SQL,64,59,3,Visual,average,0,Beginner
+621,CN,OSI Model,76,44,1,Visual,good,2,Advanced
+622,DBMS,SQL,52,77,4,Kinesthetic,average,1,Intermediate
+623,OS,Threads,64,67,3,Audio-Visual,average,0,Beginner
+624,CN,Routing,38,83,3,Audio-Visual,poor,1,Intermediate
+625,DSA,Queue,62,75,3,Kinesthetic,average,1,Intermediate
+626,OS,Threads,42,58,1,Visual,average,1,Intermediate
+627,OS,Threads,64,60,1,Visual,average,0,Beginner
+628,DBMS,Normalization,65,63,1,Visual,average,0,Beginner
+629,CN,TCP/IP,66,70,1,Visual,average,0,Beginner
+630,DSA,Queue,46,50,2,Audio-Visual,average,2,Advanced
+631,DBMS,Normalization,75,46,2,Audio-Visual,good,2,Advanced
+632,DBMS,Joins,54,63,2,Kinesthetic,average,1,Intermediate
+633,OS,Threads,52,42,4,Visual,average,2,Advanced
+634,DSA,Linked List,44,18,4,Kinesthetic,average,2,Advanced
+635,CN,TCP/IP,51,69,4,Kinesthetic,average,1,Intermediate
+636,OS,Processes,27,55,3,Audio-Visual,poor,1,Intermediate
+637,CN,OSI Model,76,49,3,Visual,good,0,Beginner
+638,DBMS,Joins,96,69,3,Kinesthetic,good,0,Beginner
+639,DBMS,SQL,52,55,2,Audio-Visual,average,1,Intermediate
+640,DBMS,SQL,41,67,5,Audio-Visual,average,1,Intermediate
+641,OS,Processes,100,50,5,Audio-Visual,good,0,Beginner
+642,DSA,Stack,55,10,3,Visual,average,2,Advanced
+643,OS,Processes,64,50,4,Visual,average,2,Advanced
+644,CN,OSI Model,84,66,1,Visual,good,0,Beginner
+645,DSA,Queue,58,70,1,Kinesthetic,average,1,Intermediate
+646,CN,OSI Model,83,50,2,Visual,good,0,Beginner
+647,CN,OSI Model,84,63,1,Audio-Visual,good,0,Beginner
+648,DBMS,Normalization,40,61,3,Audio-Visual,average,1,Intermediate
+649,CN,Routing,63,45,2,Audio-Visual,average,2,Advanced
+650,OS,Processes,63,36,4,Kinesthetic,average,2,Advanced
+651,OS,Processes,76,53,3,Audio-Visual,good,0,Beginner
+652,Python,OOP,100,38,1,Visual,good,0,Beginner
+653,DBMS,SQL,79,33,1,Kinesthetic,good,2,Advanced
+654,DSA,Arrays,64,59,5,Audio-Visual,average,0,Beginner
+655,Python,File Handling,57,80,4,Visual,average,1,Intermediate
+656,OS,Threads,59,68,1,Visual,average,1,Intermediate
+657,Python,OOP,79,62,3,Kinesthetic,good,0,Beginner
+658,DSA,Stack,49,63,2,Kinesthetic,average,1,Intermediate
+659,Python,Loops,26,48,3,Kinesthetic,poor,1,Intermediate
+660,OS,Processes,63,45,4,Kinesthetic,average,2,Advanced
+661,DSA,Arrays,71,29,4,Audio-Visual,good,2,Advanced
+662,OS,Scheduling,76,57,1,Visual,good,0,Beginner
+663,DSA,Arrays,50,59,4,Kinesthetic,average,1,Intermediate
+664,CN,Routing,56,66,1,Kinesthetic,average,1,Intermediate
+665,DBMS,Normalization,67,68,2,Audio-Visual,average,0,Beginner
+666,DBMS,SQL,71,44,2,Visual,good,2,Advanced
+667,DSA,Stack,76,96,3,Kinesthetic,good,0,Beginner
+668,DBMS,SQL,60,95,4,Kinesthetic,average,1,Intermediate
+669,Python,Functions,66,29,4,Kinesthetic,average,2,Advanced
+670,DSA,Queue,67,72,2,Kinesthetic,average,0,Beginner
+671,DSA,Linked List,85,102,1,Visual,good,0,Beginner
+672,DSA,Queue,68,46,3,Visual,average,2,Advanced
+673,OS,Processes,90,10,4,Visual,good,2,Advanced
+674,CN,Routing,78,71,2,Kinesthetic,good,0,Beginner
+675,OS,Threads,74,62,5,Kinesthetic,good,0,Beginner
+676,Python,File Handling,68,19,4,Kinesthetic,average,2,Advanced
+677,DBMS,SQL,68,45,1,Kinesthetic,average,2,Advanced
+678,OS,Threads,53,64,1,Visual,average,1,Intermediate
+679,DBMS,SQL,53,72,1,Kinesthetic,average,1,Intermediate
+680,OS,Scheduling,42,58,5,Visual,average,1,Intermediate
+681,Python,OOP,65,80,4,Audio-Visual,average,1,Intermediate
+682,DBMS,SQL,48,51,4,Audio-Visual,average,2,Advanced
+683,CN,OSI Model,62,56,2,Visual,average,2,Advanced
+684,DSA,Linked List,76,72,3,Audio-Visual,good,0,Beginner
+685,DBMS,Joins,45,71,1,Kinesthetic,average,1,Intermediate
+686,CN,OSI Model,64,71,4,Kinesthetic,average,1,Intermediate
+687,CN,TCP/IP,73,41,1,Audio-Visual,good,2,Advanced
+688,OS,Processes,77,70,3,Audio-Visual,good,0,Beginner
+689,DBMS,Joins,42,82,5,Audio-Visual,average,1,Intermediate
+690,Python,OOP,71,57,4,Audio-Visual,good,0,Beginner
+691,Python,OOP,61,76,3,Kinesthetic,average,1,Intermediate
+692,DBMS,SQL,66,78,1,Visual,average,0,Beginner
+693,DSA,Linked List,75,53,1,Audio-Visual,good,0,Beginner
+694,CN,Routing,63,66,2,Kinesthetic,average,1,Intermediate
+695,Python,Functions,62,45,3,Visual,average,2,Advanced
+696,DBMS,SQL,67,65,3,Kinesthetic,average,0,Beginner
+697,OS,Processes,74,63,3,Visual,good,0,Beginner
+698,OS,Scheduling,85,47,1,Visual,good,0,Beginner
+699,CN,TCP/IP,83,90,1,Kinesthetic,good,0,Beginner
+700,CN,Routing,57,49,2,Visual,average,2,Advanced
+701,CN,OSI Model,82,53,3,Kinesthetic,good,0,Beginner
+702,DBMS,SQL,35,59,5,Kinesthetic,poor,1,Intermediate
+703,CN,Routing,43,28,1,Visual,average,2,Advanced
+704,DSA,Queue,68,60,3,Audio-Visual,average,0,Beginner
+705,DSA,Linked List,65,83,2,Kinesthetic,average,1,Intermediate
+706,OS,Processes,54,50,4,Visual,average,2,Advanced
+707,OS,Processes,53,49,3,Visual,average,2,Advanced
+708,OS,Scheduling,48,27,5,Kinesthetic,average,2,Advanced
+709,DBMS,SQL,58,27,1,Audio-Visual,average,2,Advanced
+710,DBMS,Joins,51,36,3,Visual,average,2,Advanced
+711,CN,Routing,64,39,2,Audio-Visual,average,2,Advanced
+712,Python,OOP,52,57,5,Kinesthetic,average,1,Intermediate
+713,Python,Loops,68,86,5,Visual,average,0,Beginner
+714,DSA,Arrays,60,56,5,Kinesthetic,average,2,Advanced
+715,DBMS,Joins,23,40,1,Audio-Visual,poor,2,Advanced
+716,DBMS,Normalization,46,85,3,Visual,average,1,Intermediate
+717,OS,Scheduling,48,56,3,Audio-Visual,average,1,Intermediate
+718,Python,Loops,62,90,4,Visual,average,1,Intermediate
+719,DBMS,SQL,66,74,4,Visual,average,0,Beginner
+720,DSA,Arrays,53,76,5,Audio-Visual,average,1,Intermediate
+721,OS,Scheduling,50,59,3,Audio-Visual,average,1,Intermediate
+722,OS,Processes,69,31,2,Audio-Visual,average,2,Advanced
+723,Python,Functions,27,32,1,Visual,poor,2,Advanced
+724,OS,Threads,49,13,2,Audio-Visual,average,2,Advanced
+725,CN,TCP/IP,65,61,5,Kinesthetic,average,0,Beginner
+726,OS,Scheduling,44,56,4,Kinesthetic,average,1,Intermediate
+727,DSA,Arrays,65,21,5,Visual,average,2,Advanced
+728,DSA,Queue,95,83,2,Kinesthetic,good,0,Beginner
+729,DSA,Linked List,79,47,4,Visual,good,0,Beginner
+730,DBMS,SQL,58,80,3,Visual,average,1,Intermediate
+731,DBMS,Normalization,82,29,2,Visual,good,2,Advanced
+732,Python,Functions,57,55,2,Kinesthetic,average,2,Advanced
+733,OS,Scheduling,53,35,2,Visual,average,2,Advanced
+734,DSA,Queue,46,43,5,Audio-Visual,average,2,Advanced
+735,CN,Routing,95,67,4,Kinesthetic,good,0,Beginner
+736,DSA,Arrays,38,51,3,Kinesthetic,poor,1,Intermediate
+737,OS,Processes,93,79,2,Audio-Visual,good,0,Beginner
+738,DSA,Arrays,100,10,3,Kinesthetic,good,2,Advanced
+739,CN,Routing,76,48,5,Kinesthetic,good,0,Beginner
+740,Python,OOP,25,49,3,Audio-Visual,poor,1,Intermediate
+741,CN,Routing,20,47,5,Visual,poor,1,Intermediate
+742,OS,Threads,53,93,1,Visual,average,1,Intermediate
+743,Python,OOP,66,70,1,Kinesthetic,average,0,Beginner
+744,DBMS,Normalization,11,53,1,Kinesthetic,poor,1,Intermediate
+745,DSA,Queue,65,51,2,Kinesthetic,average,2,Advanced
+746,DSA,Linked List,74,71,1,Kinesthetic,good,0,Beginner
+747,DSA,Arrays,77,82,5,Kinesthetic,good,0,Beginner
+748,DBMS,Normalization,61,34,3,Kinesthetic,average,2,Advanced
+749,Python,Functions,57,91,1,Visual,average,1,Intermediate
+750,OS,Processes,100,53,5,Kinesthetic,good,0,Beginner
+751,OS,Scheduling,34,56,2,Visual,poor,1,Intermediate
+752,DSA,Arrays,47,65,2,Audio-Visual,average,1,Intermediate
+753,DSA,Arrays,69,26,1,Visual,average,2,Advanced
+754,CN,TCP/IP,64,85,5,Kinesthetic,average,1,Intermediate
+755,CN,TCP/IP,43,56,1,Visual,average,1,Intermediate
+756,DBMS,Normalization,60,49,5,Audio-Visual,average,2,Advanced
+757,DBMS,Joins,57,53,2,Visual,average,2,Advanced
+758,CN,OSI Model,54,50,1,Visual,average,2,Advanced
+759,CN,TCP/IP,29,48,3,Kinesthetic,poor,1,Intermediate
+760,Python,File Handling,72,92,2,Visual,good,0,Beginner
+761,CN,Routing,53,53,4,Audio-Visual,average,2,Advanced
+762,Python,Functions,65,56,1,Visual,average,0,Beginner
+763,DBMS,SQL,83,79,3,Visual,good,0,Beginner
+764,DBMS,Joins,62,50,1,Audio-Visual,average,2,Advanced
+765,DBMS,Normalization,65,51,3,Audio-Visual,average,2,Advanced
+766,DSA,Arrays,57,66,3,Visual,average,1,Intermediate
+767,DSA,Linked List,85,58,5,Audio-Visual,good,0,Beginner
+768,Python,File Handling,91,58,1,Kinesthetic,good,0,Beginner
+769,CN,TCP/IP,63,72,1,Kinesthetic,average,1,Intermediate
+770,DSA,Stack,62,42,5,Visual,average,2,Advanced
+771,DSA,Arrays,29,56,2,Kinesthetic,poor,1,Intermediate
+772,DSA,Arrays,84,32,2,Audio-Visual,good,2,Advanced
+773,OS,Processes,61,32,3,Kinesthetic,average,2,Advanced
+774,Python,Functions,40,84,4,Visual,average,1,Intermediate
+775,OS,Threads,9,62,4,Kinesthetic,poor,1,Intermediate
+776,DBMS,SQL,58,10,1,Kinesthetic,average,2,Advanced
+777,DBMS,Joins,76,65,4,Kinesthetic,good,0,Beginner
+778,CN,Routing,65,56,2,Audio-Visual,average,0,Beginner
+779,CN,OSI Model,50,34,2,Kinesthetic,average,2,Advanced
+780,Python,Loops,54,61,4,Audio-Visual,average,1,Intermediate
+781,Python,OOP,71,54,4,Audio-Visual,good,0,Beginner
+782,DBMS,Normalization,43,72,4,Audio-Visual,average,1,Intermediate
+783,DSA,Queue,99,84,1,Audio-Visual,good,0,Beginner
+784,DSA,Stack,100,31,2,Audio-Visual,good,2,Advanced
+785,Python,Loops,72,37,2,Audio-Visual,good,2,Advanced
+786,Python,OOP,69,109,3,Audio-Visual,average,1,Intermediate
+787,CN,OSI Model,100,42,5,Kinesthetic,good,0,Beginner
+788,Python,Functions,82,92,2,Visual,good,0,Beginner
+789,Python,File Handling,79,73,2,Audio-Visual,good,0,Beginner
+790,CN,TCP/IP,74,74,2,Visual,good,0,Beginner
+791,Python,File Handling,50,37,1,Audio-Visual,average,2,Advanced
+792,DBMS,Joins,50,49,4,Kinesthetic,average,2,Advanced
+793,Python,OOP,88,79,4,Audio-Visual,good,0,Beginner
+794,DBMS,Normalization,82,39,1,Audio-Visual,good,2,Advanced
+795,CN,Routing,90,41,3,Visual,good,0,Beginner
+796,Python,Loops,76,52,1,Kinesthetic,good,0,Beginner
+797,OS,Threads,57,46,4,Audio-Visual,average,2,Advanced
+798,Python,Loops,98,80,1,Visual,good,0,Beginner
+799,Python,OOP,35,12,1,Kinesthetic,poor,2,Advanced
+800,OS,Processes,45,47,2,Audio-Visual,average,2,Advanced

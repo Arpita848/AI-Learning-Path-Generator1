@@ -1,0 +1,1028 @@
+student_id,subject,topic,score,time_spent,attempts,learning_style,quiz_performance,learning_style_encoded,cluster,learner_group
+1,DSA,Queue,59,66,3,Kinesthetic,average,2,2,Consistent Learner
+2,Python,OOP,74,15,1,Kinesthetic,good,2,1,Struggling Learner
+3,DBMS,SQL,85,10,5,Visual,good,0,2,Consistent Learner
+4,DBMS,Joins,88,50,2,Kinesthetic,good,2,1,Struggling Learner
+5,CN,Routing,86,102,2,Audio-Visual,good,1,0,Fast Learner
+6,OS,Processes,51,41,5,Kinesthetic,average,2,2,Consistent Learner
+7,CN,OSI Model,38,57,5,Audio-Visual,poor,1,2,Consistent Learner
+8,CN,OSI Model,76,32,3,Visual,good,0,1,Struggling Learner
+9,OS,Scheduling,56,51,4,Kinesthetic,average,2,2,Consistent Learner
+10,CN,OSI Model,52,60,2,Audio-Visual,average,1,1,Struggling Learner
+11,CN,TCP/IP,45,53,4,Visual,average,0,2,Consistent Learner
+12,DBMS,Joins,61,42,1,Kinesthetic,average,2,1,Struggling Learner
+13,OS,Scheduling,63,75,2,Audio-Visual,average,1,1,Struggling Learner
+14,CN,TCP/IP,42,64,1,Kinesthetic,average,2,1,Struggling Learner
+15,DSA,Stack,68,52,5,Audio-Visual,average,1,2,Consistent Learner
+16,DBMS,SQL,84,56,1,Visual,good,0,1,Struggling Learner
+17,OS,Threads,60,33,4,Kinesthetic,average,2,2,Consistent Learner
+18,OS,Scheduling,33,51,1,Audio-Visual,poor,1,1,Struggling Learner
+19,OS,Scheduling,100,62,3,Visual,good,0,1,Struggling Learner
+20,CN,Routing,56,90,5,Kinesthetic,average,2,2,Consistent Learner
+21,CN,Routing,83,79,3,Audio-Visual,good,1,0,Fast Learner
+22,DBMS,Joins,74,63,4,Visual,good,0,2,Consistent Learner
+23,CN,TCP/IP,92,44,3,Visual,good,0,1,Struggling Learner
+24,CN,OSI Model,38,78,4,Kinesthetic,poor,2,2,Consistent Learner
+25,DSA,Stack,38,85,5,Kinesthetic,poor,2,2,Consistent Learner
+26,Python,Functions,62,56,4,Audio-Visual,average,1,2,Consistent Learner
+27,Python,OOP,50,59,3,Visual,average,0,1,Struggling Learner
+28,OS,Threads,70,84,3,Audio-Visual,good,1,2,Consistent Learner
+29,OS,Scheduling,73,81,1,Kinesthetic,good,2,1,Struggling Learner
+30,DSA,Arrays,54,73,3,Audio-Visual,average,1,2,Consistent Learner
+31,Python,Loops,42,47,2,Kinesthetic,average,2,1,Struggling Learner
+32,DSA,Linked List,55,71,2,Kinesthetic,average,2,1,Struggling Learner
+33,CN,Routing,76,86,3,Visual,good,0,0,Fast Learner
+34,Python,File Handling,81,26,5,Kinesthetic,good,2,2,Consistent Learner
+35,CN,TCP/IP,67,56,5,Visual,average,0,2,Consistent Learner
+36,Python,OOP,43,74,3,Visual,average,0,1,Struggling Learner
+37,CN,Routing,60,81,2,Visual,average,0,1,Struggling Learner
+38,DSA,Queue,92,53,2,Visual,good,0,1,Struggling Learner
+39,CN,TCP/IP,49,38,3,Audio-Visual,average,1,2,Consistent Learner
+40,Python,File Handling,92,38,3,Audio-Visual,good,1,2,Consistent Learner
+41,OS,Scheduling,100,44,4,Audio-Visual,good,1,2,Consistent Learner
+42,Python,OOP,82,27,3,Visual,good,0,1,Struggling Learner
+43,OS,Processes,55,60,1,Visual,average,0,1,Struggling Learner
+44,OS,Scheduling,96,37,1,Kinesthetic,good,2,1,Struggling Learner
+45,Python,OOP,34,58,3,Visual,poor,0,1,Struggling Learner
+46,DSA,Stack,59,19,1,Visual,average,0,1,Struggling Learner
+47,OS,Scheduling,54,32,5,Kinesthetic,average,2,2,Consistent Learner
+48,CN,Routing,51,60,2,Visual,average,0,1,Struggling Learner
+49,OS,Scheduling,91,61,1,Audio-Visual,good,1,1,Struggling Learner
+50,DBMS,Joins,55,19,3,Kinesthetic,average,2,2,Consistent Learner
+51,Python,OOP,83,44,2,Visual,good,0,1,Struggling Learner
+52,OS,Threads,61,19,1,Kinesthetic,average,2,1,Struggling Learner
+53,DBMS,SQL,80,17,2,Kinesthetic,good,2,1,Struggling Learner
+54,OS,Threads,29,23,5,Audio-Visual,poor,1,2,Consistent Learner
+55,DBMS,SQL,74,95,3,Kinesthetic,good,2,0,Fast Learner
+56,DSA,Linked List,27,54,2,Kinesthetic,poor,2,1,Struggling Learner
+57,CN,TCP/IP,33,65,3,Visual,poor,0,1,Struggling Learner
+58,Python,File Handling,50,84,5,Visual,average,0,2,Consistent Learner
+59,CN,Routing,51,68,2,Visual,average,0,1,Struggling Learner
+60,Python,Loops,93,45,4,Visual,good,0,2,Consistent Learner
+61,CN,OSI Model,60,85,5,Visual,average,0,2,Consistent Learner
+62,DBMS,Normalization,78,77,3,Visual,good,0,1,Struggling Learner
+63,Python,Loops,66,59,3,Visual,average,0,1,Struggling Learner
+64,Python,OOP,36,74,1,Kinesthetic,poor,2,1,Struggling Learner
+65,OS,Processes,31,85,1,Audio-Visual,poor,1,1,Struggling Learner
+66,DBMS,Normalization,79,23,1,Audio-Visual,good,1,1,Struggling Learner
+67,DSA,Queue,84,57,3,Kinesthetic,good,2,2,Consistent Learner
+68,OS,Threads,71,77,1,Kinesthetic,good,2,1,Struggling Learner
+69,CN,Routing,32,96,4,Kinesthetic,poor,2,2,Consistent Learner
+70,OS,Processes,74,52,2,Visual,good,0,1,Struggling Learner
+71,OS,Threads,56,44,4,Kinesthetic,average,2,2,Consistent Learner
+72,DBMS,SQL,50,42,1,Audio-Visual,average,1,1,Struggling Learner
+73,Python,Functions,99,50,2,Kinesthetic,good,2,1,Struggling Learner
+74,CN,Routing,67,62,3,Audio-Visual,average,1,2,Consistent Learner
+75,DBMS,SQL,78,38,5,Visual,good,0,2,Consistent Learner
+76,DBMS,Normalization,41,68,1,Kinesthetic,average,2,1,Struggling Learner
+77,DBMS,Normalization,39,51,4,Audio-Visual,poor,1,2,Consistent Learner
+78,DSA,Arrays,48,59,5,Audio-Visual,average,1,2,Consistent Learner
+79,CN,Routing,60,61,2,Kinesthetic,average,2,1,Struggling Learner
+80,Python,File Handling,68,37,4,Kinesthetic,average,2,2,Consistent Learner
+81,OS,Threads,66,63,4,Kinesthetic,average,2,2,Consistent Learner
+82,DSA,Stack,94,51,2,Kinesthetic,good,2,1,Struggling Learner
+83,OS,Processes,31,81,5,Kinesthetic,poor,2,2,Consistent Learner
+84,DBMS,Normalization,65,59,2,Visual,average,0,1,Struggling Learner
+85,CN,Routing,70,26,5,Visual,good,0,2,Consistent Learner
+86,DBMS,Joins,66,67,5,Visual,average,0,2,Consistent Learner
+87,Python,Functions,57,98,5,Audio-Visual,average,1,2,Consistent Learner
+88,CN,Routing,58,67,1,Kinesthetic,average,2,1,Struggling Learner
+89,Python,File Handling,76,85,5,Audio-Visual,good,1,2,Consistent Learner
+90,CN,Routing,40,81,4,Audio-Visual,average,1,2,Consistent Learner
+91,DSA,Queue,44,43,2,Kinesthetic,average,2,1,Struggling Learner
+92,DSA,Stack,79,78,5,Visual,good,0,2,Consistent Learner
+93,Python,Loops,84,70,5,Kinesthetic,good,2,2,Consistent Learner
+94,Python,File Handling,44,10,4,Audio-Visual,average,1,2,Consistent Learner
+95,DSA,Linked List,74,69,4,Audio-Visual,good,1,2,Consistent Learner
+96,CN,OSI Model,36,39,2,Kinesthetic,poor,2,1,Struggling Learner
+97,Python,File Handling,45,46,2,Audio-Visual,average,1,1,Struggling Learner
+98,OS,Threads,85,35,3,Audio-Visual,good,1,2,Consistent Learner
+99,CN,OSI Model,84,61,1,Audio-Visual,good,1,1,Struggling Learner
+100,Python,File Handling,67,119,1,Kinesthetic,average,2,0,Fast Learner
+101,CN,Routing,57,74,2,Audio-Visual,average,1,1,Struggling Learner
+102,CN,TCP/IP,49,59,1,Visual,average,0,1,Struggling Learner
+103,DBMS,SQL,10,59,2,Audio-Visual,poor,1,1,Struggling Learner
+104,Python,File Handling,64,52,1,Kinesthetic,average,2,1,Struggling Learner
+105,DSA,Queue,15,72,4,Audio-Visual,poor,1,2,Consistent Learner
+106,DBMS,SQL,61,49,1,Audio-Visual,average,1,1,Struggling Learner
+107,Python,OOP,38,74,2,Audio-Visual,poor,1,1,Struggling Learner
+108,OS,Processes,70,78,4,Kinesthetic,good,2,2,Consistent Learner
+109,CN,OSI Model,43,58,5,Audio-Visual,average,1,2,Consistent Learner
+110,CN,Routing,61,66,2,Audio-Visual,average,1,1,Struggling Learner
+111,CN,OSI Model,45,39,1,Kinesthetic,average,2,1,Struggling Learner
+112,Python,Functions,83,81,3,Kinesthetic,good,2,2,Consistent Learner
+113,CN,OSI Model,45,66,3,Audio-Visual,average,1,2,Consistent Learner
+114,Python,OOP,47,78,1,Kinesthetic,average,2,1,Struggling Learner
+115,CN,Routing,69,89,5,Visual,average,0,2,Consistent Learner
+116,CN,Routing,39,103,2,Visual,poor,0,1,Struggling Learner
+117,Python,Loops,56,52,4,Kinesthetic,average,2,2,Consistent Learner
+118,CN,TCP/IP,83,48,3,Kinesthetic,good,2,2,Consistent Learner
+119,DSA,Stack,79,38,1,Kinesthetic,good,2,1,Struggling Learner
+120,OS,Processes,54,63,2,Visual,average,0,1,Struggling Learner
+121,DBMS,Normalization,61,67,4,Audio-Visual,average,1,2,Consistent Learner
+122,DBMS,Joins,54,60,2,Visual,average,0,1,Struggling Learner
+123,DSA,Arrays,39,73,2,Audio-Visual,poor,1,1,Struggling Learner
+124,DSA,Linked List,69,55,3,Audio-Visual,average,1,2,Consistent Learner
+125,DBMS,Normalization,53,56,5,Kinesthetic,average,2,2,Consistent Learner
+126,CN,OSI Model,75,32,1,Visual,good,0,1,Struggling Learner
+127,DSA,Arrays,71,60,5,Kinesthetic,good,2,2,Consistent Learner
+128,CN,OSI Model,100,78,4,Kinesthetic,good,2,2,Consistent Learner
+129,Python,File Handling,57,92,1,Visual,average,0,1,Struggling Learner
+130,Python,Loops,58,46,3,Kinesthetic,average,2,2,Consistent Learner
+131,OS,Processes,61,45,1,Visual,average,0,1,Struggling Learner
+132,CN,Routing,65,88,3,Visual,average,0,0,Fast Learner
+133,DSA,Queue,93,60,2,Visual,good,0,1,Struggling Learner
+134,CN,TCP/IP,54,92,1,Audio-Visual,average,1,1,Struggling Learner
+135,CN,TCP/IP,60,40,1,Visual,average,0,1,Struggling Learner
+136,DBMS,SQL,86,43,1,Visual,good,0,1,Struggling Learner
+137,DBMS,Joins,41,25,4,Visual,average,0,2,Consistent Learner
+138,Python,Functions,42,38,3,Kinesthetic,average,2,2,Consistent Learner
+139,Python,OOP,29,78,1,Kinesthetic,poor,2,1,Struggling Learner
+140,Python,Loops,92,16,4,Visual,good,0,2,Consistent Learner
+141,DBMS,Normalization,77,33,2,Kinesthetic,good,2,1,Struggling Learner
+142,CN,TCP/IP,31,49,3,Visual,poor,0,1,Struggling Learner
+143,DBMS,Joins,91,48,4,Audio-Visual,good,1,2,Consistent Learner
+144,DSA,Stack,71,53,5,Visual,good,0,2,Consistent Learner
+145,CN,OSI Model,94,38,4,Visual,good,0,2,Consistent Learner
+146,OS,Threads,54,82,3,Audio-Visual,average,1,2,Consistent Learner
+147,DBMS,Normalization,82,50,1,Visual,good,0,1,Struggling Learner
+148,CN,OSI Model,55,46,1,Kinesthetic,average,2,1,Struggling Learner
+149,CN,OSI Model,48,78,1,Audio-Visual,average,1,1,Struggling Learner
+150,OS,Threads,42,80,3,Kinesthetic,average,2,2,Consistent Learner
+151,OS,Scheduling,76,62,1,Kinesthetic,good,2,1,Struggling Learner
+152,DSA,Queue,62,66,5,Kinesthetic,average,2,2,Consistent Learner
+153,DSA,Arrays,58,44,2,Visual,average,0,1,Struggling Learner
+154,CN,OSI Model,77,63,2,Kinesthetic,good,2,1,Struggling Learner
+155,OS,Processes,65,39,4,Audio-Visual,average,1,2,Consistent Learner
+156,CN,OSI Model,76,50,4,Visual,good,0,2,Consistent Learner
+157,Python,Functions,51,61,2,Kinesthetic,average,2,1,Struggling Learner
+158,Python,Loops,36,81,1,Visual,poor,0,1,Struggling Learner
+159,DSA,Stack,72,69,3,Audio-Visual,good,1,2,Consistent Learner
+160,DSA,Linked List,60,60,3,Kinesthetic,average,2,2,Consistent Learner
+161,Python,File Handling,60,43,4,Visual,average,0,2,Consistent Learner
+162,Python,File Handling,64,35,5,Kinesthetic,average,2,2,Consistent Learner
+163,CN,Routing,34,16,2,Audio-Visual,poor,1,1,Struggling Learner
+164,DBMS,Joins,56,55,3,Audio-Visual,average,1,2,Consistent Learner
+165,Python,Functions,65,38,1,Audio-Visual,average,1,1,Struggling Learner
+166,DSA,Queue,67,63,2,Visual,average,0,1,Struggling Learner
+167,CN,TCP/IP,31,74,4,Audio-Visual,poor,1,2,Consistent Learner
+168,Python,Functions,75,27,3,Visual,good,0,1,Struggling Learner
+169,OS,Scheduling,100,75,2,Visual,good,0,0,Fast Learner
+170,OS,Processes,56,81,1,Kinesthetic,average,2,1,Struggling Learner
+171,OS,Processes,43,49,3,Audio-Visual,average,1,2,Consistent Learner
+172,CN,Routing,35,35,4,Visual,poor,0,2,Consistent Learner
+173,DBMS,Joins,62,56,2,Audio-Visual,average,1,1,Struggling Learner
+174,CN,OSI Model,68,49,1,Kinesthetic,average,2,1,Struggling Learner
+175,CN,TCP/IP,57,56,1,Audio-Visual,average,1,1,Struggling Learner
+176,OS,Threads,100,67,2,Visual,good,0,1,Struggling Learner
+177,CN,Routing,42,62,5,Audio-Visual,average,1,2,Consistent Learner
+178,DSA,Queue,44,56,5,Visual,average,0,2,Consistent Learner
+179,Python,Loops,27,93,2,Kinesthetic,poor,2,1,Struggling Learner
+180,DBMS,Normalization,96,80,2,Visual,good,0,0,Fast Learner
+181,DBMS,SQL,83,36,5,Audio-Visual,good,1,2,Consistent Learner
+182,Python,OOP,55,52,3,Kinesthetic,average,2,2,Consistent Learner
+183,Python,File Handling,45,78,3,Visual,average,0,1,Struggling Learner
+184,CN,Routing,66,41,5,Kinesthetic,average,2,2,Consistent Learner
+185,DBMS,Normalization,64,60,3,Audio-Visual,average,1,2,Consistent Learner
+186,OS,Scheduling,54,50,5,Kinesthetic,average,2,2,Consistent Learner
+187,DSA,Stack,100,57,1,Visual,good,0,1,Struggling Learner
+188,Python,Functions,37,55,4,Audio-Visual,poor,1,2,Consistent Learner
+189,OS,Processes,48,74,4,Visual,average,0,2,Consistent Learner
+190,DSA,Stack,69,54,4,Audio-Visual,average,1,2,Consistent Learner
+191,DBMS,Joins,47,60,2,Kinesthetic,average,2,1,Struggling Learner
+192,OS,Processes,41,47,2,Audio-Visual,average,1,1,Struggling Learner
+193,DSA,Queue,65,49,3,Kinesthetic,average,2,2,Consistent Learner
+194,Python,File Handling,63,72,2,Kinesthetic,average,2,1,Struggling Learner
+195,CN,Routing,75,59,1,Audio-Visual,good,1,1,Struggling Learner
+196,DSA,Arrays,63,90,5,Visual,average,0,2,Consistent Learner
+197,OS,Threads,42,76,4,Kinesthetic,average,2,2,Consistent Learner
+198,Python,OOP,63,66,5,Visual,average,0,2,Consistent Learner
+199,DBMS,Normalization,47,47,1,Audio-Visual,average,1,1,Struggling Learner
+200,CN,TCP/IP,49,54,5,Audio-Visual,average,1,2,Consistent Learner
+201,DBMS,Joins,71,76,5,Visual,good,0,2,Consistent Learner
+202,OS,Threads,67,78,5,Visual,average,0,2,Consistent Learner
+203,OS,Threads,86,51,1,Visual,good,0,1,Struggling Learner
+204,DBMS,Normalization,64,28,2,Kinesthetic,average,2,1,Struggling Learner
+205,Python,File Handling,70,106,4,Kinesthetic,good,2,2,Consistent Learner
+206,DSA,Queue,62,71,5,Audio-Visual,average,1,2,Consistent Learner
+207,Python,Loops,57,33,2,Kinesthetic,average,2,1,Struggling Learner
+208,CN,OSI Model,70,44,2,Visual,good,0,1,Struggling Learner
+209,DBMS,SQL,62,40,4,Kinesthetic,average,2,2,Consistent Learner
+210,Python,OOP,80,53,2,Audio-Visual,good,1,1,Struggling Learner
+211,Python,File Handling,58,83,2,Visual,average,0,1,Struggling Learner
+212,DSA,Linked List,64,59,5,Audio-Visual,average,1,2,Consistent Learner
+213,OS,Scheduling,72,73,4,Kinesthetic,good,2,2,Consistent Learner
+214,DBMS,Joins,18,45,4,Audio-Visual,poor,1,2,Consistent Learner
+215,DSA,Stack,73,58,3,Kinesthetic,good,2,2,Consistent Learner
+216,DBMS,Normalization,26,63,3,Audio-Visual,poor,1,2,Consistent Learner
+217,DSA,Stack,73,75,1,Kinesthetic,good,2,1,Struggling Learner
+218,DSA,Queue,71,26,3,Visual,good,0,1,Struggling Learner
+219,CN,OSI Model,100,62,5,Visual,good,0,2,Consistent Learner
+220,CN,Routing,61,47,2,Visual,average,0,1,Struggling Learner
+221,Python,Functions,65,64,3,Kinesthetic,average,2,2,Consistent Learner
+222,OS,Scheduling,78,56,2,Kinesthetic,good,2,1,Struggling Learner
+223,DBMS,SQL,43,85,1,Kinesthetic,average,2,1,Struggling Learner
+224,DSA,Queue,72,18,1,Kinesthetic,good,2,1,Struggling Learner
+225,OS,Processes,64,33,5,Visual,average,0,2,Consistent Learner
+226,DSA,Arrays,74,96,5,Kinesthetic,good,2,2,Consistent Learner
+227,DBMS,SQL,91,59,5,Visual,good,0,2,Consistent Learner
+228,DBMS,Normalization,78,75,5,Kinesthetic,good,2,2,Consistent Learner
+229,DSA,Linked List,63,73,4,Visual,average,0,2,Consistent Learner
+230,Python,Functions,46,43,4,Audio-Visual,average,1,2,Consistent Learner
+231,OS,Processes,76,74,5,Visual,good,0,2,Consistent Learner
+232,CN,TCP/IP,53,71,2,Visual,average,0,1,Struggling Learner
+233,OS,Threads,100,71,1,Audio-Visual,good,1,1,Struggling Learner
+234,DBMS,Joins,84,68,1,Kinesthetic,good,2,1,Struggling Learner
+235,CN,Routing,96,45,5,Kinesthetic,good,2,2,Consistent Learner
+236,DBMS,SQL,66,46,1,Audio-Visual,average,1,1,Struggling Learner
+237,OS,Processes,39,52,3,Audio-Visual,poor,1,2,Consistent Learner
+238,CN,Routing,77,27,3,Kinesthetic,good,2,2,Consistent Learner
+239,CN,TCP/IP,61,39,3,Visual,average,0,1,Struggling Learner
+240,Python,Loops,48,25,3,Kinesthetic,average,2,2,Consistent Learner
+241,DSA,Arrays,61,50,3,Audio-Visual,average,1,2,Consistent Learner
+242,DSA,Stack,23,62,5,Audio-Visual,poor,1,2,Consistent Learner
+243,DSA,Stack,95,66,1,Kinesthetic,good,2,1,Struggling Learner
+244,OS,Processes,68,30,1,Audio-Visual,average,1,1,Struggling Learner
+245,CN,Routing,46,71,1,Kinesthetic,average,2,1,Struggling Learner
+246,DBMS,Normalization,40,71,1,Kinesthetic,average,2,1,Struggling Learner
+247,DBMS,Normalization,65,22,2,Visual,average,0,1,Struggling Learner
+248,DSA,Linked List,57,64,3,Kinesthetic,average,2,2,Consistent Learner
+249,Python,Loops,46,47,3,Visual,average,0,1,Struggling Learner
+250,OS,Threads,44,63,3,Visual,average,0,1,Struggling Learner
+251,DSA,Queue,53,54,2,Visual,average,0,1,Struggling Learner
+252,Python,Functions,61,50,4,Visual,average,0,2,Consistent Learner
+253,DSA,Arrays,99,24,1,Audio-Visual,good,1,1,Struggling Learner
+254,DBMS,Normalization,66,35,4,Kinesthetic,average,2,2,Consistent Learner
+255,DBMS,Normalization,42,26,1,Kinesthetic,average,2,1,Struggling Learner
+256,CN,Routing,35,53,1,Kinesthetic,poor,2,1,Struggling Learner
+257,CN,Routing,36,57,4,Visual,poor,0,2,Consistent Learner
+258,OS,Threads,66,63,3,Audio-Visual,average,1,2,Consistent Learner
+259,OS,Scheduling,42,28,4,Audio-Visual,average,1,2,Consistent Learner
+260,DBMS,Joins,59,47,5,Kinesthetic,average,2,2,Consistent Learner
+261,DBMS,Normalization,95,40,1,Visual,good,0,1,Struggling Learner
+262,OS,Processes,84,83,5,Audio-Visual,good,1,2,Consistent Learner
+263,OS,Threads,81,52,1,Audio-Visual,good,1,1,Struggling Learner
+264,OS,Scheduling,62,82,1,Kinesthetic,average,2,1,Struggling Learner
+265,Python,Loops,41,102,4,Visual,average,0,2,Consistent Learner
+266,Python,Functions,39,46,3,Kinesthetic,poor,2,2,Consistent Learner
+267,OS,Scheduling,64,43,2,Visual,average,0,1,Struggling Learner
+268,CN,OSI Model,76,54,1,Visual,good,0,1,Struggling Learner
+269,OS,Scheduling,37,68,1,Kinesthetic,poor,2,1,Struggling Learner
+270,DBMS,SQL,95,43,4,Kinesthetic,good,2,2,Consistent Learner
+271,Python,Loops,57,10,4,Visual,average,0,2,Consistent Learner
+272,CN,OSI Model,37,107,4,Visual,poor,0,2,Consistent Learner
+273,DSA,Queue,27,69,4,Audio-Visual,poor,1,2,Consistent Learner
+274,Python,File Handling,52,67,3,Visual,average,0,1,Struggling Learner
+275,CN,OSI Model,12,53,5,Kinesthetic,poor,2,2,Consistent Learner
+276,Python,File Handling,63,86,1,Kinesthetic,average,2,1,Struggling Learner
+277,DSA,Linked List,28,58,2,Visual,poor,0,1,Struggling Learner
+278,DSA,Arrays,84,50,2,Visual,good,0,1,Struggling Learner
+279,CN,TCP/IP,62,68,3,Visual,average,0,1,Struggling Learner
+280,OS,Processes,69,71,1,Kinesthetic,average,2,1,Struggling Learner
+281,DSA,Queue,46,62,1,Kinesthetic,average,2,1,Struggling Learner
+282,DBMS,Joins,80,62,1,Audio-Visual,good,1,1,Struggling Learner
+283,CN,OSI Model,66,67,2,Audio-Visual,average,1,1,Struggling Learner
+284,DBMS,Normalization,42,36,1,Kinesthetic,average,2,1,Struggling Learner
+285,OS,Processes,62,59,3,Kinesthetic,average,2,2,Consistent Learner
+286,Python,Functions,52,73,2,Visual,average,0,1,Struggling Learner
+287,OS,Scheduling,99,46,5,Visual,good,0,2,Consistent Learner
+288,DSA,Queue,72,39,3,Kinesthetic,good,2,2,Consistent Learner
+289,DSA,Linked List,88,103,4,Audio-Visual,good,1,0,Fast Learner
+290,DSA,Queue,58,53,5,Audio-Visual,average,1,2,Consistent Learner
+291,Python,Loops,64,56,5,Visual,average,0,2,Consistent Learner
+292,Python,Loops,59,50,5,Kinesthetic,average,2,2,Consistent Learner
+293,CN,OSI Model,42,56,5,Visual,average,0,2,Consistent Learner
+294,DSA,Linked List,43,85,1,Kinesthetic,average,2,1,Struggling Learner
+295,DBMS,Joins,38,25,4,Kinesthetic,poor,2,2,Consistent Learner
+296,OS,Scheduling,35,85,4,Kinesthetic,poor,2,2,Consistent Learner
+297,DSA,Queue,58,54,2,Kinesthetic,average,2,1,Struggling Learner
+298,OS,Processes,68,71,3,Visual,average,0,1,Struggling Learner
+299,DBMS,Joins,67,54,4,Visual,average,0,2,Consistent Learner
+300,DBMS,Joins,84,46,3,Kinesthetic,good,2,2,Consistent Learner
+301,OS,Processes,95,37,1,Kinesthetic,good,2,1,Struggling Learner
+302,DBMS,Joins,66,88,5,Kinesthetic,average,2,2,Consistent Learner
+303,DBMS,Joins,69,34,4,Kinesthetic,average,2,2,Consistent Learner
+304,DBMS,Joins,58,60,2,Kinesthetic,average,2,1,Struggling Learner
+305,DSA,Stack,71,45,5,Kinesthetic,good,2,2,Consistent Learner
+306,OS,Threads,78,61,5,Kinesthetic,good,2,2,Consistent Learner
+307,DSA,Stack,49,62,3,Visual,average,0,1,Struggling Learner
+308,DSA,Arrays,62,55,3,Visual,average,0,1,Struggling Learner
+309,DBMS,SQL,77,64,3,Audio-Visual,good,1,2,Consistent Learner
+310,CN,Routing,35,83,4,Audio-Visual,poor,1,2,Consistent Learner
+311,CN,Routing,66,82,1,Visual,average,0,1,Struggling Learner
+312,OS,Scheduling,55,28,5,Visual,average,0,2,Consistent Learner
+313,DSA,Linked List,50,55,4,Visual,average,0,2,Consistent Learner
+314,OS,Processes,75,70,3,Kinesthetic,good,2,2,Consistent Learner
+315,CN,OSI Model,36,41,2,Visual,poor,0,1,Struggling Learner
+316,Python,Loops,21,46,1,Audio-Visual,poor,1,1,Struggling Learner
+317,DSA,Queue,53,60,3,Kinesthetic,average,2,2,Consistent Learner
+318,OS,Scheduling,58,90,1,Audio-Visual,average,1,1,Struggling Learner
+319,OS,Threads,89,29,1,Audio-Visual,good,1,1,Struggling Learner
+320,OS,Scheduling,39,25,4,Kinesthetic,poor,2,2,Consistent Learner
+321,Python,File Handling,95,73,4,Kinesthetic,good,2,2,Consistent Learner
+322,Python,Functions,75,57,3,Audio-Visual,good,1,2,Consistent Learner
+323,DSA,Linked List,64,55,5,Audio-Visual,average,1,2,Consistent Learner
+324,OS,Processes,88,109,2,Visual,good,0,0,Fast Learner
+325,Python,Functions,63,56,4,Visual,average,0,2,Consistent Learner
+326,Python,Loops,51,38,1,Visual,average,0,1,Struggling Learner
+327,DSA,Stack,47,56,1,Audio-Visual,average,1,1,Struggling Learner
+328,OS,Threads,65,58,5,Audio-Visual,average,1,2,Consistent Learner
+329,CN,TCP/IP,41,27,1,Kinesthetic,average,2,1,Struggling Learner
+330,Python,Loops,56,58,2,Kinesthetic,average,2,1,Struggling Learner
+331,DBMS,SQL,81,42,1,Visual,good,0,1,Struggling Learner
+332,Python,OOP,63,51,1,Visual,average,0,1,Struggling Learner
+333,DSA,Linked List,58,67,3,Audio-Visual,average,1,2,Consistent Learner
+334,Python,File Handling,50,18,2,Audio-Visual,average,1,1,Struggling Learner
+335,CN,OSI Model,75,65,2,Visual,good,0,1,Struggling Learner
+336,Python,Functions,76,69,4,Audio-Visual,good,1,2,Consistent Learner
+337,CN,TCP/IP,76,45,4,Visual,good,0,2,Consistent Learner
+338,Python,Loops,45,51,5,Kinesthetic,average,2,2,Consistent Learner
+339,Python,Functions,73,34,2,Kinesthetic,good,2,1,Struggling Learner
+340,DBMS,Normalization,40,46,2,Audio-Visual,average,1,1,Struggling Learner
+341,OS,Threads,71,36,3,Audio-Visual,good,1,2,Consistent Learner
+342,CN,TCP/IP,72,79,4,Visual,good,0,2,Consistent Learner
+343,DBMS,Normalization,21,56,2,Visual,poor,0,1,Struggling Learner
+344,DSA,Stack,85,69,4,Visual,good,0,2,Consistent Learner
+345,DBMS,Normalization,54,52,4,Audio-Visual,average,1,2,Consistent Learner
+346,Python,Functions,59,51,3,Kinesthetic,average,2,2,Consistent Learner
+347,Python,Loops,43,62,1,Audio-Visual,average,1,1,Struggling Learner
+348,DSA,Arrays,57,47,4,Audio-Visual,average,1,2,Consistent Learner
+349,DBMS,Joins,61,72,4,Audio-Visual,average,1,2,Consistent Learner
+350,CN,Routing,65,62,2,Kinesthetic,average,2,1,Struggling Learner
+351,Python,File Handling,62,81,5,Kinesthetic,average,2,2,Consistent Learner
+352,CN,TCP/IP,59,58,3,Visual,average,0,1,Struggling Learner
+353,CN,TCP/IP,63,67,3,Audio-Visual,average,1,2,Consistent Learner
+354,DBMS,Joins,68,43,1,Audio-Visual,average,1,1,Struggling Learner
+355,CN,TCP/IP,37,77,3,Kinesthetic,poor,2,2,Consistent Learner
+356,OS,Threads,63,128,2,Kinesthetic,average,2,0,Fast Learner
+357,Python,OOP,61,14,4,Kinesthetic,average,2,2,Consistent Learner
+358,CN,Routing,32,56,1,Visual,poor,0,1,Struggling Learner
+359,OS,Processes,27,37,2,Visual,poor,0,1,Struggling Learner
+360,DSA,Stack,91,65,2,Kinesthetic,good,2,1,Struggling Learner
+361,Python,Loops,65,60,2,Visual,average,0,1,Struggling Learner
+362,DBMS,Joins,57,69,1,Kinesthetic,average,2,1,Struggling Learner
+363,CN,Routing,55,79,1,Audio-Visual,average,1,1,Struggling Learner
+364,DBMS,Joins,69,23,1,Audio-Visual,average,1,1,Struggling Learner
+365,DSA,Queue,49,47,5,Audio-Visual,average,1,2,Consistent Learner
+366,CN,OSI Model,69,37,5,Audio-Visual,average,1,2,Consistent Learner
+367,DSA,Stack,59,76,5,Audio-Visual,average,1,2,Consistent Learner
+368,DBMS,SQL,56,47,5,Kinesthetic,average,2,2,Consistent Learner
+369,OS,Processes,79,76,4,Visual,good,0,2,Consistent Learner
+370,Python,File Handling,55,77,2,Audio-Visual,average,1,1,Struggling Learner
+371,Python,File Handling,80,43,5,Kinesthetic,good,2,2,Consistent Learner
+372,OS,Threads,89,114,2,Audio-Visual,good,1,0,Fast Learner
+373,Python,OOP,66,101,1,Kinesthetic,average,2,0,Fast Learner
+374,CN,OSI Model,67,25,3,Kinesthetic,average,2,2,Consistent Learner
+375,Python,Loops,59,62,1,Audio-Visual,average,1,1,Struggling Learner
+376,CN,TCP/IP,48,47,3,Visual,average,0,1,Struggling Learner
+377,DSA,Stack,85,83,2,Audio-Visual,good,1,0,Fast Learner
+378,OS,Processes,89,75,5,Audio-Visual,good,1,2,Consistent Learner
+379,DSA,Stack,70,99,4,Kinesthetic,good,2,2,Consistent Learner
+380,Python,OOP,71,58,3,Visual,good,0,1,Struggling Learner
+381,OS,Threads,95,68,4,Audio-Visual,good,1,2,Consistent Learner
+382,Python,Functions,73,49,5,Kinesthetic,good,2,2,Consistent Learner
+383,OS,Scheduling,66,49,4,Visual,average,0,2,Consistent Learner
+384,Python,File Handling,48,79,3,Visual,average,0,1,Struggling Learner
+385,DBMS,Joins,83,73,3,Audio-Visual,good,1,2,Consistent Learner
+386,OS,Processes,76,95,2,Kinesthetic,good,2,0,Fast Learner
+387,CN,OSI Model,69,77,2,Kinesthetic,average,2,1,Struggling Learner
+388,DBMS,SQL,69,64,4,Visual,average,0,2,Consistent Learner
+389,DSA,Queue,86,43,4,Visual,good,0,2,Consistent Learner
+390,CN,OSI Model,52,69,3,Audio-Visual,average,1,2,Consistent Learner
+391,Python,Loops,86,22,2,Visual,good,0,1,Struggling Learner
+392,DBMS,Normalization,13,99,5,Kinesthetic,poor,2,2,Consistent Learner
+393,DBMS,Normalization,44,60,3,Visual,average,0,1,Struggling Learner
+394,Python,Functions,52,109,1,Visual,average,0,0,Fast Learner
+395,OS,Processes,63,29,2,Audio-Visual,average,1,1,Struggling Learner
+396,CN,TCP/IP,41,59,4,Visual,average,0,2,Consistent Learner
+397,DSA,Queue,100,33,5,Kinesthetic,good,2,2,Consistent Learner
+398,Python,Functions,64,71,3,Kinesthetic,average,2,2,Consistent Learner
+399,DBMS,Normalization,72,32,3,Kinesthetic,good,2,2,Consistent Learner
+400,Python,Functions,53,70,2,Audio-Visual,average,1,1,Struggling Learner
+401,DBMS,Normalization,60,46,1,Audio-Visual,average,1,1,Struggling Learner
+402,DSA,Stack,62,52,2,Visual,average,0,1,Struggling Learner
+403,CN,Routing,84,38,5,Visual,good,0,2,Consistent Learner
+404,Python,Functions,74,82,1,Visual,good,0,1,Struggling Learner
+405,Python,File Handling,64,81,1,Visual,average,0,1,Struggling Learner
+406,DBMS,Normalization,66,66,1,Kinesthetic,average,2,1,Struggling Learner
+407,DSA,Queue,68,60,3,Audio-Visual,average,1,2,Consistent Learner
+408,Python,OOP,75,39,2,Audio-Visual,good,1,1,Struggling Learner
+409,CN,OSI Model,61,45,3,Visual,average,0,1,Struggling Learner
+410,Python,Functions,72,45,5,Kinesthetic,good,2,2,Consistent Learner
+411,CN,Routing,39,50,3,Visual,poor,0,1,Struggling Learner
+412,OS,Scheduling,92,49,4,Kinesthetic,good,2,2,Consistent Learner
+413,CN,Routing,84,26,1,Visual,good,0,1,Struggling Learner
+414,Python,Functions,73,10,2,Kinesthetic,good,2,1,Struggling Learner
+415,OS,Threads,50,60,3,Visual,average,0,1,Struggling Learner
+416,DSA,Linked List,65,57,2,Audio-Visual,average,1,1,Struggling Learner
+417,DSA,Linked List,34,56,3,Visual,poor,0,1,Struggling Learner
+418,DSA,Stack,62,63,4,Audio-Visual,average,1,2,Consistent Learner
+419,DBMS,Normalization,78,34,2,Audio-Visual,good,1,1,Struggling Learner
+420,OS,Scheduling,43,47,5,Visual,average,0,2,Consistent Learner
+421,DBMS,SQL,53,33,3,Kinesthetic,average,2,2,Consistent Learner
+422,DBMS,SQL,38,38,3,Audio-Visual,poor,1,2,Consistent Learner
+423,DBMS,Joins,39,79,3,Audio-Visual,poor,1,2,Consistent Learner
+424,DBMS,Joins,79,62,1,Kinesthetic,good,2,1,Struggling Learner
+425,DSA,Arrays,66,81,5,Kinesthetic,average,2,2,Consistent Learner
+426,DSA,Queue,57,33,3,Kinesthetic,average,2,2,Consistent Learner
+427,Python,OOP,69,69,1,Audio-Visual,average,1,1,Struggling Learner
+428,Python,OOP,65,69,5,Kinesthetic,average,2,2,Consistent Learner
+429,DBMS,Joins,56,46,3,Kinesthetic,average,2,2,Consistent Learner
+430,OS,Processes,70,54,4,Visual,good,0,2,Consistent Learner
+431,CN,Routing,59,36,3,Kinesthetic,average,2,2,Consistent Learner
+432,CN,Routing,47,38,3,Visual,average,0,1,Struggling Learner
+433,DBMS,SQL,43,99,4,Audio-Visual,average,1,2,Consistent Learner
+434,DSA,Queue,67,85,4,Visual,average,0,2,Consistent Learner
+435,DSA,Linked List,91,60,1,Visual,good,0,1,Struggling Learner
+436,DBMS,Joins,54,56,5,Visual,average,0,2,Consistent Learner
+437,CN,Routing,78,87,4,Audio-Visual,good,1,2,Consistent Learner
+438,CN,OSI Model,50,50,2,Visual,average,0,1,Struggling Learner
+439,OS,Scheduling,65,50,2,Visual,average,0,1,Struggling Learner
+440,Python,Loops,79,63,3,Kinesthetic,good,2,2,Consistent Learner
+441,OS,Processes,71,49,3,Kinesthetic,good,2,2,Consistent Learner
+442,OS,Scheduling,38,61,3,Visual,poor,0,1,Struggling Learner
+443,DBMS,Normalization,83,61,4,Kinesthetic,good,2,2,Consistent Learner
+444,CN,OSI Model,61,65,2,Visual,average,0,1,Struggling Learner
+445,DSA,Queue,70,72,3,Audio-Visual,good,1,2,Consistent Learner
+446,DSA,Arrays,80,39,1,Audio-Visual,good,1,1,Struggling Learner
+447,DSA,Queue,55,80,5,Audio-Visual,average,1,2,Consistent Learner
+448,DBMS,SQL,79,99,5,Visual,good,0,2,Consistent Learner
+449,DBMS,Joins,76,38,1,Kinesthetic,good,2,1,Struggling Learner
+450,DSA,Queue,48,44,2,Kinesthetic,average,2,1,Struggling Learner
+451,CN,Routing,83,51,2,Kinesthetic,good,2,1,Struggling Learner
+452,DSA,Stack,44,75,5,Visual,average,0,2,Consistent Learner
+453,DBMS,Normalization,61,62,1,Audio-Visual,average,1,1,Struggling Learner
+454,CN,TCP/IP,58,72,3,Kinesthetic,average,2,2,Consistent Learner
+455,Python,File Handling,58,43,5,Visual,average,0,2,Consistent Learner
+456,DBMS,Normalization,95,66,1,Visual,good,0,1,Struggling Learner
+457,OS,Scheduling,39,15,2,Visual,poor,0,1,Struggling Learner
+458,CN,TCP/IP,74,70,3,Audio-Visual,good,1,2,Consistent Learner
+459,DSA,Linked List,56,64,1,Visual,average,0,1,Struggling Learner
+460,Python,Functions,43,73,1,Audio-Visual,average,1,1,Struggling Learner
+461,DSA,Queue,78,43,1,Visual,good,0,1,Struggling Learner
+462,CN,TCP/IP,67,45,3,Kinesthetic,average,2,2,Consistent Learner
+463,CN,TCP/IP,83,66,5,Visual,good,0,2,Consistent Learner
+464,OS,Threads,65,26,4,Audio-Visual,average,1,2,Consistent Learner
+465,DBMS,Normalization,68,46,2,Audio-Visual,average,1,1,Struggling Learner
+466,Python,OOP,67,32,2,Kinesthetic,average,2,1,Struggling Learner
+467,CN,TCP/IP,57,75,2,Visual,average,0,1,Struggling Learner
+468,OS,Processes,100,70,1,Kinesthetic,good,2,1,Struggling Learner
+469,OS,Scheduling,66,39,2,Audio-Visual,average,1,1,Struggling Learner
+470,DBMS,SQL,100,85,2,Audio-Visual,good,1,0,Fast Learner
+471,CN,TCP/IP,47,66,2,Kinesthetic,average,2,1,Struggling Learner
+472,Python,Loops,75,32,4,Visual,good,0,2,Consistent Learner
+473,OS,Threads,99,51,5,Kinesthetic,good,2,2,Consistent Learner
+474,DSA,Stack,66,57,5,Kinesthetic,average,2,2,Consistent Learner
+475,CN,TCP/IP,54,15,1,Audio-Visual,average,1,1,Struggling Learner
+476,DSA,Queue,27,51,3,Visual,poor,0,1,Struggling Learner
+477,DSA,Queue,80,80,2,Visual,good,0,1,Struggling Learner
+478,CN,Routing,78,102,4,Visual,good,0,0,Fast Learner
+479,Python,File Handling,73,66,1,Audio-Visual,good,1,1,Struggling Learner
+480,Python,File Handling,52,56,5,Kinesthetic,average,2,2,Consistent Learner
+481,OS,Processes,76,56,5,Visual,good,0,2,Consistent Learner
+482,OS,Processes,68,77,1,Audio-Visual,average,1,1,Struggling Learner
+483,DSA,Stack,87,20,1,Visual,good,0,1,Struggling Learner
+484,OS,Processes,40,59,3,Audio-Visual,average,1,2,Consistent Learner
+485,Python,OOP,97,44,4,Kinesthetic,good,2,2,Consistent Learner
+486,CN,Routing,60,55,1,Visual,average,0,1,Struggling Learner
+487,DBMS,Joins,55,93,4,Kinesthetic,average,2,2,Consistent Learner
+488,Python,Loops,30,50,5,Visual,poor,0,2,Consistent Learner
+489,Python,Loops,72,86,1,Kinesthetic,good,2,1,Struggling Learner
+490,OS,Scheduling,91,72,1,Audio-Visual,good,1,1,Struggling Learner
+491,Python,Loops,39,107,3,Kinesthetic,poor,2,2,Consistent Learner
+492,DSA,Queue,36,77,2,Visual,poor,0,1,Struggling Learner
+493,Python,Functions,66,28,1,Visual,average,0,1,Struggling Learner
+494,OS,Processes,71,57,5,Kinesthetic,good,2,2,Consistent Learner
+495,CN,OSI Model,40,61,1,Audio-Visual,average,1,1,Struggling Learner
+496,CN,OSI Model,100,37,1,Audio-Visual,good,1,1,Struggling Learner
+497,DSA,Stack,42,54,4,Visual,average,0,2,Consistent Learner
+498,DSA,Linked List,61,27,1,Kinesthetic,average,2,1,Struggling Learner
+499,CN,OSI Model,53,55,1,Audio-Visual,average,1,1,Struggling Learner
+500,OS,Threads,47,92,5,Visual,average,0,2,Consistent Learner
+501,DBMS,Normalization,73,68,3,Audio-Visual,good,1,2,Consistent Learner
+502,DBMS,Normalization,53,74,4,Kinesthetic,average,2,2,Consistent Learner
+503,OS,Threads,50,67,2,Visual,average,0,1,Struggling Learner
+504,CN,TCP/IP,58,74,1,Visual,average,0,1,Struggling Learner
+505,DSA,Stack,46,61,2,Kinesthetic,average,2,1,Struggling Learner
+506,Python,Functions,73,75,2,Visual,good,0,1,Struggling Learner
+507,OS,Processes,65,83,4,Audio-Visual,average,1,2,Consistent Learner
+508,DBMS,SQL,81,90,1,Visual,good,0,0,Fast Learner
+509,CN,OSI Model,36,58,2,Visual,poor,0,1,Struggling Learner
+510,OS,Scheduling,43,72,1,Visual,average,0,1,Struggling Learner
+511,OS,Threads,51,47,2,Audio-Visual,average,1,1,Struggling Learner
+512,DBMS,SQL,34,76,2,Audio-Visual,poor,1,1,Struggling Learner
+513,Python,File Handling,44,68,5,Audio-Visual,average,1,2,Consistent Learner
+514,CN,TCP/IP,100,67,1,Audio-Visual,good,1,1,Struggling Learner
+515,CN,Routing,58,63,2,Kinesthetic,average,2,1,Struggling Learner
+516,OS,Scheduling,57,94,1,Visual,average,0,1,Struggling Learner
+517,DBMS,Normalization,40,115,2,Visual,average,0,0,Fast Learner
+518,CN,TCP/IP,71,78,1,Kinesthetic,good,2,1,Struggling Learner
+519,DBMS,Normalization,100,48,1,Audio-Visual,good,1,1,Struggling Learner
+520,OS,Scheduling,83,33,5,Kinesthetic,good,2,2,Consistent Learner
+521,DSA,Arrays,94,60,2,Visual,good,0,1,Struggling Learner
+522,Python,File Handling,47,79,5,Visual,average,0,2,Consistent Learner
+523,DBMS,Normalization,54,49,5,Visual,average,0,2,Consistent Learner
+524,CN,TCP/IP,52,65,4,Kinesthetic,average,2,2,Consistent Learner
+525,DSA,Stack,80,28,3,Visual,good,0,1,Struggling Learner
+526,DSA,Linked List,56,45,2,Visual,average,0,1,Struggling Learner
+527,OS,Scheduling,64,58,1,Visual,average,0,1,Struggling Learner
+528,OS,Processes,62,53,3,Visual,average,0,1,Struggling Learner
+529,CN,Routing,71,85,2,Audio-Visual,good,1,1,Struggling Learner
+530,DBMS,SQL,56,50,1,Visual,average,0,1,Struggling Learner
+531,OS,Threads,90,66,3,Audio-Visual,good,1,2,Consistent Learner
+532,DSA,Linked List,68,62,4,Kinesthetic,average,2,2,Consistent Learner
+533,OS,Processes,81,45,2,Audio-Visual,good,1,1,Struggling Learner
+534,Python,File Handling,78,55,3,Visual,good,0,1,Struggling Learner
+535,CN,Routing,45,74,5,Audio-Visual,average,1,2,Consistent Learner
+536,DSA,Stack,45,74,3,Audio-Visual,average,1,2,Consistent Learner
+537,DSA,Stack,88,42,4,Visual,good,0,2,Consistent Learner
+538,DBMS,Joins,82,81,1,Kinesthetic,good,2,1,Struggling Learner
+539,DSA,Queue,68,56,2,Visual,average,0,1,Struggling Learner
+540,Python,OOP,52,72,5,Audio-Visual,average,1,2,Consistent Learner
+541,DSA,Arrays,50,50,5,Visual,average,0,2,Consistent Learner
+542,DBMS,Joins,73,17,3,Visual,good,0,1,Struggling Learner
+543,OS,Scheduling,44,106,5,Visual,average,0,2,Consistent Learner
+544,CN,Routing,71,63,5,Kinesthetic,good,2,2,Consistent Learner
+545,Python,Loops,55,77,4,Audio-Visual,average,1,2,Consistent Learner
+546,CN,OSI Model,55,32,2,Audio-Visual,average,1,1,Struggling Learner
+547,CN,TCP/IP,97,71,5,Audio-Visual,good,1,2,Consistent Learner
+548,Python,Functions,100,44,1,Audio-Visual,good,1,1,Struggling Learner
+549,OS,Processes,70,68,3,Visual,good,0,1,Struggling Learner
+550,CN,TCP/IP,66,76,4,Visual,average,0,2,Consistent Learner
+551,CN,OSI Model,43,57,2,Visual,average,0,1,Struggling Learner
+552,CN,Routing,36,83,4,Kinesthetic,poor,2,2,Consistent Learner
+553,OS,Processes,72,61,5,Visual,good,0,2,Consistent Learner
+554,DSA,Arrays,31,57,3,Audio-Visual,poor,1,2,Consistent Learner
+555,OS,Scheduling,77,72,5,Visual,good,0,2,Consistent Learner
+556,OS,Processes,88,60,2,Kinesthetic,good,2,1,Struggling Learner
+557,CN,OSI Model,92,47,2,Visual,good,0,1,Struggling Learner
+558,DBMS,Joins,51,101,5,Kinesthetic,average,2,2,Consistent Learner
+559,Python,OOP,44,83,2,Kinesthetic,average,2,1,Struggling Learner
+560,OS,Processes,65,61,2,Visual,average,0,1,Struggling Learner
+561,OS,Processes,48,75,4,Visual,average,0,2,Consistent Learner
+562,OS,Threads,62,81,5,Visual,average,0,2,Consistent Learner
+563,CN,Routing,69,45,1,Visual,average,0,1,Struggling Learner
+564,DSA,Stack,51,77,3,Visual,average,0,1,Struggling Learner
+565,OS,Scheduling,51,70,4,Audio-Visual,average,1,2,Consistent Learner
+566,CN,OSI Model,75,52,4,Kinesthetic,good,2,2,Consistent Learner
+567,Python,OOP,51,89,3,Visual,average,0,1,Struggling Learner
+568,DSA,Linked List,59,22,1,Visual,average,0,1,Struggling Learner
+569,Python,File Handling,78,73,1,Kinesthetic,good,2,1,Struggling Learner
+570,DSA,Linked List,62,78,1,Visual,average,0,1,Struggling Learner
+571,OS,Processes,56,78,5,Visual,average,0,2,Consistent Learner
+572,OS,Processes,57,44,5,Audio-Visual,average,1,2,Consistent Learner
+573,OS,Threads,68,63,4,Visual,average,0,2,Consistent Learner
+574,CN,Routing,76,45,3,Kinesthetic,good,2,2,Consistent Learner
+575,OS,Scheduling,49,37,5,Audio-Visual,average,1,2,Consistent Learner
+576,OS,Threads,73,62,4,Audio-Visual,good,1,2,Consistent Learner
+577,OS,Processes,64,66,4,Kinesthetic,average,2,2,Consistent Learner
+578,DSA,Stack,65,58,3,Audio-Visual,average,1,2,Consistent Learner
+579,DSA,Stack,77,57,1,Kinesthetic,good,2,1,Struggling Learner
+580,Python,Loops,73,56,2,Kinesthetic,good,2,1,Struggling Learner
+581,DSA,Arrays,43,73,5,Audio-Visual,average,1,2,Consistent Learner
+582,DBMS,SQL,54,69,4,Visual,average,0,2,Consistent Learner
+583,DBMS,SQL,76,47,3,Kinesthetic,good,2,2,Consistent Learner
+584,Python,OOP,48,66,3,Audio-Visual,average,1,2,Consistent Learner
+585,DBMS,Normalization,38,20,4,Visual,poor,0,2,Consistent Learner
+586,DSA,Queue,100,25,2,Kinesthetic,good,2,1,Struggling Learner
+587,Python,OOP,63,69,2,Kinesthetic,average,2,1,Struggling Learner
+588,DBMS,Joins,91,46,5,Audio-Visual,good,1,2,Consistent Learner
+589,CN,TCP/IP,88,60,5,Audio-Visual,good,1,2,Consistent Learner
+590,DBMS,SQL,73,79,5,Audio-Visual,good,1,2,Consistent Learner
+591,OS,Processes,57,55,4,Audio-Visual,average,1,2,Consistent Learner
+592,OS,Processes,64,93,3,Kinesthetic,average,2,2,Consistent Learner
+593,Python,File Handling,47,55,3,Kinesthetic,average,2,2,Consistent Learner
+594,DBMS,Joins,63,99,3,Visual,average,0,0,Fast Learner
+595,Python,Loops,57,55,3,Audio-Visual,average,1,2,Consistent Learner
+596,OS,Scheduling,67,50,1,Audio-Visual,average,1,1,Struggling Learner
+597,DSA,Stack,66,30,3,Audio-Visual,average,1,2,Consistent Learner
+598,OS,Scheduling,74,90,3,Visual,good,0,0,Fast Learner
+599,DSA,Queue,47,32,1,Visual,average,0,1,Struggling Learner
+600,CN,TCP/IP,79,16,3,Audio-Visual,good,1,1,Struggling Learner
+601,CN,TCP/IP,60,58,4,Kinesthetic,average,2,2,Consistent Learner
+602,Python,OOP,63,55,4,Audio-Visual,average,1,2,Consistent Learner
+603,DSA,Arrays,100,63,5,Kinesthetic,good,2,2,Consistent Learner
+604,DBMS,SQL,78,62,2,Audio-Visual,good,1,1,Struggling Learner
+605,DBMS,Joins,67,36,1,Audio-Visual,average,1,1,Struggling Learner
+606,OS,Processes,31,62,4,Audio-Visual,poor,1,2,Consistent Learner
+607,CN,OSI Model,74,103,3,Visual,good,0,0,Fast Learner
+608,DBMS,Joins,100,83,3,Audio-Visual,good,1,0,Fast Learner
+609,OS,Threads,81,59,5,Kinesthetic,good,2,2,Consistent Learner
+610,CN,Routing,74,30,2,Kinesthetic,good,2,1,Struggling Learner
+611,CN,OSI Model,34,66,3,Visual,poor,0,1,Struggling Learner
+612,DBMS,SQL,45,50,1,Visual,average,0,1,Struggling Learner
+613,CN,OSI Model,92,44,4,Audio-Visual,good,1,2,Consistent Learner
+614,CN,TCP/IP,68,43,5,Audio-Visual,average,1,2,Consistent Learner
+615,OS,Threads,75,15,4,Audio-Visual,good,1,2,Consistent Learner
+616,Python,Functions,67,63,5,Audio-Visual,average,1,2,Consistent Learner
+617,DBMS,Normalization,100,57,2,Visual,good,0,1,Struggling Learner
+618,CN,TCP/IP,84,40,1,Visual,good,0,1,Struggling Learner
+619,Python,OOP,63,52,4,Kinesthetic,average,2,2,Consistent Learner
+620,DBMS,SQL,64,59,3,Visual,average,0,1,Struggling Learner
+621,CN,OSI Model,76,44,1,Visual,good,0,1,Struggling Learner
+622,DBMS,SQL,52,77,4,Kinesthetic,average,2,2,Consistent Learner
+623,OS,Threads,64,67,3,Audio-Visual,average,1,2,Consistent Learner
+624,CN,Routing,38,83,3,Audio-Visual,poor,1,2,Consistent Learner
+625,DSA,Queue,62,75,3,Kinesthetic,average,2,2,Consistent Learner
+626,OS,Threads,42,58,1,Visual,average,0,1,Struggling Learner
+627,OS,Threads,64,60,1,Visual,average,0,1,Struggling Learner
+628,DBMS,Normalization,65,63,1,Visual,average,0,1,Struggling Learner
+629,CN,TCP/IP,66,70,1,Visual,average,0,1,Struggling Learner
+630,DSA,Queue,46,50,2,Audio-Visual,average,1,1,Struggling Learner
+631,DBMS,Normalization,75,46,2,Audio-Visual,good,1,1,Struggling Learner
+632,DBMS,Joins,54,63,2,Kinesthetic,average,2,1,Struggling Learner
+633,OS,Threads,52,42,4,Visual,average,0,2,Consistent Learner
+634,DSA,Linked List,44,18,4,Kinesthetic,average,2,2,Consistent Learner
+635,CN,TCP/IP,51,69,4,Kinesthetic,average,2,2,Consistent Learner
+636,OS,Processes,27,55,3,Audio-Visual,poor,1,2,Consistent Learner
+637,CN,OSI Model,76,49,3,Visual,good,0,1,Struggling Learner
+638,DBMS,Joins,96,69,3,Kinesthetic,good,2,2,Consistent Learner
+639,DBMS,SQL,52,55,2,Audio-Visual,average,1,1,Struggling Learner
+640,DBMS,SQL,41,67,5,Audio-Visual,average,1,2,Consistent Learner
+641,OS,Processes,100,50,5,Audio-Visual,good,1,2,Consistent Learner
+642,DSA,Stack,55,10,3,Visual,average,0,1,Struggling Learner
+643,OS,Processes,64,50,4,Visual,average,0,2,Consistent Learner
+644,CN,OSI Model,84,66,1,Visual,good,0,1,Struggling Learner
+645,DSA,Queue,58,70,1,Kinesthetic,average,2,1,Struggling Learner
+646,CN,OSI Model,83,50,2,Visual,good,0,1,Struggling Learner
+647,CN,OSI Model,84,63,1,Audio-Visual,good,1,1,Struggling Learner
+648,DBMS,Normalization,40,61,3,Audio-Visual,average,1,2,Consistent Learner
+649,CN,Routing,63,45,2,Audio-Visual,average,1,1,Struggling Learner
+650,OS,Processes,63,36,4,Kinesthetic,average,2,2,Consistent Learner
+651,OS,Processes,76,53,3,Audio-Visual,good,1,2,Consistent Learner
+652,Python,OOP,100,38,1,Visual,good,0,1,Struggling Learner
+653,DBMS,SQL,79,33,1,Kinesthetic,good,2,1,Struggling Learner
+654,DSA,Arrays,64,59,5,Audio-Visual,average,1,2,Consistent Learner
+655,Python,File Handling,57,80,4,Visual,average,0,2,Consistent Learner
+656,OS,Threads,59,68,1,Visual,average,0,1,Struggling Learner
+657,Python,OOP,79,62,3,Kinesthetic,good,2,2,Consistent Learner
+658,DSA,Stack,49,63,2,Kinesthetic,average,2,1,Struggling Learner
+659,Python,Loops,26,48,3,Kinesthetic,poor,2,2,Consistent Learner
+660,OS,Processes,63,45,4,Kinesthetic,average,2,2,Consistent Learner
+661,DSA,Arrays,71,29,4,Audio-Visual,good,1,2,Consistent Learner
+662,OS,Scheduling,76,57,1,Visual,good,0,1,Struggling Learner
+663,DSA,Arrays,50,59,4,Kinesthetic,average,2,2,Consistent Learner
+664,CN,Routing,56,66,1,Kinesthetic,average,2,1,Struggling Learner
+665,DBMS,Normalization,67,68,2,Audio-Visual,average,1,1,Struggling Learner
+666,DBMS,SQL,71,44,2,Visual,good,0,1,Struggling Learner
+667,DSA,Stack,76,96,3,Kinesthetic,good,2,0,Fast Learner
+668,DBMS,SQL,60,95,4,Kinesthetic,average,2,2,Consistent Learner
+669,Python,Functions,66,29,4,Kinesthetic,average,2,2,Consistent Learner
+670,DSA,Queue,67,72,2,Kinesthetic,average,2,1,Struggling Learner
+671,DSA,Linked List,85,102,1,Visual,good,0,0,Fast Learner
+672,DSA,Queue,68,46,3,Visual,average,0,1,Struggling Learner
+673,OS,Processes,90,10,4,Visual,good,0,2,Consistent Learner
+674,CN,Routing,78,71,2,Kinesthetic,good,2,1,Struggling Learner
+675,OS,Threads,74,62,5,Kinesthetic,good,2,2,Consistent Learner
+676,Python,File Handling,68,19,4,Kinesthetic,average,2,2,Consistent Learner
+677,DBMS,SQL,68,45,1,Kinesthetic,average,2,1,Struggling Learner
+678,OS,Threads,53,64,1,Visual,average,0,1,Struggling Learner
+679,DBMS,SQL,53,72,1,Kinesthetic,average,2,1,Struggling Learner
+680,OS,Scheduling,42,58,5,Visual,average,0,2,Consistent Learner
+681,Python,OOP,65,80,4,Audio-Visual,average,1,2,Consistent Learner
+682,DBMS,SQL,48,51,4,Audio-Visual,average,1,2,Consistent Learner
+683,CN,OSI Model,62,56,2,Visual,average,0,1,Struggling Learner
+684,DSA,Linked List,76,72,3,Audio-Visual,good,1,2,Consistent Learner
+685,DBMS,Joins,45,71,1,Kinesthetic,average,2,1,Struggling Learner
+686,CN,OSI Model,64,71,4,Kinesthetic,average,2,2,Consistent Learner
+687,CN,TCP/IP,73,41,1,Audio-Visual,good,1,1,Struggling Learner
+688,OS,Processes,77,70,3,Audio-Visual,good,1,2,Consistent Learner
+689,DBMS,Joins,42,82,5,Audio-Visual,average,1,2,Consistent Learner
+690,Python,OOP,71,57,4,Audio-Visual,good,1,2,Consistent Learner
+691,Python,OOP,61,76,3,Kinesthetic,average,2,2,Consistent Learner
+692,DBMS,SQL,66,78,1,Visual,average,0,1,Struggling Learner
+693,DSA,Linked List,75,53,1,Audio-Visual,good,1,1,Struggling Learner
+694,CN,Routing,63,66,2,Kinesthetic,average,2,1,Struggling Learner
+695,Python,Functions,62,45,3,Visual,average,0,1,Struggling Learner
+696,DBMS,SQL,67,65,3,Kinesthetic,average,2,2,Consistent Learner
+697,OS,Processes,74,63,3,Visual,good,0,1,Struggling Learner
+698,OS,Scheduling,85,47,1,Visual,good,0,1,Struggling Learner
+699,CN,TCP/IP,83,90,1,Kinesthetic,good,2,0,Fast Learner
+700,CN,Routing,57,49,2,Visual,average,0,1,Struggling Learner
+701,CN,OSI Model,82,53,3,Kinesthetic,good,2,2,Consistent Learner
+702,DBMS,SQL,35,59,5,Kinesthetic,poor,2,2,Consistent Learner
+703,CN,Routing,43,28,1,Visual,average,0,1,Struggling Learner
+704,DSA,Queue,68,60,3,Audio-Visual,average,1,2,Consistent Learner
+705,DSA,Linked List,65,83,2,Kinesthetic,average,2,1,Struggling Learner
+706,OS,Processes,54,50,4,Visual,average,0,2,Consistent Learner
+707,OS,Processes,53,49,3,Visual,average,0,1,Struggling Learner
+708,OS,Scheduling,48,27,5,Kinesthetic,average,2,2,Consistent Learner
+709,DBMS,SQL,58,27,1,Audio-Visual,average,1,1,Struggling Learner
+710,DBMS,Joins,51,36,3,Visual,average,0,1,Struggling Learner
+711,CN,Routing,64,39,2,Audio-Visual,average,1,1,Struggling Learner
+712,Python,OOP,52,57,5,Kinesthetic,average,2,2,Consistent Learner
+713,Python,Loops,68,86,5,Visual,average,0,2,Consistent Learner
+714,DSA,Arrays,60,56,5,Kinesthetic,average,2,2,Consistent Learner
+715,DBMS,Joins,23,40,1,Audio-Visual,poor,1,1,Struggling Learner
+716,DBMS,Normalization,46,85,3,Visual,average,0,1,Struggling Learner
+717,OS,Scheduling,48,56,3,Audio-Visual,average,1,2,Consistent Learner
+718,Python,Loops,62,90,4,Visual,average,0,2,Consistent Learner
+719,DBMS,SQL,66,74,4,Visual,average,0,2,Consistent Learner
+720,DSA,Arrays,53,76,5,Audio-Visual,average,1,2,Consistent Learner
+721,OS,Scheduling,50,59,3,Audio-Visual,average,1,2,Consistent Learner
+722,OS,Processes,69,31,2,Audio-Visual,average,1,1,Struggling Learner
+723,Python,Functions,27,32,1,Visual,poor,0,1,Struggling Learner
+724,OS,Threads,49,13,2,Audio-Visual,average,1,1,Struggling Learner
+725,CN,TCP/IP,65,61,5,Kinesthetic,average,2,2,Consistent Learner
+726,OS,Scheduling,44,56,4,Kinesthetic,average,2,2,Consistent Learner
+727,DSA,Arrays,65,21,5,Visual,average,0,2,Consistent Learner
+728,DSA,Queue,95,83,2,Kinesthetic,good,2,0,Fast Learner
+729,DSA,Linked List,79,47,4,Visual,good,0,2,Consistent Learner
+730,DBMS,SQL,58,80,3,Visual,average,0,1,Struggling Learner
+731,DBMS,Normalization,82,29,2,Visual,good,0,1,Struggling Learner
+732,Python,Functions,57,55,2,Kinesthetic,average,2,1,Struggling Learner
+733,OS,Scheduling,53,35,2,Visual,average,0,1,Struggling Learner
+734,DSA,Queue,46,43,5,Audio-Visual,average,1,2,Consistent Learner
+735,CN,Routing,95,67,4,Kinesthetic,good,2,2,Consistent Learner
+736,DSA,Arrays,38,51,3,Kinesthetic,poor,2,2,Consistent Learner
+737,OS,Processes,93,79,2,Audio-Visual,good,1,0,Fast Learner
+738,DSA,Arrays,100,10,3,Kinesthetic,good,2,2,Consistent Learner
+739,CN,Routing,76,48,5,Kinesthetic,good,2,2,Consistent Learner
+740,Python,OOP,25,49,3,Audio-Visual,poor,1,2,Consistent Learner
+741,CN,Routing,20,47,5,Visual,poor,0,2,Consistent Learner
+742,OS,Threads,53,93,1,Visual,average,0,1,Struggling Learner
+743,Python,OOP,66,70,1,Kinesthetic,average,2,1,Struggling Learner
+744,DBMS,Normalization,11,53,1,Kinesthetic,poor,2,1,Struggling Learner
+745,DSA,Queue,65,51,2,Kinesthetic,average,2,1,Struggling Learner
+746,DSA,Linked List,74,71,1,Kinesthetic,good,2,1,Struggling Learner
+747,DSA,Arrays,77,82,5,Kinesthetic,good,2,2,Consistent Learner
+748,DBMS,Normalization,61,34,3,Kinesthetic,average,2,2,Consistent Learner
+749,Python,Functions,57,91,1,Visual,average,0,1,Struggling Learner
+750,OS,Processes,100,53,5,Kinesthetic,good,2,2,Consistent Learner
+751,OS,Scheduling,34,56,2,Visual,poor,0,1,Struggling Learner
+752,DSA,Arrays,47,65,2,Audio-Visual,average,1,1,Struggling Learner
+753,DSA,Arrays,69,26,1,Visual,average,0,1,Struggling Learner
+754,CN,TCP/IP,64,85,5,Kinesthetic,average,2,2,Consistent Learner
+755,CN,TCP/IP,43,56,1,Visual,average,0,1,Struggling Learner
+756,DBMS,Normalization,60,49,5,Audio-Visual,average,1,2,Consistent Learner
+757,DBMS,Joins,57,53,2,Visual,average,0,1,Struggling Learner
+758,CN,OSI Model,54,50,1,Visual,average,0,1,Struggling Learner
+759,CN,TCP/IP,29,48,3,Kinesthetic,poor,2,2,Consistent Learner
+760,Python,File Handling,72,92,2,Visual,good,0,0,Fast Learner
+761,CN,Routing,53,53,4,Audio-Visual,average,1,2,Consistent Learner
+762,Python,Functions,65,56,1,Visual,average,0,1,Struggling Learner
+763,DBMS,SQL,83,79,3,Visual,good,0,0,Fast Learner
+764,DBMS,Joins,62,50,1,Audio-Visual,average,1,1,Struggling Learner
+765,DBMS,Normalization,65,51,3,Audio-Visual,average,1,2,Consistent Learner
+766,DSA,Arrays,57,66,3,Visual,average,0,1,Struggling Learner
+767,DSA,Linked List,85,58,5,Audio-Visual,good,1,2,Consistent Learner
+768,Python,File Handling,91,58,1,Kinesthetic,good,2,1,Struggling Learner
+769,CN,TCP/IP,63,72,1,Kinesthetic,average,2,1,Struggling Learner
+770,DSA,Stack,62,42,5,Visual,average,0,2,Consistent Learner
+771,DSA,Arrays,29,56,2,Kinesthetic,poor,2,1,Struggling Learner
+772,DSA,Arrays,84,32,2,Audio-Visual,good,1,1,Struggling Learner
+773,OS,Processes,61,32,3,Kinesthetic,average,2,2,Consistent Learner
+774,Python,Functions,40,84,4,Visual,average,0,2,Consistent Learner
+775,OS,Threads,9,62,4,Kinesthetic,poor,2,2,Consistent Learner
+776,DBMS,SQL,58,10,1,Kinesthetic,average,2,1,Struggling Learner
+777,DBMS,Joins,76,65,4,Kinesthetic,good,2,2,Consistent Learner
+778,CN,Routing,65,56,2,Audio-Visual,average,1,1,Struggling Learner
+779,CN,OSI Model,50,34,2,Kinesthetic,average,2,1,Struggling Learner
+780,Python,Loops,54,61,4,Audio-Visual,average,1,2,Consistent Learner
+781,Python,OOP,71,54,4,Audio-Visual,good,1,2,Consistent Learner
+782,DBMS,Normalization,43,72,4,Audio-Visual,average,1,2,Consistent Learner
+783,DSA,Queue,99,84,1,Audio-Visual,good,1,0,Fast Learner
+784,DSA,Stack,100,31,2,Audio-Visual,good,1,1,Struggling Learner
+785,Python,Loops,72,37,2,Audio-Visual,good,1,1,Struggling Learner
+786,Python,OOP,69,109,3,Audio-Visual,average,1,0,Fast Learner
+787,CN,OSI Model,100,42,5,Kinesthetic,good,2,2,Consistent Learner
+788,Python,Functions,82,92,2,Visual,good,0,0,Fast Learner
+789,Python,File Handling,79,73,2,Audio-Visual,good,1,1,Struggling Learner
+790,CN,TCP/IP,74,74,2,Visual,good,0,1,Struggling Learner
+791,Python,File Handling,50,37,1,Audio-Visual,average,1,1,Struggling Learner
+792,DBMS,Joins,50,49,4,Kinesthetic,average,2,2,Consistent Learner
+793,Python,OOP,88,79,4,Audio-Visual,good,1,2,Consistent Learner
+794,DBMS,Normalization,82,39,1,Audio-Visual,good,1,1,Struggling Learner
+795,CN,Routing,90,41,3,Visual,good,0,1,Struggling Learner
+796,Python,Loops,76,52,1,Kinesthetic,good,2,1,Struggling Learner
+797,OS,Threads,57,46,4,Audio-Visual,average,1,2,Consistent Learner
+798,Python,Loops,98,80,1,Visual,good,0,0,Fast Learner
+799,Python,OOP,35,12,1,Kinesthetic,poor,2,1,Struggling Learner
+800,OS,Processes,45,47,2,Audio-Visual,average,1,1,Struggling Learner
+801,Python,Arrays,50,60,2,Visual,50,0,1,Struggling Learner
+802,DBMS,Arrays,50,60,2,Visual,50,0,1,Struggling Learner
+803,DBMS,normalization,50,60,2,Visual,50,0,1,Struggling Learner
+804,DBMS,normalization,50,60,2,Visual,50,0,1,Struggling Learner
+805,DBMS,normalization,50,60,2,Visual,50,0,1,Struggling Learner
+806,DBMS,normalization,50,60,2,Audio-Visual,50,1,1,Struggling Learner
+807,OS,normalization,50,60,2,Audio-Visual,50,1,1,Struggling Learner
+808,OS,threading,50,60,2,Audio-Visual,50,1,1,Struggling Learner
+809,OS,threading,79,60,2,Audio-Visual,79,1,1,Struggling Learner
+810,OS,Threading,79,60,2,Audio-Visual,79,1,1,Struggling Learner
+811,OS,Threading,79,60,2,Audio-Visual,79,1,1,Struggling Learner
+812,OS,Threading,83,60,2,Audio-Visual,83,1,1,Struggling Learner
+813,OS,Threading,83,60,2,Audio-Visual,83,1,1,Struggling Learner
+814,Machine Learning,Optimization,50,60,2,Kinesthetic,50,2,1,Struggling Learner
+815,Machine Learning,Optimization,89,60,2,Kinesthetic,89,2,1,Struggling Learner
+816,Machine Learning,Optimization,89,132,2,Kinesthetic,89,2,0,Fast Learner
+817,Machine Learning,Optimization,89,119,2,Kinesthetic,89,2,0,Fast Learner
+818,Machine Learning,Optimization,89,115,2,Kinesthetic,89,2,0,Fast Learner
+819,Machine Learning,Optimization,89,115,3,Kinesthetic,89,2,0,Fast Learner
+820,Machine Learning,Optimization,89,115,3,Kinesthetic,89,2,0,Fast Learner
+821,Machine Learning,Optimization,89,115,3,Kinesthetic,89,2,0,Fast Learner
+822,Machine Learning,Optimization,72,115,3,Kinesthetic,72,2,0,Fast Learner
+823,Machine Learning,Optimization,72,115,3,Kinesthetic,72,2,0,Fast Learner
+824,Machine Learning,Optimization,27,115,3,Kinesthetic,27,2,2,Consistent Learner
+825,Machine Learning,Optimization,27,115,3,Kinesthetic,27,2,2,Consistent Learner
+826,Machine Learning,Optimization,65,115,3,Kinesthetic,65,2,0,Fast Learner
+827,Machine Learning,Optimization,65,115,3,Kinesthetic,65,2,0,Fast Learner
+828,Machine Learning,Optimization,23,115,3,Kinesthetic,23,2,2,Consistent Learner
+829,Machine Learning,Optimization,52,115,3,Kinesthetic,52,2,0,Fast Learner
+830,Machine Learning,Optimization,98,115,3,Kinesthetic,98,2,0,Fast Learner
+831,Machine Learning,Optimization,20,115,3,Kinesthetic,20,2,2,Consistent Learner
+832,Machine Learning,Optimization,70,115,3,Kinesthetic,70,2,0,Fast Learner
+833,Python,Arrays,50,60,2,Visual,50,0,1,Struggling Learner
+834,Python,Arrays,94,60,2,Visual,94,0,1,Struggling Learner
+835,Python,Arrays,94,60,1,Visual,94,0,1,Struggling Learner
+836,Python,Arrays,94,60,2,Visual,94,0,1,Struggling Learner
+837,Python,Arrays,94,90,2,Visual,94,0,0,Fast Learner
+838,Python,Arrays,94,90,2,Visual,94,0,0,Fast Learner
+839,Python,Arrays,87,90,2,Visual,87,0,0,Fast Learner
+840,Python,loops,87,90,2,Visual,87,0,0,Fast Learner
+841,Python,loops,87,90,2,Visual,87,0,0,Fast Learner
+842,DBMS,Arrays,50,60,2,Visual,50,0,1,Struggling Learner
+843,DBMS,Arrays,84,60,2,Visual,84,0,1,Struggling Learner
+844,DBMS,Arrays,84,60,2,Visual,84,0,1,Struggling Learner
+845,DBMS,Arrays,84,60,2,Visual,84,0,1,Struggling Learner
+846,DBMS,Arrays,94,60,2,Visual,94,0,1,Struggling Learner
+847,DBMS,Arrays,94,138,2,Visual,94,0,0,Fast Learner
+848,DBMS,Arrays,94,138,2,Audio-Visual,94,1,0,Fast Learner
+849,Machine Learning,Arrays,94,138,2,Audio-Visual,94,1,0,Fast Learner
+850,Machine Learning,types of ml,94,138,2,Audio-Visual,94,1,0,Fast Learner
+851,Machine Learning,types of ml,94,138,2,Audio-Visual,94,1,0,Fast Learner
+852,Machine Learning,types of ml,12,138,2,Audio-Visual,12,1,0,Fast Learner
+853,Machine Learning,types of ml,12,138,2,Kinesthetic,12,2,0,Fast Learner
+854,Machine Learning,types of ml,12,138,2,Visual,12,0,0,Fast Learner
+855,CN,types of ml,12,138,2,Visual,12,0,0,Fast Learner
+858,DBMS,Arrays,50,60,2,Visual,50,0,1,Struggling Learner
+859,DBMS,Arrays,82,60,2,Visual,82,0,1,Struggling Learner
+860,DBMS,Arrays,82,138,2,Visual,82,0,0,Fast Learner
+861,DBMS,Arrays,82,38,2,Visual,82,0,1,Struggling Learner
+862,DBMS,Arrays,82,38,2,Visual,82,0,1,Struggling Learner
+863,DBMS,Arrays,71,38,2,Visual,71,0,1,Struggling Learner
+864,DBMS,Arrays,71,38,2,Visual,71,0,1,Struggling Learner
+865,DBMS,Arrays,83,38,2,Visual,83,0,1,Struggling Learner
+866,DBMS,Arrays,83,38,2,Visual,83,0,1,Struggling Learner
+867,OS,Arrays,83,38,2,Visual,83,0,1,Struggling Learner
+868,OS,Arrays,83,38,2,Visual,83,0,1,Struggling Learner
+869,OS,Arrays,29,38,2,Visual,29,0,1,Struggling Learner
+870,CN,Arrays,29,38,2,Visual,29,0,1,Struggling Learner
+871,CN,Arrays,29,38,2,Visual,29,0,1,Struggling Learner
+872,Machine Learning,Arrays,29,38,2,Visual,29,0,1,Struggling Learner
+873,Machine Learning,Arrays,86,38,2,Visual,86,0,1,Struggling Learner
+874,Machine Learning,Arrays,91,38,2,Visual,91,0,1,Struggling Learner
+875,CN,Arrays,91,38,2,Visual,91,0,1,Struggling Learner
+878,CN,osi,86,38,2,Visual,86,0,1,Struggling Learner
+879,CN,osi,86,38,2,Visual,86,0,1,Struggling Learner
+880,DBMS,normalization,84,90,1,Audio-Visual,84,1,0,Fast Learner
+881,DBMS,normalization,93,90,1,Audio-Visual,93,1,0,Fast Learner
+882,DBMS,normalization,93,90,1,Audio-Visual,93,1,0,Fast Learner
+883,DBMS,normalization,89,90,1,Audio-Visual,89,1,0,Fast Learner
+884,DBMS,normalization,89,90,1,Audio-Visual,89,1,0,Fast Learner
+886,CN,OSI model,84,101,2,Audio-Visual,84,1,0,Fast Learner
+887,Python,OSI model,84,101,2,Audio-Visual,84,1,0,Fast Learner
+888,Python,basics,84,101,2,Audio-Visual,84,1,0,Fast Learner
+889,Python,basics,84,101,2,Visual,84,0,0,Fast Learner
+890,Python,basics,84,101,3,Visual,84,0,0,Fast Learner
+891,Python,basics,84,127,3,Visual,84,0,0,Fast Learner
+892,Python,basics,91,127,3,Visual,91,0,0,Fast Learner
+893,Python,basics,91,127,3,Visual,91,0,0,Fast Learner
+894,Python,loops,91,127,3,Visual,91,0,0,Fast Learner
+895,Python,loops,24,127,3,Visual,24,0,0,Fast Learner
+896,Python,loops,24,64,3,Visual,24,0,1,Struggling Learner
+897,Python,loops,24,30,3,Visual,24,0,1,Struggling Learner
+898,Python,loops,24,30,3,Visual,24,0,1,Struggling Learner
+899,Python,loops,24,30,3,Visual,24,0,1,Struggling Learner
+900,DBMS,Arrays,50,60,2,Audio-Visual,50,1,1,Struggling Learner
+901,DBMS,Arrays,50,60,2,Audio-Visual,50,1,1,Struggling Learner
+902,DBMS,Arrays,50,60,2,Audio-Visual,50,1,1,Struggling Learner
+903,CN,Arrays,50,60,2,Audio-Visual,50,1,1,Struggling Learner
+904,CN,Arrays,88,60,2,Audio-Visual,88,1,1,Struggling Learner
+905,CN,Arrays,88,121,2,Audio-Visual,88,1,0,Fast Learner
+906,CN,Arrays,88,121,3,Audio-Visual,88,1,0,Fast Learner
+907,CN,Arrays,88,121,3,Audio-Visual,88,1,0,Fast Learner
+908,OS,ArraysOSI model,66,60,2,Visual,66,0,1,Struggling Learner
+909,OS,ArraysOSI model,66,60,2,Audio-Visual,66,1,1,Struggling Learner
+910,DBMS,Normalization,50,60,2,Audio-Visual,50,1,1,Struggling Learner
+911,Python,Arrays,50,60,2,Visual,50,0,1,Struggling Learner
+912,OS,Deadlocks,69,35,1,Visual,69,0,1,Struggling Learner
+913,OS,Deadlocks,85,35,1,Visual,85,0,1,Struggling Learner
+914,OS,Deadlocks,85,74,1,Visual,85,0,1,Struggling Learner
+915,OS,Deadlocks,85,97,1,Visual,85,0,0,Fast Learner
+916,OS,Deadlocks,85,97,2,Visual,85,0,0,Fast Learner
+917,OS,Deadlocks,85,97,2,Visual,85,0,0,Fast Learner
+918,OS,Deadlocks,85,97,2,Audio-Visual,85,1,0,Fast Learner
+919,DBMS,All Topics,85,97,2,Audio-Visual,85,1,0,Fast Learner
+920,DBMS,SQL Queries,85,97,2,Audio-Visual,85,1,0,Fast Learner
+921,DBMS,SQL Queries,9,97,2,Audio-Visual,9,1,1,Struggling Learner
+922,DBMS,SQL Queries,25,97,2,Audio-Visual,25,1,1,Struggling Learner
+923,DBMS,SQL Queries,21,97,2,Audio-Visual,21,1,1,Struggling Learner
+924,DBMS,SQL Queries,21,68,2,Audio-Visual,21,1,1,Struggling Learner
+925,DBMS,SQL Queries,21,38,2,Audio-Visual,21,1,1,Struggling Learner
+926,DBMS,SQL Queries,21,47,2,Audio-Visual,21,1,1,Struggling Learner
+927,DBMS,SQL Queries,21,62,2,Audio-Visual,21,1,1,Struggling Learner
+928,DBMS,SQL Queries,21,62,1,Audio-Visual,21,1,1,Struggling Learner
+929,DBMS,SQL Queries,21,62,1,Audio-Visual,21,1,1,Struggling Learner
+930,Machine Learning,Regression,50,60,2,Kinesthetic,50,2,1,Struggling Learner
+931,Machine Learning,Regression,75,60,2,Kinesthetic,75,2,1,Struggling Learner
+932,Machine Learning,Supervised Learning,75,60,2,Kinesthetic,75,2,1,Struggling Learner
+933,Machine Learning,Supervised Learning,75,60,2,Kinesthetic,75,2,1,Struggling Learner
+934,DBMS,All Topics,75,60,2,Kinesthetic,75,2,1,Struggling Learner
+935,DBMS,Transactions,75,60,2,Kinesthetic,75,2,1,Struggling Learner
+936,DBMS,Transactions,56,60,2,Kinesthetic,56,2,1,Struggling Learner
+937,DBMS,Transactions,62,60,2,Kinesthetic,62,2,1,Struggling Learner
+938,DBMS,Transactions,62,60,2,Kinesthetic,62,2,1,Struggling Learner
+939,CN,All Topics,62,60,2,Kinesthetic,62,2,1,Struggling Learner
+940,CN,Network Security,62,60,2,Kinesthetic,62,2,1,Struggling Learner
+941,CN,Network Security,17,60,2,Kinesthetic,17,2,1,Struggling Learner
+942,CN,Network Security,25,60,2,Kinesthetic,25,2,1,Struggling Learner
+943,CN,Network Security,15,60,2,Kinesthetic,15,2,1,Struggling Learner
+944,CN,Network Security,15,78,2,Kinesthetic,15,2,1,Struggling Learner
+945,CN,Network Security,15,78,1,Kinesthetic,15,2,1,Struggling Learner
+946,CN,Network Security,15,78,1,Kinesthetic,15,2,1,Struggling Learner
+947,OS,Process Scheduling,86,60,1,Kinesthetic,86,2,1,Struggling Learner
+948,OS,Process Scheduling,86,60,2,Kinesthetic,86,2,1,Struggling Learner
+949,OS,Process Scheduling,86,60,2,Kinesthetic,86,2,1,Struggling Learner
+950,OS,Process Scheduling,30,39,1,Visual,30,0,1,Struggling Learner
+951,OS,Process Scheduling,30,39,1,Visual,30,0,1,Struggling Learner
+952,DBMS,Transactions,88,34,1,Kinesthetic,88,2,1,Struggling Learner
+953,DBMS,Transactions,88,34,2,Kinesthetic,88,2,1,Struggling Learner
+954,DBMS,Transactions,88,34,2,Kinesthetic,88,2,1,Struggling Learner
+955,DBMS,Transactions,88,34,3,Kinesthetic,88,2,2,Consistent Learner
+956,DBMS,Transactions,88,34,3,Kinesthetic,88,2,2,Consistent Learner
+957,DBMS,Transactions,78,34,3,Kinesthetic,78,2,2,Consistent Learner
+958,DBMS,Transactions,97,34,3,Kinesthetic,97,2,2,Consistent Learner
+959,DBMS,Transactions,93,34,3,Kinesthetic,93,2,2,Consistent Learner
+960,DBMS,Normalization,93,34,3,Kinesthetic,93,2,2,Consistent Learner
+961,DBMS,Normalization,93,34,3,Kinesthetic,93,2,2,Consistent Learner
+962,DBMS,Normalization,93,131,3,Kinesthetic,93,2,0,Fast Learner
+963,DBMS,Normalization,93,131,3,Kinesthetic,93,2,0,Fast Learner
+964,DBMS,Normalization,93,131,2,Kinesthetic,93,2,0,Fast Learner
+965,DBMS,Normalization,93,131,2,Kinesthetic,93,2,0,Fast Learner
+966,DBMS,Normalization,93,131,1,Kinesthetic,93,2,0,Fast Learner
+967,DBMS,Normalization,93,131,1,Kinesthetic,93,2,0,Fast Learner
+968,DBMS,Normalization,96,131,1,Kinesthetic,96,2,0,Fast Learner
+969,DBMS,Normalization,96,131,2,Kinesthetic,96,2,0,Fast Learner
+970,DBMS,Normalization,96,131,2,Kinesthetic,96,2,0,Fast Learner
+971,DBMS,Normalization,96,131,2,Kinesthetic,96,2,0,Fast Learner
+972,Python,General,93,157,1,Kinesthetic,93,2,0,Fast Learner
+973,Python,Data Types,93,157,1,Kinesthetic,93,2,0,Fast Learner
+974,Python,OOP,93,157,1,Kinesthetic,93,2,0,Fast Learner
+975,Python,OOP,93,157,1,Kinesthetic,93,2,0,Fast Learner
+976,DBMS,General,93,157,1,Kinesthetic,93,2,0,Fast Learner
+977,DBMS,SQL Queries,93,157,1,Kinesthetic,93,2,0,Fast Learner
+978,DBMS,SQL Queries,93,157,1,Kinesthetic,93,2,0,Fast Learner
+979,DBMS,SQL Queries,93,105,1,Kinesthetic,93,2,0,Fast Learner
+980,DBMS,SQL Queries,51,105,1,Kinesthetic,51,2,0,Fast Learner
+981,DBMS,SQL Queries,51,105,1,Kinesthetic,51,2,0,Fast Learner
+982,Machine Learning,Regression,76,122,2,Visual,76,0,0,Fast Learner
+983,DBMS,General,76,122,2,Visual,76,0,0,Fast Learner
+984,DBMS,Normalization,76,122,2,Visual,76,0,0,Fast Learner
+985,DBMS,Normalization,76,122,2,Visual,76,0,0,Fast Learner
+986,DBMS,Normalization,86,122,2,Visual,86,0,0,Fast Learner
+987,DBMS,Normalization,86,139,2,Visual,86,0,0,Fast Learner
+988,DBMS,Normalization,86,139,3,Visual,86,0,0,Fast Learner
+989,DBMS,Normalization,86,139,3,Visual,86,0,0,Fast Learner
+990,DBMS,SQL Queries,86,139,3,Visual,86,0,0,Fast Learner
+991,DBMS,SQL Queries,86,139,3,Visual,86,0,0,Fast Learner
+992,DBMS,SQL Queries,63,139,3,Visual,63,0,0,Fast Learner
+993,DBMS,SQL Queries,75,139,3,Visual,75,0,0,Fast Learner
+994,DBMS,SQL Queries,86,139,3,Visual,86,0,0,Fast Learner
+995,DBMS,SQL Queries,14,139,3,Visual,14,0,0,Fast Learner
+996,DBMS,SQL Queries,4,139,3,Visual,4,0,0,Fast Learner
+997,DBMS,SQL Queries,32,139,3,Visual,32,0,0,Fast Learner
+998,DBMS,SQL Queries,58,139,3,Visual,58,0,0,Fast Learner
+999,DBMS,SQL Queries,94,139,3,Visual,94,0,0,Fast Learner
+1000,DBMS,SQL Queries,98,139,3,Visual,98,0,0,Fast Learner
+1001,DBMS,SQL Queries,66,139,3,Visual,66,0,0,Fast Learner
+1002,DBMS,SQL Queries,35,139,3,Visual,35,0,0,Fast Learner
+1003,DBMS,SQL Queries,14,139,3,Visual,14,0,0,Fast Learner
+1004,DBMS,SQL Queries,67,139,3,Visual,67,0,0,Fast Learner
+1005,DBMS,SQL Queries,80,139,3,Visual,80,0,0,Fast Learner
+1006,DBMS,SQL Queries,91,139,3,Visual,91,0,0,Fast Learner
+1007,DBMS,SQL Queries,54,139,3,Visual,54,0,0,Fast Learner
+1008,DBMS,Transactions,86,105,3,Kinesthetic,86,2,0,Fast Learner
+1009,DBMS,SQL Queries,75,148,3,Visual,75,0,0,Fast Learner
+1010,OS,General,75,148,3,Visual,75,0,0,Fast Learner
+1011,CN,General,75,148,3,Visual,75,0,0,Fast Learner
+1012,CN,OSI Model,75,148,3,Visual,75,0,0,Fast Learner
+1013,DBMS,SQL Queries,87,110,3,Audio-Visual,87,1,0,Fast Learner
+1014,OS,General,87,110,3,Audio-Visual,87,1,0,Fast Learner
+1015,OS,Memory Management,87,110,3,Audio-Visual,87,1,0,Fast Learner
+1016,OS,Deadlocks,87,110,3,Audio-Visual,87,1,0,Fast Learner
+1017,OS,Process Scheduling,87,110,3,Audio-Visual,87,1,0,Fast Learner
+1018,CN,General,87,110,3,Audio-Visual,87,1,0,Fast Learner
+1019,CN,OSI Model,87,110,3,Audio-Visual,87,1,0,Fast Learner
+1020,OS,Process Scheduling,87,110,3,Audio-Visual,87,1,0,Fast Learner
+1021,OS,Process Scheduling,87,110,3,Audio-Visual,87,1,0,Fast Learner
+1022,OS,Process Scheduling,87,110,3,Audio-Visual,87,1,0,Fast Learner
+1023,OS,Process Scheduling,87,143,3,Audio-Visual,87,1,0,Fast Learner
+1024,OS,Process Scheduling,87,143,4,Audio-Visual,87,1,0,Fast Learner
+1025,OS,Process Scheduling,87,143,4,Audio-Visual,87,1,0,Fast Learner
+1026,OS,Process Scheduling,87,143,1,Audio-Visual,87,1,0,Fast Learner
+1027,OS,Process Scheduling,87,143,1,Audio-Visual,87,1,0,Fast Learner
+1028,OS,Process Scheduling,76,143,1,Audio-Visual,76,1,0,Fast Learner
+1029,OS,Process Scheduling,76,143,1,Audio-Visual,76,1,0,Fast Learner
+1030,OS,Process Scheduling,66,143,1,Audio-Visual,66,1,0,Fast Learner
+1031,OS,Process Scheduling,66,143,1,Audio-Visual,66,1,0,Fast Learner
+1032,OS,Process Scheduling,71,131,1,Audio-Visual,71,1,0,Fast Learner

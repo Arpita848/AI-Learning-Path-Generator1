@@ -1,0 +1,851 @@
+subject,current_topic,score,time_spent,attempts,learning_style,next_topic
+Python,OOP,17,107,5,Visual,OOP
+CN,Routing,42,61,2,Visual,Routing
+CN,Routing,67,78,3,Visual,Routing
+Python,Functions,58,69,2,Visual,Functions
+Python,File Handling,71,83,2,Kinesthetic,File Handling
+DBMS,SQL,30,169,4,Visual,SQL
+Python,Functions,87,75,1,Audio-Visual,Loops
+OS,Processes,71,84,4,Audio-Visual,Processes
+CN,TCP/IP,87,30,2,Kinesthetic,CN Revision
+CN,Routing,44,79,2,Visual,Routing
+Python,Functions,85,33,2,Visual,Loops
+DSA,Arrays,77,118,3,Kinesthetic,Arrays
+DSA,Stack,44,64,2,Visual,Stack
+DBMS,Normalisation,79,109,4,Kinesthetic,Normalisation
+Python,OOP,83,69,2,Visual,Functions
+DBMS,SQL,83,52,1,Visual,Joins
+OS,Threads,50,97,2,Visual,Threads
+CN,Routing,42,64,3,Visual,Routing
+OS,Processes,78,60,2,Kinesthetic,Processes
+CN,Routing,97,30,2,Kinesthetic,OSI Model
+DSA,Stack,64,106,4,Visual,Stack
+Python,Loops,87,57,1,Kinesthetic,File Handling
+DSA,Queue,82,52,1,Kinesthetic,Stack
+CN,Routing,93,56,2,Visual,OSI Model
+DBMS,SQL,33,135,4,Kinesthetic,SQL
+Python,OOP,70,63,2,Kinesthetic,OOP
+DSA,Linked List,67,59,3,Kinesthetic,Linked List
+Python,OOP,75,61,2,Visual,OOP
+DSA,Linked List,60,99,3,Kinesthetic,Linked List
+OS,Scheduling,92,62,2,Visual,Threads
+Python,OOP,44,111,4,Visual,OOP
+Python,OOP,22,176,3,Kinesthetic,OOP
+CN,Routing,46,103,4,Visual,Routing
+OS,Processes,56,83,3,Visual,Processes
+DBMS,Joins,39,162,3,Kinesthetic,Joins
+OS,Processes,87,43,2,Audio-Visual,Scheduling
+OS,Threads,60,63,2,Visual,Threads
+CN,Routing,56,93,2,Audio-Visual,Routing
+CN,OSI Model,81,25,2,Audio-Visual,TCP/IP
+DSA,Arrays,97,65,2,Kinesthetic,Linked List
+DSA,Queue,54,105,2,Audio-Visual,Queue
+Python,Loops,83,42,2,Kinesthetic,File Handling
+DSA,Stack,35,142,5,Audio-Visual,Stack
+OS,Processes,37,94,4,Visual,Processes
+DBMS,Joins,87,34,1,Audio-Visual,Normalisation
+Python,Loops,62,118,3,Audio-Visual,Loops
+OS,Processes,83,22,1,Visual,Scheduling
+OS,Scheduling,78,99,4,Visual,Scheduling
+Python,Functions,71,92,4,Audio-Visual,Functions
+OS,Threads,90,45,2,Audio-Visual,OS Revision
+DBMS,Normalisation,94,56,2,Visual,DBMS Revision
+OS,Processes,90,49,2,Audio-Visual,Scheduling
+DBMS,Normalisation,89,52,2,Kinesthetic,DBMS Revision
+OS,Processes,61,81,3,Kinesthetic,Processes
+DBMS,Joins,65,113,3,Visual,Joins
+Python,OOP,75,116,3,Audio-Visual,OOP
+Python,File Handling,96,55,2,Kinesthetic,Python Revision
+CN,OSI Model,51,110,3,Visual,OSI Model
+OS,Threads,58,106,2,Audio-Visual,Threads
+OS,Scheduling,14,119,4,Visual,Scheduling
+Python,File Handling,64,103,2,Audio-Visual,File Handling
+CN,TCP/IP,98,44,2,Kinesthetic,CN Revision
+DBMS,Joins,55,112,2,Visual,Joins
+DBMS,Joins,66,71,3,Visual,Joins
+CN,Routing,71,53,2,Audio-Visual,Routing
+DBMS,SQL,70,77,3,Kinesthetic,SQL
+DBMS,Joins,52,110,2,Audio-Visual,Joins
+OS,Processes,40,55,2,Visual,Processes
+Python,Functions,63,77,3,Kinesthetic,Functions
+DSA,Queue,83,57,1,Kinesthetic,Stack
+DBMS,Joins,28,178,5,Visual,Joins
+OS,Threads,43,94,4,Visual,Threads
+CN,TCP/IP,38,152,3,Audio-Visual,TCP/IP
+DBMS,Normalisation,76,84,4,Kinesthetic,Normalisation
+CN,OSI Model,82,37,2,Audio-Visual,TCP/IP
+DBMS,Joins,90,31,2,Kinesthetic,Normalisation
+OS,Threads,92,20,1,Visual,OS Revision
+CN,Routing,72,107,2,Visual,Routing
+DSA,Arrays,71,120,4,Visual,Arrays
+CN,OSI Model,88,39,2,Audio-Visual,TCP/IP
+Python,Functions,75,85,4,Kinesthetic,Functions
+OS,Processes,50,118,2,Audio-Visual,Processes
+CN,OSI Model,95,75,2,Visual,TCP/IP
+DBMS,Joins,51,82,3,Audio-Visual,Joins
+DBMS,SQL,44,69,2,Visual,SQL
+Python,Functions,93,58,1,Kinesthetic,Loops
+CN,OSI Model,51,62,2,Audio-Visual,OSI Model
+Python,Functions,62,70,2,Kinesthetic,Functions
+DBMS,Joins,69,108,2,Kinesthetic,Joins
+CN,TCP/IP,77,78,4,Kinesthetic,TCP/IP
+Python,OOP,99,67,2,Kinesthetic,Functions
+OS,Threads,95,48,1,Audio-Visual,OS Revision
+CN,OSI Model,50,52,4,Kinesthetic,OSI Model
+DSA,Linked List,58,73,4,Visual,Linked List
+Python,File Handling,60,63,2,Audio-Visual,File Handling
+OS,Threads,81,49,1,Audio-Visual,OS Revision
+DBMS,Normalisation,97,49,2,Kinesthetic,DBMS Revision
+DBMS,Normalisation,86,37,1,Audio-Visual,DBMS Revision
+Python,OOP,56,70,3,Visual,OOP
+Python,Functions,83,61,1,Kinesthetic,Loops
+OS,Scheduling,87,49,1,Audio-Visual,Threads
+DSA,Queue,93,41,2,Audio-Visual,Stack
+OS,Threads,90,75,1,Visual,OS Revision
+CN,TCP/IP,60,74,4,Audio-Visual,TCP/IP
+DBMS,SQL,92,44,1,Audio-Visual,Joins
+CN,TCP/IP,94,26,2,Audio-Visual,CN Revision
+DSA,Queue,88,41,2,Audio-Visual,Stack
+CN,OSI Model,78,112,4,Audio-Visual,OSI Model
+OS,Processes,13,171,5,Visual,Processes
+OS,Processes,61,87,3,Kinesthetic,Processes
+CN,OSI Model,52,71,2,Visual,OSI Model
+CN,TCP/IP,98,29,1,Kinesthetic,CN Revision
+Python,File Handling,85,24,2,Audio-Visual,Python Revision
+DBMS,Normalisation,59,75,3,Audio-Visual,Normalisation
+DBMS,Normalisation,72,87,2,Audio-Visual,Normalisation
+OS,Processes,76,113,3,Visual,Processes
+OS,Processes,18,176,5,Visual,Processes
+DSA,Queue,60,106,2,Visual,Queue
+Python,Loops,85,32,1,Audio-Visual,File Handling
+DSA,Arrays,89,67,2,Audio-Visual,Linked List
+DSA,Linked List,66,51,3,Visual,Linked List
+OS,Threads,91,26,1,Audio-Visual,OS Revision
+CN,OSI Model,12,171,4,Visual,OSI Model
+DBMS,SQL,21,128,4,Kinesthetic,SQL
+CN,Routing,71,119,3,Audio-Visual,Routing
+DBMS,Normalisation,99,46,2,Kinesthetic,DBMS Revision
+DBMS,SQL,36,159,5,Audio-Visual,SQL
+DSA,Queue,31,172,5,Audio-Visual,Queue
+OS,Processes,86,24,1,Kinesthetic,Scheduling
+DSA,Arrays,99,20,2,Kinesthetic,Linked List
+DSA,Queue,79,51,3,Visual,Queue
+OS,Processes,64,103,4,Kinesthetic,Processes
+DBMS,Joins,69,114,2,Visual,Joins
+CN,OSI Model,50,57,3,Audio-Visual,OSI Model
+Python,File Handling,77,60,3,Visual,File Handling
+CN,TCP/IP,74,87,3,Visual,TCP/IP
+Python,Functions,57,102,3,Audio-Visual,Functions
+Python,Loops,58,97,2,Audio-Visual,Loops
+Python,OOP,71,66,4,Kinesthetic,OOP
+CN,OSI Model,21,175,4,Visual,OSI Model
+OS,Threads,68,114,2,Audio-Visual,Threads
+Python,Loops,58,78,3,Visual,Loops
+CN,TCP/IP,42,84,2,Visual,TCP/IP
+OS,Scheduling,29,162,5,Audio-Visual,Scheduling
+Python,OOP,65,103,3,Visual,OOP
+OS,Threads,11,109,3,Visual,Threads
+Python,Loops,95,58,2,Audio-Visual,File Handling
+Python,Loops,43,112,4,Audio-Visual,Loops
+DBMS,Normalisation,29,117,3,Kinesthetic,Normalisation
+Python,OOP,85,28,2,Audio-Visual,Functions
+CN,TCP/IP,26,145,3,Audio-Visual,TCP/IP
+OS,Threads,72,103,3,Audio-Visual,Threads
+OS,Processes,64,61,3,Visual,Processes
+CN,OSI Model,37,129,5,Visual,OSI Model
+DSA,Queue,74,115,2,Visual,Queue
+DSA,Stack,66,72,4,Kinesthetic,Stack
+Python,Functions,69,91,4,Visual,Functions
+DBMS,Joins,58,57,3,Visual,Joins
+DBMS,SQL,69,59,4,Kinesthetic,SQL
+CN,TCP/IP,43,107,4,Visual,TCP/IP
+DBMS,Normalisation,94,26,2,Kinesthetic,DBMS Revision
+DSA,Linked List,69,70,3,Audio-Visual,Linked List
+DBMS,Joins,62,58,3,Visual,Joins
+OS,Scheduling,94,75,1,Visual,Threads
+OS,Scheduling,66,66,4,Visual,Scheduling
+CN,OSI Model,49,117,2,Visual,OSI Model
+OS,Processes,56,93,3,Audio-Visual,Processes
+DSA,Queue,83,52,1,Audio-Visual,Stack
+CN,Routing,51,73,4,Visual,Routing
+DSA,Linked List,67,106,4,Kinesthetic,Linked List
+DBMS,SQL,40,110,2,Visual,SQL
+DBMS,Joins,93,30,1,Audio-Visual,Normalisation
+DBMS,Joins,91,74,1,Visual,Normalisation
+DBMS,Normalisation,82,80,1,Kinesthetic,DBMS Revision
+DBMS,SQL,57,99,2,Audio-Visual,SQL
+Python,Loops,69,110,4,Kinesthetic,Loops
+DBMS,Joins,12,92,4,Visual,Joins
+CN,TCP/IP,34,120,4,Audio-Visual,TCP/IP
+CN,OSI Model,75,118,2,Kinesthetic,OSI Model
+Python,Loops,85,62,1,Kinesthetic,File Handling
+CN,TCP/IP,37,150,3,Visual,TCP/IP
+OS,Threads,62,94,2,Kinesthetic,Threads
+CN,TCP/IP,36,159,4,Audio-Visual,TCP/IP
+DBMS,Normalisation,75,67,2,Audio-Visual,Normalisation
+DSA,Queue,92,72,2,Audio-Visual,Stack
+DSA,Arrays,81,75,2,Audio-Visual,Linked List
+DBMS,Normalisation,92,41,1,Audio-Visual,DBMS Revision
+CN,OSI Model,82,47,1,Kinesthetic,TCP/IP
+OS,Scheduling,63,71,4,Audio-Visual,Scheduling
+OS,Threads,75,57,2,Audio-Visual,Threads
+DSA,Queue,94,22,1,Kinesthetic,Stack
+OS,Scheduling,81,58,1,Audio-Visual,Threads
+Python,Functions,61,85,2,Visual,Functions
+DSA,Linked List,48,83,3,Visual,Linked List
+CN,OSI Model,90,32,1,Visual,TCP/IP
+DBMS,SQL,85,62,2,Visual,Joins
+OS,Scheduling,100,31,2,Kinesthetic,Threads
+DSA,Stack,42,97,3,Audio-Visual,Stack
+CN,Routing,75,117,3,Kinesthetic,Routing
+Python,Functions,64,109,4,Audio-Visual,Functions
+CN,TCP/IP,40,66,3,Visual,TCP/IP
+Python,Functions,60,78,3,Audio-Visual,Functions
+OS,Processes,67,85,2,Audio-Visual,Processes
+Python,Functions,79,71,4,Visual,Functions
+Python,OOP,98,36,1,Kinesthetic,Functions
+Python,File Handling,60,111,2,Visual,File Handling
+OS,Scheduling,85,48,2,Kinesthetic,Threads
+DSA,Arrays,63,101,2,Visual,Arrays
+Python,Loops,88,48,1,Kinesthetic,File Handling
+DBMS,Normalisation,77,70,3,Audio-Visual,Normalisation
+CN,OSI Model,95,21,1,Audio-Visual,TCP/IP
+DSA,Arrays,35,166,5,Kinesthetic,Arrays
+Python,OOP,33,136,4,Audio-Visual,OOP
+CN,TCP/IP,69,59,3,Kinesthetic,TCP/IP
+OS,Threads,49,62,3,Visual,Threads
+CN,OSI Model,76,101,4,Kinesthetic,OSI Model
+OS,Scheduling,73,67,3,Visual,Scheduling
+DBMS,Normalisation,62,114,4,Visual,Normalisation
+OS,Scheduling,63,103,4,Kinesthetic,Scheduling
+Python,File Handling,87,66,1,Audio-Visual,Python Revision
+CN,OSI Model,87,22,1,Kinesthetic,TCP/IP
+DSA,Linked List,26,168,4,Visual,Linked List
+Python,Functions,20,174,4,Visual,Functions
+DSA,Linked List,63,83,4,Visual,Linked List
+OS,Threads,59,86,4,Audio-Visual,Threads
+OS,Scheduling,79,85,3,Audio-Visual,Scheduling
+DBMS,Joins,69,60,3,Kinesthetic,Joins
+DBMS,SQL,88,79,2,Kinesthetic,Joins
+CN,Routing,48,117,2,Kinesthetic,Routing
+DBMS,Joins,49,50,4,Visual,Joins
+DBMS,Joins,40,86,3,Visual,Joins
+Python,Functions,43,72,3,Visual,Functions
+Python,File Handling,73,87,2,Audio-Visual,File Handling
+Python,Loops,70,119,4,Audio-Visual,Loops
+CN,OSI Model,53,92,2,Audio-Visual,OSI Model
+DSA,Queue,59,74,2,Visual,Queue
+DBMS,Joins,66,62,2,Visual,Joins
+DSA,Queue,64,84,3,Audio-Visual,Queue
+Python,Loops,56,57,4,Visual,Loops
+DBMS,Normalisation,84,64,1,Visual,DBMS Revision
+DSA,Linked List,99,43,2,Kinesthetic,DSA Revision
+DSA,Stack,46,117,3,Visual,Stack
+CN,Routing,96,32,1,Kinesthetic,OSI Model
+DBMS,SQL,28,152,3,Visual,SQL
+Python,File Handling,94,56,1,Kinesthetic,Python Revision
+Python,File Handling,86,57,1,Audio-Visual,Python Revision
+CN,Routing,95,22,2,Kinesthetic,OSI Model
+DBMS,Joins,79,98,3,Audio-Visual,Joins
+CN,Routing,78,72,4,Visual,Routing
+DSA,Queue,94,63,2,Kinesthetic,Stack
+DSA,Linked List,56,64,2,Audio-Visual,Linked List
+Python,Functions,39,94,4,Kinesthetic,Functions
+Python,Functions,24,119,5,Visual,Functions
+Python,Functions,82,72,2,Visual,Loops
+CN,Routing,51,72,4,Audio-Visual,Routing
+Python,Loops,74,90,4,Visual,Loops
+DBMS,SQL,55,88,4,Visual,SQL
+Python,File Handling,54,99,2,Audio-Visual,File Handling
+Python,File Handling,31,96,4,Audio-Visual,File Handling
+Python,OOP,98,66,1,Kinesthetic,Functions
+OS,Scheduling,66,65,4,Kinesthetic,Scheduling
+DSA,Stack,90,69,2,Audio-Visual,Arrays
+OS,Scheduling,65,109,2,Audio-Visual,Scheduling
+OS,Processes,51,78,4,Audio-Visual,Processes
+CN,TCP/IP,50,75,3,Visual,TCP/IP
+DSA,Linked List,62,82,3,Visual,Linked List
+DBMS,Joins,91,30,1,Kinesthetic,Normalisation
+Python,OOP,81,68,1,Kinesthetic,Functions
+DSA,Queue,16,154,4,Visual,Queue
+CN,OSI Model,41,118,4,Visual,OSI Model
+OS,Threads,38,112,3,Audio-Visual,Threads
+DSA,Stack,63,84,3,Visual,Stack
+DBMS,Normalisation,87,39,1,Kinesthetic,DBMS Revision
+CN,OSI Model,85,25,2,Kinesthetic,TCP/IP
+Python,OOP,78,110,3,Kinesthetic,OOP
+OS,Threads,52,90,2,Visual,Threads
+DBMS,SQL,57,99,4,Audio-Visual,SQL
+DSA,Queue,63,56,2,Visual,Queue
+OS,Threads,87,69,2,Visual,OS Revision
+DBMS,Joins,72,105,2,Kinesthetic,Joins
+Python,Loops,82,37,1,Kinesthetic,File Handling
+DBMS,Joins,25,129,4,Audio-Visual,Joins
+DSA,Queue,77,115,3,Kinesthetic,Queue
+CN,Routing,61,99,2,Visual,Routing
+Python,Functions,65,71,2,Visual,Functions
+DSA,Queue,73,88,3,Kinesthetic,Queue
+DSA,Linked List,70,63,2,Visual,Linked List
+OS,Threads,90,48,2,Audio-Visual,OS Revision
+CN,Routing,72,75,3,Audio-Visual,Routing
+OS,Scheduling,72,81,3,Visual,Scheduling
+DBMS,Joins,86,57,1,Kinesthetic,Normalisation
+DSA,Linked List,82,72,2,Audio-Visual,DSA Revision
+OS,Threads,92,24,2,Kinesthetic,OS Revision
+DBMS,Normalisation,91,64,1,Kinesthetic,DBMS Revision
+OS,Processes,66,92,3,Visual,Processes
+DSA,Stack,64,114,2,Audio-Visual,Stack
+Python,Loops,82,27,1,Audio-Visual,File Handling
+DSA,Linked List,64,107,3,Audio-Visual,Linked List
+Python,OOP,71,71,4,Audio-Visual,OOP
+DSA,Arrays,70,79,3,Visual,Arrays
+DBMS,Joins,86,48,2,Kinesthetic,Normalisation
+OS,Threads,97,31,2,Kinesthetic,OS Revision
+DBMS,Normalisation,65,100,4,Visual,Normalisation
+DBMS,Normalisation,89,78,1,Kinesthetic,DBMS Revision
+Python,Functions,92,46,1,Audio-Visual,Loops
+CN,TCP/IP,80,55,1,Visual,CN Revision
+DBMS,Normalisation,80,51,1,Kinesthetic,DBMS Revision
+CN,TCP/IP,65,103,4,Audio-Visual,TCP/IP
+Python,OOP,68,78,4,Kinesthetic,OOP
+CN,TCP/IP,53,64,3,Audio-Visual,TCP/IP
+OS,Threads,94,54,1,Kinesthetic,OS Revision
+DSA,Arrays,71,61,3,Kinesthetic,Arrays
+DSA,Stack,63,104,2,Visual,Stack
+DSA,Queue,58,118,2,Visual,Queue
+OS,Threads,83,28,2,Audio-Visual,OS Revision
+DSA,Stack,70,81,4,Kinesthetic,Stack
+OS,Threads,52,61,3,Audio-Visual,Threads
+OS,Scheduling,50,61,4,Audio-Visual,Scheduling
+OS,Processes,68,77,3,Visual,Processes
+OS,Threads,37,152,4,Visual,Threads
+Python,OOP,70,52,2,Visual,OOP
+DBMS,SQL,72,66,4,Audio-Visual,SQL
+OS,Processes,46,97,4,Visual,Processes
+DBMS,Normalisation,87,47,1,Audio-Visual,DBMS Revision
+DSA,Stack,41,51,4,Visual,Stack
+DBMS,Normalisation,87,44,1,Kinesthetic,DBMS Revision
+OS,Processes,84,61,1,Audio-Visual,Scheduling
+CN,TCP/IP,66,69,3,Kinesthetic,TCP/IP
+DSA,Queue,63,99,3,Kinesthetic,Queue
+DSA,Stack,57,120,4,Audio-Visual,Stack
+Python,Loops,96,32,2,Kinesthetic,File Handling
+DSA,Linked List,40,59,4,Audio-Visual,Linked List
+OS,Scheduling,78,103,3,Kinesthetic,Scheduling
+Python,OOP,18,117,3,Visual,OOP
+DBMS,Normalisation,66,103,3,Audio-Visual,Normalisation
+CN,TCP/IP,12,129,3,Visual,TCP/IP
+DSA,Arrays,74,58,3,Audio-Visual,Arrays
+DSA,Queue,33,104,4,Kinesthetic,Queue
+DSA,Queue,80,30,2,Kinesthetic,Stack
+OS,Processes,33,105,3,Audio-Visual,Processes
+CN,Routing,82,51,2,Audio-Visual,OSI Model
+CN,Routing,74,63,4,Audio-Visual,Routing
+CN,Routing,80,35,1,Kinesthetic,OSI Model
+DSA,Stack,100,46,1,Kinesthetic,Arrays
+OS,Scheduling,83,52,1,Kinesthetic,Threads
+Python,File Handling,89,69,2,Kinesthetic,Python Revision
+OS,Processes,59,81,3,Audio-Visual,Processes
+DSA,Stack,33,93,3,Kinesthetic,Stack
+Python,Loops,92,74,2,Kinesthetic,File Handling
+DBMS,Joins,84,65,2,Kinesthetic,Normalisation
+CN,OSI Model,89,67,1,Visual,TCP/IP
+DBMS,SQL,68,66,2,Visual,SQL
+DBMS,Normalisation,69,84,2,Visual,Normalisation
+CN,Routing,74,109,3,Kinesthetic,Routing
+DSA,Linked List,77,65,2,Audio-Visual,Linked List
+CN,Routing,90,29,1,Kinesthetic,OSI Model
+DBMS,Normalisation,88,72,1,Kinesthetic,DBMS Revision
+CN,TCP/IP,24,103,3,Visual,TCP/IP
+DSA,Stack,91,63,1,Kinesthetic,Arrays
+Python,Functions,49,61,3,Visual,Functions
+Python,Functions,66,113,2,Visual,Functions
+OS,Processes,74,69,2,Kinesthetic,Processes
+OS,Scheduling,95,23,1,Audio-Visual,Threads
+CN,Routing,92,70,1,Visual,OSI Model
+OS,Scheduling,63,114,3,Visual,Scheduling
+OS,Threads,45,85,2,Kinesthetic,Threads
+OS,Threads,83,35,1,Kinesthetic,OS Revision
+Python,Functions,65,95,2,Visual,Functions
+OS,Threads,91,80,1,Kinesthetic,OS Revision
+DBMS,Normalisation,51,61,2,Audio-Visual,Normalisation
+CN,OSI Model,79,75,2,Kinesthetic,OSI Model
+OS,Processes,64,64,4,Kinesthetic,Processes
+OS,Threads,47,93,3,Visual,Threads
+DBMS,Normalisation,55,95,2,Audio-Visual,Normalisation
+DBMS,Joins,49,72,4,Visual,Joins
+CN,OSI Model,29,130,5,Visual,OSI Model
+DBMS,SQL,87,42,2,Audio-Visual,Joins
+Python,Loops,31,121,5,Audio-Visual,Loops
+Python,OOP,73,71,3,Kinesthetic,OOP
+CN,OSI Model,98,61,1,Kinesthetic,TCP/IP
+Python,Loops,63,59,3,Kinesthetic,Loops
+Python,OOP,69,111,4,Audio-Visual,OOP
+DSA,Linked List,30,116,3,Kinesthetic,Linked List
+CN,OSI Model,17,102,3,Visual,OSI Model
+DBMS,SQL,73,61,3,Kinesthetic,SQL
+DBMS,SQL,25,171,4,Kinesthetic,SQL
+Python,Loops,78,83,2,Audio-Visual,Loops
+OS,Processes,39,149,4,Audio-Visual,Processes
+Python,Functions,46,94,4,Visual,Functions
+DSA,Queue,93,54,2,Audio-Visual,Stack
+OS,Processes,81,52,1,Audio-Visual,Scheduling
+DSA,Stack,84,22,2,Kinesthetic,Arrays
+DSA,Arrays,82,25,2,Audio-Visual,Linked List
+CN,OSI Model,99,57,2,Kinesthetic,TCP/IP
+CN,TCP/IP,98,69,1,Kinesthetic,CN Revision
+DBMS,Joins,95,22,1,Audio-Visual,Normalisation
+DBMS,SQL,90,64,1,Audio-Visual,Joins
+OS,Scheduling,69,89,3,Kinesthetic,Scheduling
+Python,Functions,74,91,3,Kinesthetic,Functions
+Python,Functions,76,102,4,Audio-Visual,Functions
+Python,Functions,76,101,2,Kinesthetic,Functions
+DSA,Queue,21,136,5,Kinesthetic,Queue
+DBMS,Normalisation,53,53,2,Audio-Visual,Normalisation
+DSA,Linked List,63,70,3,Visual,Linked List
+OS,Processes,43,77,2,Audio-Visual,Processes
+OS,Threads,77,51,3,Audio-Visual,Threads
+Python,Functions,59,85,3,Audio-Visual,Functions
+DBMS,Joins,96,72,2,Kinesthetic,Normalisation
+OS,Threads,59,88,4,Visual,Threads
+OS,Threads,88,61,2,Audio-Visual,OS Revision
+Python,File Handling,49,53,4,Visual,File Handling
+DBMS,Joins,86,41,1,Audio-Visual,Normalisation
+CN,OSI Model,97,31,2,Kinesthetic,TCP/IP
+CN,Routing,95,25,1,Visual,OSI Model
+OS,Scheduling,68,87,3,Audio-Visual,Scheduling
+CN,TCP/IP,38,114,5,Visual,TCP/IP
+CN,OSI Model,29,107,3,Audio-Visual,OSI Model
+DBMS,SQL,85,69,1,Audio-Visual,Joins
+DSA,Arrays,24,125,3,Visual,Arrays
+DSA,Linked List,73,104,3,Kinesthetic,Linked List
+Python,OOP,21,91,4,Visual,OOP
+Python,OOP,55,94,3,Visual,OOP
+CN,OSI Model,21,128,4,Kinesthetic,OSI Model
+CN,OSI Model,84,41,2,Audio-Visual,TCP/IP
+DBMS,SQL,64,77,4,Kinesthetic,SQL
+Python,Loops,43,98,4,Visual,Loops
+Python,OOP,36,92,3,Visual,OOP
+DBMS,SQL,32,109,3,Visual,SQL
+OS,Scheduling,26,124,5,Visual,Scheduling
+Python,OOP,28,153,3,Audio-Visual,OOP
+CN,Routing,89,30,1,Audio-Visual,OSI Model
+DBMS,Joins,41,61,2,Kinesthetic,Joins
+DSA,Queue,33,102,4,Visual,Queue
+OS,Scheduling,30,95,4,Audio-Visual,Scheduling
+DBMS,Normalisation,44,55,2,Kinesthetic,Normalisation
+DSA,Arrays,88,76,1,Audio-Visual,Linked List
+DBMS,Joins,62,111,3,Audio-Visual,Joins
+Python,Functions,51,63,3,Visual,Functions
+CN,TCP/IP,62,95,4,Audio-Visual,TCP/IP
+DSA,Linked List,38,146,3,Audio-Visual,Linked List
+Python,Functions,91,53,1,Visual,Loops
+OS,Threads,50,56,2,Visual,Threads
+DBMS,Joins,35,131,3,Kinesthetic,Joins
+CN,Routing,66,80,2,Visual,Routing
+DBMS,SQL,53,113,4,Audio-Visual,SQL
+DBMS,SQL,46,88,4,Visual,SQL
+DBMS,Joins,87,74,2,Audio-Visual,Normalisation
+DBMS,Normalisation,69,64,2,Visual,Normalisation
+OS,Scheduling,84,55,2,Visual,Threads
+DSA,Linked List,66,74,2,Kinesthetic,Linked List
+DBMS,SQL,67,55,4,Visual,SQL
+DBMS,Joins,73,67,3,Visual,Joins
+CN,OSI Model,73,72,4,Visual,OSI Model
+DSA,Queue,90,52,2,Audio-Visual,Stack
+DSA,Arrays,89,48,1,Audio-Visual,Linked List
+CN,OSI Model,61,120,4,Visual,OSI Model
+OS,Threads,84,65,1,Audio-Visual,OS Revision
+CN,OSI Model,67,118,3,Visual,OSI Model
+Python,OOP,61,57,2,Kinesthetic,OOP
+OS,Threads,26,178,4,Audio-Visual,Threads
+OS,Scheduling,97,75,1,Kinesthetic,Threads
+OS,Threads,22,139,4,Visual,Threads
+OS,Threads,28,115,5,Kinesthetic,Threads
+DBMS,SQL,64,119,4,Visual,SQL
+DSA,Arrays,71,59,2,Audio-Visual,Arrays
+Python,File Handling,77,83,2,Kinesthetic,File Handling
+OS,Scheduling,76,69,3,Visual,Scheduling
+OS,Scheduling,45,90,4,Visual,Scheduling
+Python,Functions,62,61,3,Audio-Visual,Functions
+OS,Scheduling,74,117,3,Audio-Visual,Scheduling
+Python,OOP,56,81,2,Visual,OOP
+Python,File Handling,59,53,4,Audio-Visual,File Handling
+CN,OSI Model,45,74,3,Audio-Visual,OSI Model
+DSA,Queue,31,170,3,Visual,Queue
+Python,Functions,68,59,4,Visual,Functions
+OS,Processes,25,122,5,Kinesthetic,Processes
+OS,Scheduling,62,105,3,Audio-Visual,Scheduling
+CN,Routing,45,55,4,Visual,Routing
+CN,Routing,89,58,1,Audio-Visual,OSI Model
+DBMS,Joins,15,158,3,Visual,Joins
+CN,OSI Model,31,172,4,Visual,OSI Model
+CN,Routing,38,166,4,Kinesthetic,Routing
+OS,Processes,63,77,3,Visual,Processes
+DSA,Stack,68,74,2,Kinesthetic,Stack
+Python,File Handling,59,58,3,Visual,File Handling
+DBMS,Joins,45,80,2,Audio-Visual,Joins
+DSA,Arrays,69,89,4,Audio-Visual,Arrays
+OS,Scheduling,60,81,2,Audio-Visual,Scheduling
+OS,Scheduling,90,76,2,Kinesthetic,Threads
+DBMS,Normalisation,79,60,3,Kinesthetic,Normalisation
+Python,OOP,100,21,2,Kinesthetic,Functions
+Python,Loops,92,50,1,Visual,File Handling
+CN,TCP/IP,41,115,2,Audio-Visual,TCP/IP
+DSA,Stack,15,112,5,Visual,Stack
+DSA,Linked List,40,79,2,Audio-Visual,Linked List
+DSA,Arrays,64,55,2,Audio-Visual,Arrays
+CN,TCP/IP,88,57,1,Audio-Visual,CN Revision
+Python,Loops,87,53,2,Audio-Visual,File Handling
+DBMS,Normalisation,84,48,1,Kinesthetic,DBMS Revision
+DSA,Stack,79,65,4,Kinesthetic,Stack
+Python,File Handling,54,70,4,Visual,File Handling
+Python,Functions,49,115,2,Visual,Functions
+DSA,Arrays,92,58,1,Kinesthetic,Linked List
+CN,OSI Model,76,102,4,Audio-Visual,OSI Model
+DSA,Arrays,90,79,2,Kinesthetic,Linked List
+Python,OOP,96,63,2,Kinesthetic,Functions
+DSA,Linked List,73,65,2,Visual,Linked List
+CN,TCP/IP,100,47,2,Kinesthetic,CN Revision
+DBMS,SQL,92,42,1,Audio-Visual,Joins
+DSA,Queue,67,102,3,Audio-Visual,Queue
+Python,OOP,30,116,5,Visual,OOP
+Python,Functions,88,36,2,Audio-Visual,Loops
+DBMS,SQL,67,111,2,Audio-Visual,SQL
+OS,Scheduling,66,67,4,Visual,Scheduling
+DSA,Queue,90,71,1,Kinesthetic,Stack
+Python,OOP,99,47,1,Kinesthetic,Functions
+Python,OOP,66,116,3,Visual,OOP
+DSA,Linked List,41,86,2,Audio-Visual,Linked List
+CN,TCP/IP,81,43,1,Kinesthetic,CN Revision
+OS,Scheduling,92,57,1,Audio-Visual,Threads
+Python,Loops,63,94,3,Visual,Loops
+DBMS,Joins,15,142,5,Visual,Joins
+OS,Scheduling,88,76,2,Kinesthetic,Threads
+DSA,Arrays,80,50,1,Audio-Visual,Linked List
+DSA,Stack,61,116,4,Audio-Visual,Stack
+DSA,Arrays,70,59,4,Kinesthetic,Arrays
+OS,Processes,40,74,3,Visual,Processes
+DSA,Arrays,67,95,2,Kinesthetic,Arrays
+Python,File Handling,37,159,3,Visual,File Handling
+OS,Scheduling,90,31,2,Visual,Threads
+Python,File Handling,81,52,2,Audio-Visual,Python Revision
+DBMS,SQL,61,51,2,Visual,SQL
+Python,Loops,58,73,4,Audio-Visual,Loops
+CN,OSI Model,63,76,3,Audio-Visual,OSI Model
+DBMS,Joins,54,79,2,Audio-Visual,Joins
+CN,OSI Model,75,69,3,Audio-Visual,OSI Model
+CN,TCP/IP,72,88,3,Visual,TCP/IP
+DBMS,SQL,16,122,4,Visual,SQL
+OS,Scheduling,67,82,3,Audio-Visual,Scheduling
+CN,Routing,52,86,3,Visual,Routing
+DBMS,SQL,64,68,2,Audio-Visual,SQL
+DBMS,Normalisation,45,60,2,Visual,Normalisation
+OS,Threads,62,84,3,Audio-Visual,Threads
+CN,TCP/IP,55,52,2,Audio-Visual,TCP/IP
+Python,Functions,63,58,3,Kinesthetic,Functions
+DBMS,Normalisation,79,69,2,Kinesthetic,Normalisation
+OS,Scheduling,26,111,3,Visual,Scheduling
+OS,Scheduling,88,55,2,Audio-Visual,Threads
+DSA,Linked List,68,117,4,Visual,Linked List
+OS,Scheduling,12,146,4,Visual,Scheduling
+OS,Processes,84,42,2,Kinesthetic,Scheduling
+DBMS,Joins,38,127,5,Audio-Visual,Joins
+OS,Processes,93,45,1,Audio-Visual,Scheduling
+DBMS,Joins,73,80,4,Kinesthetic,Joins
+OS,Scheduling,58,102,2,Visual,Scheduling
+OS,Processes,69,84,4,Visual,Processes
+Python,Functions,80,31,1,Kinesthetic,Loops
+Python,Functions,75,77,3,Kinesthetic,Functions
+OS,Scheduling,62,60,2,Visual,Scheduling
+Python,File Handling,68,98,2,Kinesthetic,File Handling
+DSA,Linked List,51,75,3,Audio-Visual,Linked List
+DSA,Linked List,89,79,2,Audio-Visual,DSA Revision
+CN,TCP/IP,69,75,3,Kinesthetic,TCP/IP
+DSA,Queue,90,20,1,Kinesthetic,Stack
+DBMS,SQL,98,70,2,Kinesthetic,Joins
+Python,Functions,99,41,1,Kinesthetic,Loops
+CN,Routing,90,55,2,Kinesthetic,OSI Model
+DSA,Queue,49,82,2,Visual,Queue
+OS,Threads,52,119,3,Visual,Threads
+CN,TCP/IP,24,147,4,Kinesthetic,TCP/IP
+DBMS,SQL,52,52,4,Visual,SQL
+DSA,Arrays,40,118,3,Visual,Arrays
+CN,Routing,23,172,4,Visual,Routing
+Python,OOP,61,75,2,Kinesthetic,OOP
+CN,TCP/IP,88,23,2,Audio-Visual,CN Revision
+DSA,Linked List,100,23,2,Kinesthetic,DSA Revision
+Python,Loops,12,128,3,Visual,Loops
+Python,OOP,22,114,3,Visual,OOP
+DSA,Linked List,30,163,4,Visual,Linked List
+DBMS,SQL,97,45,2,Kinesthetic,Joins
+CN,OSI Model,90,74,2,Audio-Visual,TCP/IP
+OS,Threads,86,44,2,Kinesthetic,OS Revision
+DBMS,SQL,19,166,3,Visual,SQL
+OS,Processes,86,74,2,Audio-Visual,Scheduling
+OS,Threads,50,62,2,Visual,Threads
+OS,Scheduling,18,128,3,Visual,Scheduling
+DSA,Queue,71,72,3,Visual,Queue
+CN,Routing,43,98,2,Visual,Routing
+OS,Scheduling,77,65,2,Audio-Visual,Scheduling
+Python,Loops,27,162,3,Visual,Loops
+DSA,Queue,66,107,4,Visual,Queue
+DBMS,Joins,35,100,4,Audio-Visual,Joins
+DBMS,Joins,73,66,2,Kinesthetic,Joins
+DBMS,Normalisation,29,157,3,Visual,Normalisation
+DBMS,Joins,77,64,4,Visual,Joins
+OS,Scheduling,60,71,3,Visual,Scheduling
+DBMS,Normalisation,67,75,4,Kinesthetic,Normalisation
+Python,OOP,40,68,3,Visual,OOP
+Python,Loops,60,76,4,Audio-Visual,Loops
+CN,OSI Model,50,52,3,Visual,OSI Model
+Python,Loops,26,179,5,Kinesthetic,Loops
+Python,OOP,91,75,1,Audio-Visual,Functions
+DBMS,SQL,72,62,3,Audio-Visual,SQL
+Python,Functions,94,55,1,Kinesthetic,Loops
+OS,Scheduling,80,42,2,Audio-Visual,Threads
+CN,OSI Model,92,76,1,Kinesthetic,TCP/IP
+DBMS,Normalisation,32,156,5,Kinesthetic,Normalisation
+DSA,Linked List,93,39,2,Kinesthetic,DSA Revision
+DSA,Stack,76,67,3,Kinesthetic,Stack
+DSA,Arrays,83,31,2,Kinesthetic,Linked List
+DBMS,Joins,79,85,2,Audio-Visual,Joins
+CN,TCP/IP,69,79,4,Audio-Visual,TCP/IP
+OS,Processes,49,114,4,Visual,Processes
+DSA,Linked List,55,74,2,Audio-Visual,Linked List
+Python,Loops,71,75,2,Audio-Visual,Loops
+DBMS,Normalisation,94,76,1,Audio-Visual,DBMS Revision
+DBMS,Normalisation,73,118,4,Audio-Visual,Normalisation
+Python,OOP,78,55,2,Audio-Visual,OOP
+Python,File Handling,44,74,3,Visual,File Handling
+OS,Scheduling,79,56,4,Kinesthetic,Scheduling
+Python,OOP,97,28,2,Kinesthetic,Functions
+DSA,Linked List,81,76,2,Visual,DSA Revision
+DSA,Queue,74,96,2,Kinesthetic,Queue
+CN,TCP/IP,72,55,2,Kinesthetic,TCP/IP
+DSA,Stack,61,103,3,Kinesthetic,Stack
+DBMS,Joins,38,106,3,Visual,Joins
+Python,File Handling,80,58,2,Audio-Visual,Python Revision
+DBMS,Joins,44,50,2,Audio-Visual,Joins
+CN,Routing,61,94,2,Kinesthetic,Routing
+CN,TCP/IP,52,56,2,Audio-Visual,TCP/IP
+OS,Threads,52,108,4,Visual,Threads
+Python,Loops,62,58,3,Audio-Visual,Loops
+DBMS,SQL,88,41,2,Kinesthetic,Joins
+CN,Routing,100,53,1,Kinesthetic,OSI Model
+OS,Scheduling,57,117,4,Visual,Scheduling
+DSA,Linked List,72,113,2,Visual,Linked List
+OS,Processes,74,65,4,Kinesthetic,Processes
+DBMS,Joins,77,77,2,Kinesthetic,Joins
+Python,Loops,60,50,2,Audio-Visual,Loops
+CN,TCP/IP,86,41,2,Kinesthetic,CN Revision
+DSA,Linked List,97,77,2,Kinesthetic,DSA Revision
+Python,Loops,61,118,2,Visual,Loops
+OS,Processes,60,93,3,Kinesthetic,Processes
+CN,TCP/IP,53,89,4,Audio-Visual,TCP/IP
+OS,Scheduling,87,43,2,Kinesthetic,Threads
+Python,Loops,82,48,1,Kinesthetic,File Handling
+OS,Scheduling,84,69,2,Visual,Threads
+CN,TCP/IP,61,108,3,Kinesthetic,TCP/IP
+Python,Loops,99,75,1,Kinesthetic,File Handling
+CN,TCP/IP,60,76,3,Visual,TCP/IP
+CN,OSI Model,88,29,1,Audio-Visual,TCP/IP
+CN,TCP/IP,71,120,3,Kinesthetic,TCP/IP
+OS,Threads,69,93,4,Kinesthetic,Threads
+DBMS,Normalisation,61,61,3,Kinesthetic,Normalisation
+CN,TCP/IP,63,89,3,Visual,TCP/IP
+CN,Routing,52,109,2,Audio-Visual,Routing
+DBMS,Joins,84,75,2,Kinesthetic,Normalisation
+OS,Scheduling,52,110,2,Audio-Visual,Scheduling
+DSA,Arrays,54,115,2,Audio-Visual,Arrays
+Python,Loops,60,118,3,Visual,Loops
+CN,Routing,25,139,3,Visual,Routing
+CN,OSI Model,60,119,4,Audio-Visual,OSI Model
+Python,File Handling,94,40,1,Kinesthetic,Python Revision
+Python,OOP,65,91,3,Visual,OOP
+DSA,Stack,95,71,1,Visual,Arrays
+OS,Scheduling,53,76,4,Visual,Scheduling
+OS,Scheduling,86,25,1,Visual,Threads
+Python,Loops,75,95,2,Visual,Loops
+CN,OSI Model,65,101,3,Visual,OSI Model
+DSA,Linked List,72,96,3,Kinesthetic,Linked List
+DSA,Stack,20,108,5,Kinesthetic,Stack
+DSA,Queue,93,75,2,Kinesthetic,Stack
+DBMS,Normalisation,93,55,2,Kinesthetic,DBMS Revision
+CN,Routing,56,114,3,Visual,Routing
+OS,Processes,91,27,2,Kinesthetic,Scheduling
+CN,OSI Model,66,61,2,Audio-Visual,OSI Model
+Python,Loops,20,158,3,Visual,Loops
+DBMS,Normalisation,63,87,3,Visual,Normalisation
+CN,TCP/IP,88,23,2,Audio-Visual,CN Revision
+OS,Threads,25,100,3,Visual,Threads
+OS,Scheduling,88,74,2,Kinesthetic,Threads
+CN,TCP/IP,91,71,1,Kinesthetic,CN Revision
+DSA,Queue,84,58,1,Audio-Visual,Stack
+DBMS,Joins,100,30,1,Kinesthetic,Normalisation
+Python,OOP,95,39,2,Kinesthetic,Functions
+CN,Routing,92,50,2,Audio-Visual,OSI Model
+Python,Loops,60,117,4,Audio-Visual,Loops
+CN,TCP/IP,93,59,2,Audio-Visual,CN Revision
+OS,Threads,56,74,4,Visual,Threads
+DSA,Arrays,10,98,3,Visual,Arrays
+DBMS,Joins,88,32,1,Kinesthetic,Normalisation
+CN,TCP/IP,100,27,1,Kinesthetic,CN Revision
+CN,Routing,88,38,2,Kinesthetic,OSI Model
+DBMS,Joins,90,36,1,Audio-Visual,Normalisation
+DBMS,Joins,68,72,3,Kinesthetic,Joins
+DSA,Linked List,83,29,2,Kinesthetic,DSA Revision
+DBMS,Normalisation,27,99,5,Audio-Visual,Normalisation
+Python,File Handling,80,79,1,Kinesthetic,Python Revision
+DBMS,Normalisation,95,50,2,Kinesthetic,DBMS Revision
+Python,Functions,75,65,4,Kinesthetic,Functions
+Python,OOP,60,60,3,Audio-Visual,OOP
+DSA,Stack,22,174,3,Visual,Stack
+Python,Loops,45,106,4,Audio-Visual,Loops
+Python,Functions,75,119,4,Audio-Visual,Functions
+DBMS,SQL,70,55,3,Kinesthetic,SQL
+CN,OSI Model,92,29,1,Visual,TCP/IP
+Python,File Handling,32,173,3,Visual,File Handling
+OS,Processes,76,58,2,Audio-Visual,Processes
+CN,Routing,93,41,2,Kinesthetic,OSI Model
+CN,TCP/IP,66,55,4,Kinesthetic,TCP/IP
+OS,Processes,61,120,2,Audio-Visual,Processes
+Python,Functions,100,59,2,Kinesthetic,Loops
+Python,OOP,100,57,2,Kinesthetic,Functions
+DBMS,Normalisation,68,116,3,Kinesthetic,Normalisation
+CN,TCP/IP,95,59,1,Kinesthetic,CN Revision
+DSA,Stack,83,59,2,Kinesthetic,Arrays
+DSA,Arrays,64,110,3,Kinesthetic,Arrays
+Python,OOP,54,105,3,Visual,OOP
+DBMS,SQL,97,31,1,Kinesthetic,Joins
+Python,OOP,98,57,2,Kinesthetic,Functions
+OS,Processes,63,80,4,Kinesthetic,Processes
+DSA,Queue,51,105,2,Audio-Visual,Queue
+DSA,Linked List,31,170,4,Audio-Visual,Linked List
+DSA,Queue,58,67,2,Visual,Queue
+DSA,Arrays,99,30,1,Kinesthetic,Linked List
+DBMS,SQL,70,85,2,Visual,SQL
+DSA,Stack,57,69,4,Audio-Visual,Stack
+Python,OOP,81,47,2,Audio-Visual,Functions
+Python,File Handling,67,51,4,Audio-Visual,File Handling
+DSA,Arrays,52,52,3,Audio-Visual,Arrays
+DBMS,Normalisation,70,109,2,Visual,Normalisation
+OS,Threads,80,75,1,Audio-Visual,OS Revision
+Python,Loops,86,70,1,Audio-Visual,File Handling
+OS,Processes,74,55,3,Kinesthetic,Processes
+Python,Functions,87,54,1,Kinesthetic,Loops
+DSA,Stack,58,114,4,Audio-Visual,Stack
+OS,Scheduling,66,65,3,Audio-Visual,Scheduling
+CN,OSI Model,75,58,2,Audio-Visual,OSI Model
+DSA,Arrays,68,64,4,Kinesthetic,Arrays
+DSA,Queue,71,119,2,Audio-Visual,Queue
+Python,Loops,47,79,4,Kinesthetic,Loops
+OS,Threads,72,117,4,Visual,Threads
+DSA,Arrays,87,50,2,Kinesthetic,Linked List
+OS,Scheduling,85,65,2,Audio-Visual,Threads
+DSA,Stack,70,66,3,Kinesthetic,Stack
+CN,TCP/IP,91,29,2,Kinesthetic,CN Revision
+OS,Processes,75,68,3,Kinesthetic,Processes
+CN,TCP/IP,59,110,3,Audio-Visual,TCP/IP
+CN,TCP/IP,94,41,1,Kinesthetic,CN Revision
+CN,Routing,44,78,3,Audio-Visual,Routing
+CN,TCP/IP,87,70,2,Kinesthetic,CN Revision
+DBMS,Normalisation,91,45,1,Visual,DBMS Revision
+Python,Loops,38,137,4,Audio-Visual,Loops
+OS,Scheduling,82,33,2,Audio-Visual,Threads
+DBMS,Normalisation,43,61,2,Audio-Visual,Normalisation
+CN,OSI Model,98,68,2,Kinesthetic,TCP/IP
+OS,Scheduling,98,68,1,Kinesthetic,Threads
+CN,OSI Model,89,73,2,Kinesthetic,TCP/IP
+Python,OOP,75,65,4,Kinesthetic,OOP
+DSA,Linked List,42,65,3,Visual,Linked List
+CN,TCP/IP,68,105,3,Audio-Visual,TCP/IP
+Python,Loops,42,83,2,Visual,Loops
+DBMS,Normalisation,61,84,3,Kinesthetic,Normalisation
+OS,Processes,70,59,4,Audio-Visual,Processes
+Python,Functions,61,88,3,Visual,Functions
+Python,Loops,36,126,4,Kinesthetic,Loops
+DSA,Queue,67,74,4,Kinesthetic,Queue
+CN,TCP/IP,48,103,3,Visual,TCP/IP
+DSA,Queue,72,96,2,Audio-Visual,Queue
+CN,TCP/IP,59,53,4,Audio-Visual,TCP/IP
+DSA,Stack,29,100,4,Audio-Visual,Stack
+Python,OOP,81,32,1,Audio-Visual,Functions
+CN,Routing,33,95,3,Audio-Visual,Routing
+Python,OOP,38,115,3,Visual,OOP
+DSA,Arrays,51,114,4,Visual,Arrays
+Python,OOP,74,77,4,Visual,OOP
+CN,Routing,16,154,5,Visual,Routing
+DSA,Linked List,80,73,2,Visual,DSA Revision
+DBMS,SQL,28,156,3,Audio-Visual,SQL
+OS,Threads,20,153,3,Visual,Threads
+OS,Threads,63,87,3,Audio-Visual,Threads
+DBMS,Normalisation,71,112,4,Audio-Visual,Normalisation
+Python,OOP,78,63,4,Kinesthetic,OOP
+Python,Loops,79,101,2,Kinesthetic,Loops
+OS,Threads,66,95,3,Visual,Threads
+DBMS,Normalisation,39,103,3,Audio-Visual,Normalisation
+DSA,Queue,82,51,1,Kinesthetic,Stack
+OS,Processes,53,59,4,Audio-Visual,Processes
+DBMS,SQL,95,52,2,Audio-Visual,Joins
+CN,TCP/IP,81,47,1,Kinesthetic,CN Revision
+DBMS,Joins,37,174,4,Kinesthetic,Joins
+DBMS,SQL,95,68,1,Audio-Visual,Joins
+CN,TCP/IP,71,70,4,Visual,TCP/IP
+CN,OSI Model,59,91,2,Visual,OSI Model
+OS,Scheduling,62,98,2,Visual,Scheduling
+DBMS,Joins,87,35,2,Kinesthetic,Normalisation
+OS,Processes,67,91,2,Audio-Visual,Processes
+CN,TCP/IP,72,110,4,Audio-Visual,TCP/IP
+CN,OSI Model,75,112,2,Audio-Visual,OSI Model
+OS,Processes,23,115,4,Visual,Processes
+Python,Functions,59,101,2,Audio-Visual,Functions
+CN,Routing,45,117,3,Visual,Routing
+Python,Loops,68,119,3,Visual,Loops
+CN,TCP/IP,85,76,1,Audio-Visual,CN Revision
+DBMS,Joins,68,57,4,Visual,Joins
+DSA,Stack,60,105,3,Visual,Stack
+Python,Functions,59,70,3,Audio-Visual,Functions
+DSA,Queue,67,89,3,Kinesthetic,Queue
+DBMS,Normalisation,68,67,2,Kinesthetic,Normalisation
+CN,Routing,90,70,1,Visual,OSI Model
+OS,Threads,93,77,2,Audio-Visual,OS Revision
+DSA,Stack,96,79,1,Kinesthetic,Arrays
+CN,Routing,68,99,4,Audio-Visual,Routing
+DSA,Stack,68,106,3,Kinesthetic,Stack
+DBMS,Normalisation,83,40,2,Audio-Visual,DBMS Revision
+DSA,Arrays,89,21,1,Audio-Visual,Linked List
+DSA,Arrays,64,65,4,Visual,Arrays
+DBMS,SQL,88,39,1,Audio-Visual,Joins
+OS,Processes,100,40,2,Kinesthetic,Scheduling
+Python,File Handling,90,65,2,Audio-Visual,Python Revision
+CN,Routing,73,120,4,Audio-Visual,Routing
+Python,Functions,49,50,3,Visual,Functions
+CN,Routing,76,66,4,Kinesthetic,Routing
+OS,Scheduling,84,36,1,Audio-Visual,Threads
+DBMS,Joins,72,78,2,Kinesthetic,Joins
+CN,TCP/IP,94,32,2,Kinesthetic,CN Revision
+CN,OSI Model,31,111,5,Kinesthetic,OSI Model
+DBMS,Joins,55,76,2,Visual,Joins
+OS,Scheduling,49,105,2,Visual,Scheduling
+OS,Threads,15,142,3,Visual,Threads
+DSA,Linked List,74,60,2,Kinesthetic,Linked List
+DBMS,Normalisation,93,67,2,Kinesthetic,DBMS Revision
+OS,Processes,81,20,2,Audio-Visual,Scheduling
+DBMS,Normalisation,42,55,4,Audio-Visual,Normalisation
+DBMS,Joins,35,180,5,Audio-Visual,Joins
+OS,Processes,88,67,2,Kinesthetic,Scheduling
+OS,Threads,63,71,3,Audio-Visual,Threads
+DSA,Linked List,61,79,2,Kinesthetic,Linked List
+DBMS,Joins,95,22,2,Kinesthetic,Normalisation
+DBMS,Joins,84,27,2,Kinesthetic,Normalisation
+DSA,Arrays,93,33,1,Visual,Linked List
+DBMS,Normalisation,80,38,1,Kinesthetic,DBMS Revision
+Python,Loops,34,180,5,Kinesthetic,Loops
+OS,Threads,11,173,5,Visual,Threads
+CN,Routing,100,38,2,Kinesthetic,OSI Model
+CN,TCP/IP,33,112,3,Audio-Visual,TCP/IP
+Python,OOP,72,86,4,Kinesthetic,OOP
+Python,Loops,89,77,1,Audio-Visual,File Handling
+CN,Routing,62,110,3,Audio-Visual,Routing
+DBMS,Joins,30,144,3,Visual,Joins
