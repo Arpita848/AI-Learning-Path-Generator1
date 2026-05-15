@@ -14,8 +14,13 @@ import json
 import numpy as np
 import copy
 import joblib
-df = pd.read_csv("data/student_clustered.csv")
+from openai import OpenAI
+from datetime import datetime
+import os
 
+df = pd.read_csv("data/student_clustered.csv")
+if "quiz_generated" not in st.session_state:
+    st.session_state.quiz_generated = False
 # -------------------------------
 # 📚 SUBJECT → TOPIC MAPPING
 # -------------------------------
@@ -84,7 +89,82 @@ students_df = df.copy()   #  NOW df exists
 students_df["score"] = pd.to_numeric(students_df["score"], errors="coerce")
 def save_students(df):
     df.to_csv(STUDENT_FILE, index=False)
+def generate_ai_quiz(
+    topic,
+    difficulty,
+    learning_style
+):
 
+    prompt = f"""
+    Generate 5 multiple choice questions.
+
+    Topic: {topic}
+
+    Difficulty: {difficulty}
+
+    Learning Style: {learning_style}
+
+    Return ONLY valid JSON.
+
+    Format:
+
+    [
+      {{
+        "question": "Question here",
+        "options": [
+          "Option A",
+          "Option B",
+          "Option C",
+          "Option D"
+        ],
+        "answer": "Correct Option"
+      }}
+    ]
+    """
+
+    try:
+
+        response = client.chat.completions.create(
+
+            model="deepseek/deepseek-chat",
+
+            messages=[
+                {
+                    "role": "user",
+                    "content": prompt
+                }
+            ],
+
+            temperature=0.7
+
+        )
+
+        quiz_text = (
+            response
+            .choices[0]
+            .message
+            .content
+        )
+
+        # Remove markdown if AI returns ```json
+        quiz_text = (
+            quiz_text
+            .replace("```json", "")
+            .replace("```", "")
+            .strip()
+        )
+
+        quiz_data = json.loads(quiz_text)
+
+        return quiz_data
+
+    except Exception as e:
+
+        st.error(
+            f"Quiz generation failed: {e}"
+        )
+
+        return []
 st.markdown("""
 <style>
 
@@ -429,47 +509,162 @@ strong_topics = pd.Series(dtype=float)
 # -------------------------------
 # CONFIG
 # -------------------------------
-
-
 API_URL = "http://127.0.0.1:5001"
 
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+
+client = OpenAI(
+    base_url="https://openrouter.ai/api/v1",
+    api_key=OPENROUTER_API_KEY
+)
+
+if "analyze" not in st.session_state:
+    if "quiz_questions" not in st.session_state:
+        st.session_state.quiz_questions = []
+
+    if "quiz_generated" not in st.session_state:
+        st.session_state.quiz_generated = False
+    st.session_state.analyze = False
 # -------------------------------
 # SIDEBAR
 # -------------------------------
 st.sidebar.markdown("""
-<h2 style='color:white;'>AI Dashboard</h2>
+<h2 style='color:white;'>Student Dashboard</h2>
 <hr style='border:1px solid gray'>
 """, unsafe_allow_html=True)
 
 # -------------------------------
-# 👤 LOGIN SYSTEM
+# 🔐 LOGIN SYSTEM
 # -------------------------------
-st.sidebar.subheader("Student Login")
 
-student_id = st.sidebar.text_input("Enter Student ID")
+st.sidebar.subheader("🔐 Student Login")
 
-students_df["score"] = pd.to_numeric(students_df["score"], errors="coerce")
+# Initialize session state
+if "logged_in" not in st.session_state:
+    st.session_state.logged_in = False
+
+if "student_id" not in st.session_state:
+    st.session_state.student_id = None
+
+COMMON_PASSWORD = "IBM"
+
+# -------------------------------
+# SHOW LOGIN FORM ONLY IF LOGGED OUT
+# -------------------------------
+
+if not st.session_state.logged_in:
+
+    entered_id = st.sidebar.text_input(
+        "Student ID"
+    )
+
+    entered_password = st.sidebar.text_input(
+        "Password",
+        type="password"
+    )
+
+    st.sidebar.caption("Demo Password: IBM")
+
+    # -------------------------------
+    # LOGIN BUTTON
+    # -------------------------------
+
+    if st.sidebar.button("Login"):
+
+        try:
+
+            entered_id = int(entered_id)
+
+            if entered_password == COMMON_PASSWORD:
+
+                st.session_state.logged_in = True
+                st.session_state.student_id = entered_id
+
+                st.rerun()
+
+            else:
+
+                st.toast(
+                    "Invalid Password"
+                )
+
+        except ValueError:
+
+            st.toast(
+                "Student ID must be numeric"
+            )
+
+# -------------------------------
+# SESSION VALUES
+# -------------------------------
+
+login_success = st.session_state.logged_in
+student_id = st.session_state.student_id
+# -------------------------------
+# STUDENT HISTORY
+# -------------------------------
 
 if student_id:
-    try:
-        student_id = int(student_id)
-        st.sidebar.success(f"Logged in as Student {student_id}")
-    except:
-        st.sidebar.error("Enter valid numeric ID")
 
-if student_id:
-    student_history = students_df[students_df["student_id"] == student_id]
+    student_history = students_df[
+        students_df["student_id"] == student_id
+    ]
+
 else:
-    student_history = pd.DataFrame()
 
-score = st.sidebar.slider("Score", 0, 100, 50)
-time_spent = st.sidebar.slider("Time Spent (mins)", 10, 180, 60)
-attempts = st.sidebar.slider("Attempts", 1, 5, 2)
+    student_history = pd.DataFrame()
+# -------------------------------
+# LOGGED-IN VIEW
+# -------------------------------
+
+if login_success:
+
+    st.sidebar.success(
+        f"Logged in as Student {student_id}"
+    )
+
+    if st.sidebar.button("Logout"):
+
+        st.session_state.logged_in = False
+        st.session_state.student_id = None
+
+        st.rerun()
+
+# -------------------------------
+# PROTECT DASHBOARD
+# -------------------------------
+
+if not login_success:
+
+    st.warning("Please login to access dashboard")
+
+    st.stop()
+score = st.sidebar.slider(
+    "Score",
+    0,
+    100,
+    50
+)
+
+time_spent = st.sidebar.slider(
+    "Time Spent (mins)",
+    10,
+    180,
+    60
+)
+
+attempts = st.sidebar.slider(
+    "Attempts",
+    1,
+    5,
+    2
+)
 
 learning_style = st.sidebar.selectbox(
     "Learning Style",
     ["Visual", "Audio-Visual", "Kinesthetic"]
 )
+
 subject = st.sidebar.selectbox(
     "Subject",
     list(SUBJECT_TOPICS.keys())
@@ -481,17 +676,30 @@ topic = st.sidebar.selectbox(
 )
 
 if topic == "All Topics":
-    st.info("You are analyzing subject-level performance")
 
+    st.sidebar.info(
+        "You are analyzing subject-level performance"
+    )
 
-if st.sidebar.button("Analyze Student", key="analyze_btn"):
+# -------------------------------
+# BUTTONS
+# -------------------------------
+
+if st.sidebar.button(
+    "Analyze Student",
+    key="analyze_btn"
+):
+
     st.session_state.analyze = True
-    
 
-if st.sidebar.button("Reset", key="reset_btn"):
+if st.sidebar.button(
+    "Reset",
+    key="reset_btn"
+):
+
     st.session_state.analyze = False
-    
 
+    st.rerun()
 
 # -------------------------------
 # TITLE
@@ -535,21 +743,11 @@ if not filtered_df.empty:
     st.bar_chart(topic_performance.sort_values(ascending=False))
 else:
     st.info("No data available yet")
-
-st.markdown("<h2 style='text-align:center;'> Your Progress</h2>", unsafe_allow_html=True)
-
-if not student_history.empty:
-    progress = student_history.groupby("topic")["score"].mean()
-    st.line_chart(progress)
-else:
-    st.info("No past data available")
-
 # -------------------------------
 # LOAD KMEANS MODELS
 # -------------------------------
 kmeans = joblib.load("models/kmeans.pkl")
 scaler = joblib.load("models/scaler.pkl")
-
 # -------------------------------
 # CREATE LEARNER GROUPS
 # -------------------------------
@@ -622,65 +820,157 @@ if not students_df.empty and len(students_df) > 0:
             students_df["cluster"]
             .map(cluster_name_map)
         )
-
-       
-
-        # -------------------------------
-        # 📊 Average Score by Group
-        # -------------------------------
-
-        group_scores = students_df.groupby("learner_group")["score"].mean()
-
-        fig2, ax2 = plt.subplots()
-
-        group_scores.plot(kind="bar", ax=ax2)
-
-        ax2.set_title("Average Score by Learning Group")
-
-        st.pyplot(fig2)
-
 else:
     st.info("No student data available yet")
-
 # -------------------------------
-# 🎨 Learning Style Distribution
+# 🏆 Topic-wise Student Rank
 # -------------------------------
 
-st.subheader("Learning Style Distribution")
 
-if "learning_style" in students_df.columns:
+if student_id and not students_df.empty and topic != "All Topics":
 
-    # Pie Chart
-    style_counts = students_df["learning_style"].value_counts()
+    # Filter students for selected topic
+    topic_students = students_df[
+        (students_df["subject"] == subject) &
+        (students_df["topic"] == topic)
+    ].copy()
 
-    fig3, ax3 = plt.subplots()
+    if not topic_students.empty:
 
-    ax3.pie(
-        style_counts,
-        labels=style_counts.index,
-        autopct='%1.1f%%'
-    )
+        # Average score per student in that topic
+        topic_ranks = (
+            topic_students
+            .groupby("student_id")["score"]
+            .last()
+            .sort_values(ascending=False)
+            .reset_index()
+        )
 
-    ax3.set_title("Students by Learning Style")
+        # Assign ranks
+        topic_ranks["rank"] = range(1, len(topic_ranks) + 1)
 
-    st.pyplot(fig3)
+        # Find current student's rank
+        student_rank_data = topic_ranks[
+            topic_ranks["student_id"] == student_id
+        ]
+        if not student_rank_data.empty:
+            student_rank = int(student_rank_data["rank"].values[0])
+            total_students = len(topic_ranks)
+            # -------------------------------
+            # 🎨 Dynamic Rank Color
+            # -------------------------------
+
+            if student_rank == 1:
+                rank_color = "#16a34a"   # green
+            else:
+                rank_color = "#eab308"   # yellow
+
+            st.markdown(f"""
+            <h3 style='
+                font-weight:800;
+                margin-bottom:10px;
+            '>
+            🏆 Your Rank in {topic} topic:
+            <span style='color:{rank_color};'>
+            {student_rank} / {total_students}
+            </span>
+            </h3>
+            """, unsafe_allow_html=True)
+            # -------------------------------
+            # 📈 Topic Rank Performance Graph
+            # -------------------------------
+
+            fig_rank, ax_rank = plt.subplots(figsize=(9,4))
+
+            # X-axis → Rank positions
+            x_values = range(1, len(topic_ranks) + 1)
+
+            # Y-axis → Scores
+            y_values = topic_ranks["score"]
+
+            # Line graph
+            ax_rank.plot(
+                x_values,
+                y_values,
+                marker='o',
+                linewidth=3
+            )
+
+            # Highlight current student
+            student_row = topic_ranks[
+                topic_ranks["student_id"] == student_id
+            ]
+
+            if not student_row.empty:
+
+                student_x = int(student_row["rank"].values[0])
+                student_y = float(student_row["score"].values[0])
 
 
-else:
-    st.warning("No learning_style data available")
+                ax_rank.annotate(
+                    "You are here",
+                    (student_x, student_y),
+                    textcoords="offset points",
+                    xytext=(0,18),
+                    ha='center',
+                    fontsize=11,
+                    fontweight='bold',
+                    bbox=dict(
+                        boxstyle="round,pad=0.4",
+                        fc="#e0f2fe",
+                        alpha=0.9
+                    )
+                )
 
-# -------------------------------
-#  Strength vs Weakness
-# -------------------------------
-if not student_history.empty:
-    weak = filtered_df[filtered_df["score"] < 40].shape[0]
-    strong = filtered_df[filtered_df["score"] >= 70].shape[0]
-else:
-    weak = 0
-    strong = 0
+            # Labels
+            ax_rank.set_title(
+                f"{topic} Leaderboard",
+                fontsize=16,
+                fontweight='bold'
+            )
 
-st.subheader(" Strength vs Weakness")
-st.write(f"Weak: {weak} | Strong: {strong}")
+            ax_rank.set_xlabel(
+                "Student Rank",
+                fontsize=13,
+                fontweight='bold',
+                fontstyle='italic'
+            )
+            ax_rank.set_xticks(list(x_values))
+            ax_rank.set_xticklabels(
+                [
+                    f"Rank {r}\nID {sid}"
+                    for r, sid in zip(
+                        topic_ranks["rank"],
+                        topic_ranks["student_id"]
+                    )
+                ],
+                fontsize=9
+            )
+            ax_rank.set_ylabel(
+                "Latest Topic Score",
+                fontsize=13,
+                fontweight='bold',
+                fontstyle='italic'
+            )
+
+            # Grid for modern look
+            ax_rank.grid(alpha=0.3)
+
+            # Remove top/right borders
+            ax_rank.spines['top'].set_visible(False)
+            ax_rank.spines['right'].set_visible(False)
+
+            # Legend
+            ax_rank.legend()
+
+            st.pyplot(fig_rank)
+
+        else:
+            st.info("No ranking data available yet")
+    else:
+        st.warning("No students found for this topic")
+elif topic == "All Topics":
+    st.info("Select a specific topic to view ranking")
 
 # -------------------------------
 # ANALYZE
@@ -766,13 +1056,7 @@ if st.session_state.analyze:
         weak_topics = pd.Series(dtype=float)
         strong_topics = pd.Series(dtype=float)
 
-
-
-    
-    # -------------------------------
     # PRIORITY TOPICS FROM HISTORY
-    # -------------------------------
-
     priority_topics = []
 
     if not student_history.empty:
@@ -791,29 +1075,13 @@ if st.session_state.analyze:
                 priority_topics.append(
                     (topic_name, round(avg_score, 2))
                 )
-
-    st.subheader("Priority Topics")
-
-    if priority_topics:
-
-        for topic_name, score_value in priority_topics:
-
-            st.warning(
-                f"{topic_name} → Score: {score_value}"
-            )
-
-    else:
-        st.success("No priority topics")
-
-
     # -------------------------------
-    # 📊 KPI CARDS
+    # KPI CARDS
     # -------------------------------
 
     # Safe defaults (avoid errors if not defined)
     weak_topics = weak_topics if 'weak_topics' in locals() else []
     strong_topics = strong_topics if 'strong_topics' in locals() else []
-
     col1, col2, col3 = st.columns(3)
 
     # Total Records
@@ -840,12 +1108,6 @@ if st.session_state.analyze:
     </div>
     """, unsafe_allow_html=True)
 
-
-    st.subheader("Improvement Suggestions")
-
-    for topic in weak_topics.index:
-        st.warning(f"Focus more on {topic} - revise basics and practice questions")
-    
     # -------------------------------
     # 🎯 QUIZ RECOMMENDATION LOGIC
     # -------------------------------
@@ -881,27 +1143,24 @@ if st.session_state.analyze:
     # -------------------------------
     # 🔥 TABS
     # -------------------------------
-    tab1, tab2, tab3, tab4 = st.tabs([
+    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
         "Overview",
+        "AI Insights",
         "Analytics",
         "Learning Plan",
+        "Quiz Arena",
         "Achievements & Badges"
     ])
-
     # -------------------------------
     # 📊 TAB 1: OVERVIEW
     # -------------------------------
     with tab1:
-        
-
         st.subheader("Student Overview")
 
         col1, col2, col3 = st.columns(3)
         col1.metric("Level", result.get("level", "N/A"))
         col2.metric("Score", score)
         col3.metric("Learning Style", learning_style)
-
-        
 
         st.subheader("Performance Insight")
 
@@ -914,52 +1173,242 @@ if st.session_state.analyze:
 
         st.subheader("Progress")
         st.progress(score / 100)
+        st.markdown("<h2 style='text-align:center;'> Your Progress</h2>", unsafe_allow_html=True)
+
+        if not student_history.empty:
+            progress = student_history.groupby("topic")["score"].mean()
+            st.line_chart(progress)
+        else:
+            st.info("No past data available")
+        student_history = students_df[
+            students_df["student_id"] == student_id
+        ]
 
     # -------------------------------
-    # 📈 TAB 2: ANALYTICS
+    # 🧠 TAB 2: AI INSIGHTS
     # -------------------------------
     with tab2:
+
+        st.markdown("""
+        <h1 style='text-align:center; color:#2563eb;'>
+        AI Student Insights
+        </h1>
+        """, unsafe_allow_html=True)
+
+        # -----------------------------------
+        # 📊 AI Learner Performance Overview
+        # -----------------------------------
+
+        st.subheader("AI Learner Performance Overview")
+
+        if not students_df.empty:
+
+            group_scores = (
+                students_df
+                .groupby("learner_group")["score"]
+                .mean()
+            )
+
+            fig2, ax2 = plt.subplots(figsize=(7,4))
+
+            group_scores.plot(
+                kind="bar",
+                ax=ax2
+            )
+
+            ax2.set_xlabel(
+                "Learner Categories",
+                fontsize=13,
+                fontweight='bold',
+                fontstyle='italic'
+            )
+
+            ax2.set_ylabel(
+                "Average Student Score",
+                fontsize=13,
+                fontweight='bold',
+                fontstyle='italic'
+            )
+            ax2.set_title("Performance Across Learner Categories")
+
+            st.pyplot(fig2)
+
+        # -----------------------------------
+        # 🧠 AI LEARNING INSIGHT
+        # -----------------------------------
+        if student_id and not student_history.empty:
+            latest_student = student_history.iloc[-1]
+            current_group = latest_student.get(
+                "learner_group",
+                "Consistent Learner"
+            )
+            latest_score = latest_student["score"]
+            # -----------------------------------
+            # Smart Override Based on Score
+            # -----------------------------------
+            if latest_score >= 85:
+                current_group = "Advanced Learner"
+
+            elif latest_score >= 50 and current_group == "Struggling Learner":
+                current_group = "Consistent Learner"
+
+            st.subheader("AI Learning Insight")
+
+            if current_group == "Advanced Learner":
+
+                st.success("""
+                You are currently performing as an 
+                Advanced Learner.
+
+                Your consistency and strong scores indicate 
+                excellent progress. Continue practicing 
+                advanced-level problems to maintain your position.
+                """)
+
+            elif current_group == "Consistent Learner":
+
+                st.info("""
+                You are currently classified as a 
+                Consistent Learner.
+
+                Improving the priority topics below can help 
+                you move into the Advanced Learner category.
+                """)
+
+            else:
+
+                st.warning("""
+                You are currently classified as a 
+                Struggling Learner.
+
+                Focus on strengthening the priority topics 
+                below to improve your learning performance.
+                """)
+
+            # -----------------------------------
+            # 📌 Priority Topics
+            # -----------------------------------
+
+            st.subheader("Priority Topics")
+
+            if priority_topics:
+
+                for topic_name, score_value in priority_topics:
+
+                    st.markdown(f"""
+                    <div style="
+                        padding:12px;
+                        border-radius:12px;
+                        margin-bottom:10px;
+                        background:rgba(255,255,255,0.25);
+                        backdrop-filter:blur(8px);
+                        border-left:5px solid #3b82f6;
+                    ">
+                        <b>{topic_name}</b><br>
+                        Current Score: {score_value}
+                    </div>
+                    """, unsafe_allow_html=True)
+
+            else:
+
+                st.success("No priority topics detected.")
+
+        # -----------------------------------
+        # ⚠️ Weak Topics
+        # -----------------------------------
+
+        st.subheader("Weak Topics")
+
+        if not weak_topics.empty:
+
+            for topic in weak_topics.index:
+
+                st.warning(
+                    f"{topic} needs improvement"
+                )
+
+        else:
+
+            st.success("No weak topics detected")
+
+        # -----------------------------------
+        # ✅ Strong Topics
+        # -----------------------------------
+
+        st.subheader("Strong Topics")
+
+        if not strong_topics.empty:
+
+            st.success(", ".join(strong_topics.index))
+
+        else:
+
+            st.info("No strong topics yet")
+        
+        # -------------------------------
+        # ⚖️ WEAK vs STRONG DISTRIBUTION
+        # -------------------------------
+        st.markdown("<h2 style='text-align:center;'> Weak vs Strong Distribution</h2>", unsafe_allow_html=True)
+        weak_count = len(weak_topics)
+        strong_count = len(strong_topics)
+        fig, ax = plt.subplots(figsize=(4,3))
+        ax.bar(
+            ["Weak", "Strong"],
+            [weak_count, strong_count],
+            color=["#ef4444", "#22c55e"]
+        )
+        ax.set_title("Weak vs Strong", fontsize=10)
+        col1, col2, col3 = st.columns([1,2,1])
+        with col2:
+            st.pyplot(fig)
+    # -------------------------------
+    # 📈 TAB 3: ANALYTICS
+    # -------------------------------
+    with tab3:
         st.markdown("""
         <h1 style='text-align:center; color:#4f46e5; margin-bottom:20px;'>
         Welcome to Your Analytics Dashboard
         </h1>
         """, unsafe_allow_html=True)
-        st.markdown("<h2 style='text-align:center;'> Performance Analytics</h2>", unsafe_allow_html=True)
-
+        
         # -------------------------------
         # 🏆 TOP PERFORMERS
         # -------------------------------
-        st.markdown("<h2 style='text-align:center;'>🏆 Top 5 Performers</h2>", unsafe_allow_html=True)
-
+        st.markdown("<h2 style='text-align:center;'>🏆 Top 10 Performers</h2>", unsafe_allow_html=True)
         if not students_df.empty:
-            top_students = students_df.groupby("student_id")["score"].mean().nlargest(5)
-
+            top_students = students_df.groupby("student_id")["score"].mean().nlargest(10)
             fig, ax = plt.subplots(figsize=(5,3))
-
             ax.bar(
                 top_students.index.astype(str),
                 top_students.values,
                 color=["#6366f1", "#22c55e", "#f59e0b", "#ef4444", "#3b82f6"]
             )
-
             ax.set_title("Top 5 Students", fontsize=10)
             ax.set_xlabel("Student ID", fontsize=8)
             ax.set_ylabel("Score", fontsize=8)
-
             col1, col2, col3 = st.columns([1,2,1])
             with col2:
                 st.pyplot(fig)
         else:
             st.info("No student data available")
+        # -------------------------------
+        # 🎨 Learning Style Distribution
+        # -------------------------------
+        st.subheader("Learning Style Distribution")
 
-        st.markdown("<h2 style='text-align:center;'> Student Record</h2>", unsafe_allow_html=True)
-
-        if not students_df.empty:
-            top_topics = students_df.sort_values("score", ascending=False).groupby("student_id").head(3)
-
-            top_topics["score"] = pd.to_numeric(top_topics["score"], errors="coerce")
-            st.dataframe(top_topics)
-
+        if "learning_style" in students_df.columns:
+            style_counts = students_df["learning_style"].value_counts()
+            fig3, ax3 = plt.subplots()
+            ax3.pie(
+                style_counts,
+                labels=style_counts.index,
+                autopct='%1.1f%%'
+            )
+           
+            st.pyplot(fig3)
+        else:
+            st.warning("No learning_style data available")
+        
         # -------------------------------
         # 📚 SUBJECT PERFORMANCE
         # -------------------------------
@@ -972,74 +1421,19 @@ if st.session_state.analyze:
             col1, col2, col3 = st.columns([1,2,1])
             with col2:
                 st.bar_chart(subject_avg.fillna(0))
-        
-
             safe_df = subject_avg.fillna(0)
-
             # Ensure all values are numeric
             safe_df = safe_df.apply(pd.to_numeric, errors="coerce")
-
             st.dataframe(
                 safe_df.style.background_gradient(cmap="Purples")
             )
         else:
             st.info("No subject data available")
-    
-
-        fig, ax = plt.subplots(figsize=(6,4))
-
-        if not students_df.empty:
-            x = np.arange(len(subject_avg.index))
-            width = 0.15
-
-        for i, col in enumerate(subject_avg.columns):
-            ax.bar(x + i*width, subject_avg[col].fillna(0), width, label=col)
-
-        ax.set_xticks(x + width * len(subject_avg.columns)/2)
-        ax.set_xticklabels(subject_avg.index.astype(str))
-
-        ax.set_xlabel("Student ID")
-        ax.set_ylabel("Score")
-        ax.set_title("Subject-wise Performance")
-
-        ax.legend()
-
-        col1, col2, col3 = st.columns([1,2,1])
-        with col2:
-            st.pyplot(fig)
-
-        # -------------------------------
-        # ⚖️ WEAK vs STRONG DISTRIBUTION
-        # -------------------------------
-        st.markdown("<h2 style='text-align:center;'> Weak vs Strong Distribution</h2>", unsafe_allow_html=True)
-
-        weak_count = len(weak_topics)
-        strong_count = len(strong_topics)
-
-        fig, ax = plt.subplots(figsize=(4,3))
-
-        ax.bar(
-            ["Weak", "Strong"],
-            [weak_count, strong_count],
-            color=["#ef4444", "#22c55e"]
-        )
-
-        ax.set_title("Weak vs Strong", fontsize=10)
-
-        col1, col2, col3 = st.columns([1,2,1])
-        with col2:
-            st.pyplot(fig)
-
         
-
         st.markdown("<h2 style='text-align:center;'>📊 Overall score by students</h2>", unsafe_allow_html=True)
-
         avg_scores = students_df.groupby("student_id")["score"].mean()
-
         st.bar_chart(avg_scores)
-
         st.markdown("<h2 style='text-align:center;'>📋 Your Past Records</h2>", unsafe_allow_html=True)
-
         if not student_history.empty:
             st.dataframe(
                 student_history.style
@@ -1047,90 +1441,27 @@ if st.session_state.analyze:
             )
         else:
             st.warning("No records yet")
-
-        # -------------------------------
-        # 🔍 WEAK & STRONG TOPICS
-        # -------------------------------
-        st.subheader(" Weak Topics")
-
-        if not weak_topics.empty:
-            for topic in weak_topics.index:
-                st.markdown(f"""
-                <div class="card">
-                <b>{topic}</b> needs improvement
-                </div>
-                """, unsafe_allow_html=True)
-        else:
-            st.success("No weak topics 🎉")
-
-        st.subheader(" Strong Topics")
-
-        if not strong_topics.empty:
-            st.success(", ".join(strong_topics.index))
-        else:
-            st.warning("No strong topics yet")
-
-        # -------------------------------
-        # 📊 TOPIC COMPARISON
-        # -------------------------------
-        st.subheader(" Topic Strength Comparison")
-        if not filtered_df.empty:
-            st.bar_chart(topic_performance)
-        else:
-            st.warning("No topic data to display")
-
-        # -------------------------------
-        # 🔥 HEATMAP (Matplotlib)
-        # -------------------------------
-        st.subheader(" Performance Heatmap")
-
-        if not heatmap_data.empty:
-            fig, ax = plt.subplots()
-
-            cax = ax.imshow(heatmap_data.values)
-
-            ax.set_xticks(range(len(heatmap_data.columns)))
-            ax.set_yticks(range(len(heatmap_data.index)))
-
-            ax.set_xticklabels(heatmap_data.columns)
-            ax.set_yticklabels(heatmap_data.index)
-
-            plt.colorbar(cax)
-
-            col1, col2, col3 = st.columns([1,2,1])
-            with col2:
-                st.pyplot(fig)
-        else:
-            st.warning("Not enough data for heatmap")
-
+        
     # -----------------------------------
     # AI LEARNING PATH GENERATOR
     # -----------------------------------
-
     def generate_ai_learning_plan(student_df):
-
         latest = student_df.iloc[-1]
-
         learning_style = latest["learning_style"]
         learner_group = latest["learner_group"]
-
         # -----------------------------------
         # Identify Weak Topics
         # -----------------------------------
-
         topic_scores = (
             student_df.groupby("topic")["score"]
             .mean()
             .sort_values()
         )
-
         weak_topics = topic_scores.index.tolist()
-
         lowest_score = topic_scores.iloc[0]
 
         # Weak topic = lowest scoring topic
         weak_topic = weak_topics[0]
-
         # Remove strong topics if needed
         priority_topics = [
             topic
@@ -1142,22 +1473,16 @@ if st.session_state.analyze:
         if len(priority_topics) == 0:
 
             priority_topics = weak_topics[:3]
-
         # -------------------------------
         # Personalized Recommendations
         # -------------------------------
-
         recommendations = []
-
         # -----------------------------------
         # Score-Based Adaptive Learning
         # -----------------------------------
-
         average_score = student_df["score"].mean()
-
         # LOW PERFORMERS
         if average_score < 40:
-
             recommendations = [
                 f"Start learning {weak_topic} from basic concepts",
                 "Study theory before problem solving",
@@ -1165,7 +1490,6 @@ if st.session_state.analyze:
                 "Revise fundamentals regularly",
                 "Solve beginner-level questions first"
             ]
-
         # MEDIUM PERFORMERS
         elif average_score < 70:
 
@@ -1217,23 +1541,18 @@ if st.session_state.analyze:
             recommendations.append(
                 "Spend 30 minutes daily on revision"
             )
-
         elif learner_group == "Consistent Learners":
 
             recommendations.append(
                 "Practice medium-level questions regularly"
             )
-
         elif learner_group == "High Performers":
-
             recommendations.append(
                 "Try advanced-level problem solving"
             )
-
         # -------------------------------
         # Weekly Plan
         # -------------------------------
-
         weekly_plan = {
             "Monday": "Learn core concepts",
             "Tuesday": "Practice beginner problems",
@@ -1241,7 +1560,6 @@ if st.session_state.analyze:
             "Thursday": "Solve quizzes and exercises",
             "Friday": "Topic revision and mock test"
         }
-
         # -----------------------------------
         # ML-BASED NEXT TOPIC PREDICTION
         # -----------------------------------
@@ -1283,16 +1601,11 @@ if st.session_state.analyze:
                     "next_topic",
                     weak_topic
                 )
-
             else:
 
                 next_topic = weak_topic
-
         except:
-
             next_topic = weak_topic
-
-
         return {
             "weak_topic": weak_topic,
             "priority_topics": priority_topics,
@@ -1303,17 +1616,14 @@ if st.session_state.analyze:
             "next_topic": next_topic,
             "average_score": average_score,
         }
-    
     # -----------------------------------
     # AI RESOURCE RECOMMENDATION ENGINE
     # -----------------------------------
-
     def generate_ai_resources(
         weak_topic,
         learning_style,
         learner_group
     ):
-
         resources = []
         videos = []
 
@@ -1440,25 +1750,16 @@ if st.session_state.analyze:
 
         return quizzes
 
-
-
     # -------------------------------
-    #  TAB 3: LEARNING PLAN
+    #  TAB 4: LEARNING PLAN
     # -------------------------------
-    with tab3:
+    with tab4:
         # -----------------------------------
         # AI Personalized Learning Plan
         # -----------------------------------
 
-        st.subheader("AI Personalized Learning Path")
-
-        selected_student = st.selectbox(
-            "Select Student",
-            students_df["student_id"].unique()
-        )
-
         student_data = students_df[
-            students_df["student_id"] == selected_student
+            students_df["student_id"] == student_id
         ]
 
         ai_plan = generate_ai_learning_plan(student_data)
@@ -1467,7 +1768,7 @@ if st.session_state.analyze:
         # AI Analysis
         # -----------------------------------
 
-        st.write(f"### Student: {selected_student}")
+        st.write(f"### Student ID: {student_id}")
 
         st.write("### AI Analysis")
 
@@ -1518,8 +1819,6 @@ if st.session_state.analyze:
         # AI SMART RESOURCES
         # -----------------------------------
 
-        st.write("##Recommendations")
-
         resource_data = generate_ai_resources(
             ai_plan["weak_topic"],
             ai_plan["learning_style"],
@@ -1566,59 +1865,138 @@ if st.session_state.analyze:
                 f"[▶ Watch videos on {weak_topic}]({youtube_link})"
             )
 
+    # -------------------------------
+    # TAB 5: Quiz Arena
+    # -------------------------------
+    with tab5:
 
+        st.title("Quiz Arena")
+
+        st.write(
+            "AI-generated adaptive quizzes"
+        )
         # -----------------------------------
-        # Recommended Quizzes
+        # QUIZ SETTINGS
         # -----------------------------------
 
-        st.write("### Recommended Quizzes")
-
-        # -----------------------------------
-        # AI Quiz Recommendations
-        # -----------------------------------
-
-        quiz_data = generate_ai_quizzes(
-
-            ai_plan["priority_topics"],
-            ai_plan["average_score"],
-            ai_plan["learning_style"],
-            ai_plan["learner_group"]
+        quiz_topic = st.selectbox(
+            "Select Topic",
+            SUBJECT_TOPICS[subject],
+            key="quiz_topic"
         )
 
-        for quiz in quiz_data:
+        # Difficulty logic
+        if score < 40:
+            difficulty = "Easy"
 
-            st.markdown(f"""
-            ### {quiz['topic']} Quiz
+        elif score < 70:
+            difficulty = "Medium"
 
-            • Difficulty: **{quiz['difficulty']}**  
-            • Questions: **{quiz['questions']}**  
-            • Focus Area: **{quiz['focus']}**  
-            • AI Tip: **{quiz['style_tip']}**
+        else:
+            difficulty = "Hard"
 
-            [Start Quiz]({quiz['link']})
-            """)
+        st.info(
+            f"AI Difficulty Level: {difficulty}"
+        )
 
+        # -----------------------------------
+        # GENERATE QUIZ
+        # -----------------------------------
+
+        if st.button("Generate AI Quiz"):
+
+            with st.spinner(
+                "Generating personalized quiz..."
+            ):
+
+                st.session_state.quiz_questions = generate_ai_quiz(
+                    quiz_topic,
+                    difficulty,
+                    learning_style
+                )
+
+                st.session_state.quiz_generated = True
+
+        # -----------------------------------
+        # DISPLAY QUIZ
+        # -----------------------------------
+
+        if (
+            st.session_state.quiz_generated
+            and st.session_state.quiz_questions
+        ):
+
+            st.success("Quiz Ready")
+
+            user_answers = []
+
+            for i, q in enumerate(
+                st.session_state.quiz_questions
+            ):
+
+                st.markdown(
+                    f"### Q{i+1}. {q['question']}"
+                )
+
+                selected = st.radio(
+                    "Choose answer",
+                    q["options"],
+                    key=f"quiz_{i}"
+                )
+
+                user_answers.append(selected)
+
+            # -----------------------------------
+            # SUBMIT QUIZ
+            # -----------------------------------
+
+            if st.button("Submit Quiz"):
+
+                correct = 0
+
+                for i, q in enumerate(
+                    st.session_state.quiz_questions
+                ):
+
+                    if (
+                        user_answers[i]
+                        == q["answer"]
+                    ):
+
+                        correct += 1
+
+                final_score = (
+                    correct
+                    / len(st.session_state.quiz_questions)
+                ) * 100
+
+                st.metric(
+                    "Quiz Score",
+                    f"{final_score}%"
+                )
+
+                if final_score >= 70:
+
+                    st.success(
+                        "Excellent performance!"
+                    )
+
+                else:
+
+                    st.warning(
+                        "Practice more questions"
+                    )
 
     # -------------------------------
-    # TAB 4: ACHIEVEMENTS & BADGES
+    # TAB 6: ACHIEVEMENTS & BADGES
     # -------------------------------
 
-    with tab4:
+    with tab6:
 
         st.subheader("Achievements & Badges")
 
-        # -----------------------------------
-        # Student Selection
-        # -----------------------------------
-
-        selected_student_badge = st.selectbox(
-            "Select Student for Achievements",
-            students_df["student_id"].unique(),
-            key="badge_student"
-        )
-
         student_badge_data = students_df[
-            students_df["student_id"] == selected_student_badge
+            students_df["student_id"] == student_id
         ]
 
         # -----------------------------------
