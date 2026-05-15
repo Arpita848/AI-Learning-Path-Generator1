@@ -16,7 +16,6 @@ student_id,subject,topic,score,time_spent,attempts,learning_style,cluster,learne
 17,DSA,Stack,24,97,3,Kinesthetic,2.0,Struggling Learner,2.0
 17,DSA,Linked List,24,97,3,Kinesthetic,2.0,Struggling Learner,2.0
 10,DBMS,SQL,32,76,3,Visual,1.0,Advanced Learner,0.0
-10,CN,OSI Model,91,43,1,Kinesthetic,1.0,Advanced Learner,2.0
 10,CN,TCP/IP,27,72,2,Audio-Visual,1.0,Advanced Learner,1.0
 10,OS,Threads,84,49,2,Kinesthetic,1.0,Advanced Learner,2.0
 17,DSA,Queue,82,46,2,Kinesthetic,1.0,Advanced Learner,2.0
@@ -55,9 +54,25 @@ student_id,subject,topic,score,time_spent,attempts,learning_style,cluster,learne
 34,DSA,Arrays,4,86,3,Kinesthetic,2.0,Struggling Learner,2.0
 34,OS,General,4,86,3,Kinesthetic,2.0,Struggling Learner,2.0
 34,OS,Processes,4,86,3,Kinesthetic,2.0,Struggling Learner,2.0
-15,DBMS,SQL,9,97,2,Audio-Visual,1.0,Advanced Learner,1.0
 15,DSA,Stack,65,78,2,Audio-Visual,1.0,Advanced Learner,1.0
 15,DSA,General,65,78,2,Audio-Visual,1.0,Advanced Learner,1.0
 10,DSA,General,65,78,2,Audio-Visual,1.0,Advanced Learner,1.0
 10,OS,General,65,78,2,Audio-Visual,1.0,Advanced Learner,1.0
-10,OS,Processes,97,90,2,Audio-Visual,,,
+10,OS,Processes,97,90,2,Audio-Visual,0.0,Consistent Learner,1.0
+33,DBMS,SQL,5,68,3,Audio-Visual,2.0,Struggling Learner,1.0
+6,DBMS,Normalization,5,78,2,Visual,1.0,Advanced Learner,0.0
+7,CN,Routing,67,44,2,Kinesthetic,1.0,Advanced Learner,2.0
+8,OS,Processes,20,82,2,Audio-Visual,1.0,Advanced Learner,1.0
+6,DSA,Queue,10,86,2,Audio-Visual,1.0,Advanced Learner,1.0
+9,DBMS,Joins,31,100,1,Audio-Visual,1.0,Advanced Learner,1.0
+19,OS,Threads,65,43,2,Kinesthetic,1.0,Advanced Learner,2.0
+31,DBMS,Joins,12,47,3,Audio-Visual,2.0,Struggling Learner,1.0
+37,CN,TCP/IP,96,48,2,Kinesthetic,1.0,Advanced Learner,2.0
+18,DBMS,Normalization,88,22,1,Kinesthetic,1.0,Advanced Learner,2.0
+15,DBMS,SQL,70,69,2,Audio-Visual,1.0,Advanced Learner,1.0
+40,DBMS,SQL,61,72,3,Audio-Visual,2.0,Struggling Learner,1.0
+20,DSA,Linked List,81,84,2,Audio-Visual,0.0,Consistent Learner,1.0
+37,OS,Scheduling,21,35,2,Visual,1.0,Advanced Learner,0.0
+10,CN,OSI Model,98,60,2,Visual,1.0,Advanced Learner,0.0
+16,DSA,Stack,26,89,3,Audio-Visual,2.0,Struggling Learner,1.0
+6,OS,Threads,72,74,3,Audio-Visual,,,
