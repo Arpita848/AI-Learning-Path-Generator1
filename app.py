@@ -159,8 +159,23 @@ def get_learning_path():
     X_scaled = scaler.transform(X_input)
     cluster = kmeans.predict(X_scaled)[0]
 
-    # IMPORTANT: adjust mapping after testing
-    level = level_map.get(cluster, "Intermediate")
+    # Get cluster centers
+    cluster_centers = kmeans.cluster_centers_
+
+    # Score column index = 0
+    score_centers = cluster_centers[:, 0]
+
+    # Sort clusters by score center
+    sorted_clusters = np.argsort(score_centers)
+
+    # Dynamic mapping
+    dynamic_level_map = {
+        sorted_clusters[0]: "Weak",
+        sorted_clusters[1]: "Intermediate",
+        sorted_clusters[2]: "Strong"
+    }
+
+    level = dynamic_level_map.get(cluster, "Intermediate")
 
     profile = cluster_profiles.get(cluster, {})
 

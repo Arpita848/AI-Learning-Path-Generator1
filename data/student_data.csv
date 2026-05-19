@@ -1,78 +1,122 @@
 student_id,subject,topic,score,time_spent,attempts,learning_style,cluster,learner_group,learning_style_encoded
-7,OS,Processes,64,35,2,Audio-Visual,1.0,Advanced Learner,1.0
-10,OS,Scheduling,74,25,2,Audio-Visual,1.0,Advanced Learner,1.0
-10,DBMS,Joins,74,25,2,Audio-Visual,1.0,Advanced Learner,1.0
+7,OS,Processes,64,35,2,Audio-Visual,1.0,Consistent Learner,1.0
+10,OS,Scheduling,74,25,2,Audio-Visual,1.0,Consistent Learner,1.0
+10,DBMS,Joins,74,25,2,Audio-Visual,1.0,Consistent Learner,1.0
 16,DBMS,Joins,26,74,3,Kinesthetic,2.0,Struggling Learner,2.0
-13,DBMS,Joins,45,55,2,Visual,1.0,Advanced Learner,0.0
-13,CN,TCP/IP,62,71,2,Visual,1.0,Advanced Learner,0.0
-13,CN,General,62,71,2,Visual,1.0,Advanced Learner,0.0
-11,DBMS,Normalization,41,89,3,Visual,1.0,Advanced Learner,0.0
-14,CN,Routing,75,60,2,Kinesthetic,1.0,Advanced Learner,2.0
-14,DSA,General,75,60,2,Kinesthetic,1.0,Advanced Learner,2.0
-14,DSA,Queue,75,60,2,Kinesthetic,1.0,Advanced Learner,2.0
-6,DBMS,SQL,19,84,3,Visual,1.0,Advanced Learner,0.0
-6,CN,General,19,84,3,Visual,1.0,Advanced Learner,0.0
-6,CN,Routing,19,84,3,Visual,1.0,Advanced Learner,0.0
+13,DBMS,Joins,45,55,2,Visual,1.0,Consistent Learner,0.0
+13,CN,TCP/IP,62,71,2,Visual,1.0,Consistent Learner,0.0
+13,CN,General,62,71,2,Visual,1.0,Consistent Learner,0.0
+11,DBMS,Normalization,41,89,3,Visual,1.0,Consistent Learner,0.0
+14,CN,Routing,75,60,2,Kinesthetic,1.0,Consistent Learner,2.0
+14,DSA,General,75,60,2,Kinesthetic,1.0,Consistent Learner,2.0
+14,DSA,Queue,75,60,2,Kinesthetic,1.0,Consistent Learner,2.0
+6,DBMS,SQL,19,84,3,Visual,1.0,Consistent Learner,0.0
+6,CN,General,19,84,3,Visual,1.0,Consistent Learner,0.0
+6,CN,Routing,19,84,3,Visual,1.0,Consistent Learner,0.0
 17,DSA,Stack,24,97,3,Kinesthetic,2.0,Struggling Learner,2.0
 17,DSA,Linked List,24,97,3,Kinesthetic,2.0,Struggling Learner,2.0
-10,DBMS,SQL,32,76,3,Visual,1.0,Advanced Learner,0.0
-10,CN,TCP/IP,27,72,2,Audio-Visual,1.0,Advanced Learner,1.0
-10,OS,Threads,84,49,2,Kinesthetic,1.0,Advanced Learner,2.0
-17,DSA,Queue,82,46,2,Kinesthetic,1.0,Advanced Learner,2.0
-15,Python,File Handling,86,46,2,Kinesthetic,1.0,Advanced Learner,2.0
-10,DBMS,General,59,69,3,Visual,1.0,Advanced Learner,0.0
-19,DSA,Arrays,80,43,2,Kinesthetic,1.0,Advanced Learner,2.0
-10,DSA,Arrays,96,27,2,Kinesthetic,1.0,Advanced Learner,2.0
+10,DBMS,SQL,32,76,3,Visual,1.0,Consistent Learner,0.0
+10,CN,TCP/IP,27,72,2,Audio-Visual,1.0,Consistent Learner,1.0
+10,OS,Threads,84,49,2,Kinesthetic,1.0,Consistent Learner,2.0
+17,DSA,Queue,82,46,2,Kinesthetic,1.0,Consistent Learner,2.0
+15,Python,File Handling,86,46,2,Kinesthetic,1.0,Consistent Learner,2.0
+10,DBMS,General,59,69,3,Visual,1.0,Consistent Learner,0.0
+19,DSA,Arrays,80,43,2,Kinesthetic,1.0,Consistent Learner,2.0
+10,DSA,Arrays,96,27,2,Kinesthetic,1.0,Consistent Learner,2.0
 15,DSA,Arrays,45,89,3,Audio-Visual,2.0,Struggling Learner,1.0
 15,CN,Routing,45,89,3,Audio-Visual,2.0,Struggling Learner,1.0
-15,OS,General,45,89,3,Audio-Visual,2.0,Struggling Learner,1.0
-15,CN,General,45,89,3,Audio-Visual,2.0,Struggling Learner,1.0
 15,Python,General,26,95,3,Kinesthetic,2.0,Struggling Learner,2.0
-13,CN,Routing,14,84,2,Audio-Visual,1.0,Advanced Learner,1.0
-7,OS,Scheduling,20,80,2,Audio-Visual,1.0,Advanced Learner,1.0
-15,OS,Scheduling,13,80,2,Audio-Visual,1.0,Advanced Learner,1.0
-15,DBMS,Joins,13,80,2,Audio-Visual,1.0,Advanced Learner,1.0
-15,DBMS,General,13,80,2,Audio-Visual,1.0,Advanced Learner,1.0
-12,DBMS,General,13,80,2,Audio-Visual,1.0,Advanced Learner,1.0
-18,DBMS,SQL,98,38,1,Kinesthetic,1.0,Advanced Learner,2.0
-22,DBMS,SQL,95,30,1,Audio-Visual,1.0,Advanced Learner,1.0
-22,DSA,General,95,30,1,Audio-Visual,1.0,Advanced Learner,1.0
-22,DSA,Queue,95,30,1,Audio-Visual,1.0,Advanced Learner,1.0
-25,DSA,Queue,98,39,1,Visual,1.0,Advanced Learner,0.0
-25,CN,General,98,39,1,Visual,1.0,Advanced Learner,0.0
-25,CN,Routing,98,39,1,Visual,1.0,Advanced Learner,0.0
-23,CN,Routing,95,41,1,Kinesthetic,1.0,Advanced Learner,2.0
-23,DSA,General,95,41,1,Kinesthetic,1.0,Advanced Learner,2.0
-23,DSA,Linked List,95,41,1,Kinesthetic,1.0,Advanced Learner,2.0
-29,CN,OSI Model,5,32,1,Audio-Visual,1.0,Advanced Learner,1.0
-26,CN,OSI Model,5,133,3,Visual,0.0,Consistent Learner,0.0
-26,OS,General,5,133,3,Visual,0.0,Consistent Learner,0.0
-26,OS,Threads,5,133,3,Visual,0.0,Consistent Learner,0.0
-33,CN,Routing,60,54,2,Audio-Visual,1.0,Advanced Learner,1.0
-33,DSA,General,60,54,2,Audio-Visual,1.0,Advanced Learner,1.0
-33,DSA,Arrays,60,54,2,Audio-Visual,1.0,Advanced Learner,1.0
+13,CN,Routing,14,84,2,Audio-Visual,1.0,Consistent Learner,1.0
+7,OS,Scheduling,20,80,2,Audio-Visual,1.0,Consistent Learner,1.0
+12,DBMS,General,13,80,2,Audio-Visual,1.0,Consistent Learner,1.0
+18,DBMS,SQL,98,38,1,Kinesthetic,1.0,Consistent Learner,2.0
+22,DBMS,SQL,95,30,1,Audio-Visual,1.0,Consistent Learner,1.0
+22,DSA,General,95,30,1,Audio-Visual,1.0,Consistent Learner,1.0
+22,DSA,Queue,95,30,1,Audio-Visual,1.0,Consistent Learner,1.0
+25,DSA,Queue,98,39,1,Visual,1.0,Consistent Learner,0.0
+25,CN,General,98,39,1,Visual,1.0,Consistent Learner,0.0
+25,CN,Routing,98,39,1,Visual,1.0,Consistent Learner,0.0
+23,DSA,Linked List,95,41,1,Kinesthetic,1.0,Consistent Learner,2.0
+29,CN,OSI Model,5,32,1,Audio-Visual,1.0,Consistent Learner,1.0
+26,CN,OSI Model,5,133,3,Visual,0.0,Advanced Learner,0.0
+26,OS,General,5,133,3,Visual,0.0,Advanced Learner,0.0
+26,OS,Threads,5,133,3,Visual,0.0,Advanced Learner,0.0
+33,CN,Routing,60,54,2,Audio-Visual,1.0,Consistent Learner,1.0
+33,DSA,General,60,54,2,Audio-Visual,1.0,Consistent Learner,1.0
+33,DSA,Arrays,60,54,2,Audio-Visual,1.0,Consistent Learner,1.0
 34,DSA,Arrays,4,86,3,Kinesthetic,2.0,Struggling Learner,2.0
 34,OS,General,4,86,3,Kinesthetic,2.0,Struggling Learner,2.0
 34,OS,Processes,4,86,3,Kinesthetic,2.0,Struggling Learner,2.0
-15,DSA,Stack,65,78,2,Audio-Visual,1.0,Advanced Learner,1.0
-15,DSA,General,65,78,2,Audio-Visual,1.0,Advanced Learner,1.0
-10,DSA,General,65,78,2,Audio-Visual,1.0,Advanced Learner,1.0
-10,OS,General,65,78,2,Audio-Visual,1.0,Advanced Learner,1.0
-10,OS,Processes,97,90,2,Audio-Visual,0.0,Consistent Learner,1.0
+10,DSA,General,65,78,2,Audio-Visual,1.0,Consistent Learner,1.0
+10,OS,General,65,78,2,Audio-Visual,1.0,Consistent Learner,1.0
+10,OS,Processes,97,90,2,Audio-Visual,0.0,Advanced Learner,1.0
 33,DBMS,SQL,5,68,3,Audio-Visual,2.0,Struggling Learner,1.0
-6,DBMS,Normalization,5,78,2,Visual,1.0,Advanced Learner,0.0
-7,CN,Routing,67,44,2,Kinesthetic,1.0,Advanced Learner,2.0
-8,OS,Processes,20,82,2,Audio-Visual,1.0,Advanced Learner,1.0
-6,DSA,Queue,10,86,2,Audio-Visual,1.0,Advanced Learner,1.0
-9,DBMS,Joins,31,100,1,Audio-Visual,1.0,Advanced Learner,1.0
-19,OS,Threads,65,43,2,Kinesthetic,1.0,Advanced Learner,2.0
+6,DBMS,Normalization,5,78,2,Visual,1.0,Consistent Learner,0.0
+7,CN,Routing,67,44,2,Kinesthetic,1.0,Consistent Learner,2.0
+8,OS,Processes,20,82,2,Audio-Visual,1.0,Consistent Learner,1.0
+9,DBMS,Joins,31,100,1,Audio-Visual,1.0,Consistent Learner,1.0
+19,OS,Threads,65,43,2,Kinesthetic,1.0,Consistent Learner,2.0
 31,DBMS,Joins,12,47,3,Audio-Visual,2.0,Struggling Learner,1.0
-37,CN,TCP/IP,96,48,2,Kinesthetic,1.0,Advanced Learner,2.0
-18,DBMS,Normalization,88,22,1,Kinesthetic,1.0,Advanced Learner,2.0
-15,DBMS,SQL,70,69,2,Audio-Visual,1.0,Advanced Learner,1.0
+37,CN,TCP/IP,96,48,2,Kinesthetic,1.0,Consistent Learner,2.0
+18,DBMS,Normalization,88,22,1,Kinesthetic,1.0,Consistent Learner,2.0
+15,DBMS,SQL,70,69,2,Audio-Visual,1.0,Consistent Learner,1.0
 40,DBMS,SQL,61,72,3,Audio-Visual,2.0,Struggling Learner,1.0
-20,DSA,Linked List,81,84,2,Audio-Visual,0.0,Consistent Learner,1.0
-37,OS,Scheduling,21,35,2,Visual,1.0,Advanced Learner,0.0
-10,CN,OSI Model,98,60,2,Visual,1.0,Advanced Learner,0.0
+37,OS,Scheduling,21,35,2,Visual,1.0,Consistent Learner,0.0
+10,CN,OSI Model,98,60,2,Visual,1.0,Consistent Learner,0.0
 16,DSA,Stack,26,89,3,Audio-Visual,2.0,Struggling Learner,1.0
-6,OS,Threads,72,74,3,Audio-Visual,,,
+6,OS,Threads,72,74,3,Audio-Visual,2.0,Struggling Learner,1.0
+23,CN,Routing,81,40,2,Visual,1.0,Consistent Learner,0.0
+23,DSA,General,81,40,2,Visual,1.0,Consistent Learner,0.0
+23,DSA,Arrays,81,40,2,Visual,1.0,Consistent Learner,0.0
+21,CN,TCP/IP,91,42,3,Kinesthetic,2.0,Struggling Learner,2.0
+25,DSA,Linked List,18,81,2,Visual,1.0,Consistent Learner,0.0
+12,DBMS,SQL,30,100,3,Audio-Visual,2.0,Struggling Learner,1.0
+38,DSA,Linked List,7,35,2,Visual,1.0,Consistent Learner,0.0
+5,Python,Functions,31,83,3,Audio-Visual,2.0,Struggling Learner,1.0
+3,Python,Loops,44,83,3,Audio-Visual,2.0,Struggling Learner,1.0
+6,OS,Scheduling,56,65,2,Audio-Visual,1.0,Consistent Learner,1.0
+10,Python,File Handling,25,73,3,Audio-Visual,2.0,Struggling Learner,1.0
+19,Python,OOP,68,80,2,Kinesthetic,1.0,Consistent Learner,2.0
+5,Python,Loops,59,75,3,Audio-Visual,2.0,Struggling Learner,1.0
+8,DSA,Arrays,73,79,3,Audio-Visual,2.0,Struggling Learner,1.0
+27,Python,Loops,70,70,3,Audio-Visual,2.0,Struggling Learner,1.0
+23,DBMS,SQL,75,67,3,Audio-Visual,2.0,Struggling Learner,1.0
+36,DSA,Stack,37,86,3,Audio-Visual,2.0,Struggling Learner,1.0
+51,DSA,Queue,50,60,2,Audio-Visual,1.0,Consistent Learner,1.0
+45,OS,Processes,93,95,3,Audio-Visual,0.0,Advanced Learner,1.0
+45,DBMS,General,93,95,3,Kinesthetic,0.0,Advanced Learner,2.0
+20,OS,General,94,46,2,Kinesthetic,1.0,Consistent Learner,2.0
+20,OS,Processes,12,46,2,Kinesthetic,1.0,Consistent Learner,2.0
+20,DSA,General,12,46,2,Kinesthetic,1.0,Consistent Learner,2.0
+26,OS,Scheduling,43,39,3,Visual,1.0,Consistent Learner,0.0
+26,CN,General,43,39,3,Visual,1.0,Consistent Learner,0.0
+26,CN,Routing,4,39,3,Visual,1.0,Consistent Learner,0.0
+15,Python,OOP,58,37,2,Kinesthetic,1.0,Consistent Learner,2.0
+15,DBMS,Joins,58,37,2,Kinesthetic,1.0,Consistent Learner,2.0
+15,DBMS,General,58,37,2,Kinesthetic,1.0,Consistent Learner,2.0
+15,CN,General,58,37,2,Kinesthetic,1.0,Consistent Learner,2.0
+15,OS,General,58,37,2,Kinesthetic,1.0,Consistent Learner,2.0
+15,OS,Scheduling,88,63,2,Visual,1.0,Consistent Learner,0.0
+15,DSA,General,88,63,2,Visual,1.0,Consistent Learner,0.0
+15,DSA,Stack,88,63,2,Visual,1.0,Consistent Learner,0.0
+20,DSA,Linked List,55,41,3,Audio-Visual,2.0,Struggling Learner,1.0
+23,DSA,Queue,23,51,3,Audio-Visual,2.0,Struggling Learner,1.0
+23,OS,General,23,51,3,Audio-Visual,2.0,Struggling Learner,1.0
+23,OS,Processes,23,51,3,Audio-Visual,2.0,Struggling Learner,1.0
+23,Python,General,23,51,3,Audio-Visual,2.0,Struggling Learner,1.0
+23,Python,OOP,23,51,3,Audio-Visual,2.0,Struggling Learner,1.0
+23,Python,Loops,23,51,3,Audio-Visual,2.0,Struggling Learner,1.0
+23,Python,Functions,23,51,3,Audio-Visual,2.0,Struggling Learner,1.0
+34,OS,Threads,72,91,3,Audio-Visual,0.0,Advanced Learner,1.0
+34,DBMS,General,72,91,3,Audio-Visual,0.0,Advanced Learner,1.0
+34,DBMS,SQL,96,91,3,Audio-Visual,0.0,Advanced Learner,1.0
+34,Python,General,96,91,3,Audio-Visual,0.0,Advanced Learner,1.0
+34,DSA,General,96,91,3,Audio-Visual,0.0,Advanced Learner,1.0
+15,OS,Processes,52,78,2,Audio-Visual,1.0,Consistent Learner,1.0
+6,Python,General,97,47,1,Kinesthetic,1.0,Consistent Learner,2.0
+6,DSA,General,97,47,1,Kinesthetic,1.0,Consistent Learner,2.0
+6,DSA,Queue,92,84,1,Kinesthetic,0.0,Advanced Learner,2.0
+31,Python,General,95,88,1,Kinesthetic,0.0,Advanced Learner,2.0
+31,DSA,Arrays,2,21,2,Kinesthetic,1.0,Consistent Learner,2.0
+31,DSA,General,95,90,1,Kinesthetic,0.0,Advanced Learner,2.0
+31,DSA,Linked List,89,21,1,Kinesthetic,,,

@@ -17,6 +17,11 @@ import joblib
 from openai import OpenAI
 from datetime import datetime
 import os
+from dotenv import load_dotenv
+
+
+
+
 
 df = pd.read_csv("data/student_clustered.csv")
 if "quiz_generated" not in st.session_state:
@@ -123,36 +128,49 @@ def generate_ai_quiz(
     """
 
     try:
+            st.error("API key missing. Check .env file")
+            return []
 
-        response = client.chat.completions.create(
+        headers = {
+            "Content-Type": "application/json"
+        }
 
-            model="deepseek/deepseek-chat",
-
-            messages=[
+        payload = {
+            "model": "deepseek/deepseek-chat",
+            "messages": [
                 {
                     "role": "user",
                     "content": prompt
                 }
-            ],
-
-            temperature=0.7
-
+            ]
+        }
+        
+        response = requests.post(
+            "https://openrouter.ai/api/v1/chat/completions",
+            headers=headers,
+            json=payload,
+            timeout=30
         )
 
-        quiz_text = (
-            response
-            .choices[0]
-            .message
-            .content
-        )
+        if response.status_code == 200:
+            quiz_text = response.json()["choices"][0]["message"]["content"]
+        else:
+            st.error(response.text)
+            return []
 
         # Remove markdown if AI returns ```json
         quiz_text = (
             quiz_text
             .replace("```json", "")
             .replace("```", "")
+            .replace("json", "", 1)
             .strip()
         )
+
+        start = quiz_text.find("[")
+        end = quiz_text.rfind("]") + 1
+
+        quiz_text = quiz_text[start:end]
 
         quiz_data = json.loads(quiz_text)
 
@@ -160,9 +178,12 @@ def generate_ai_quiz(
 
     except Exception as e:
 
-        st.error(
-            f"Quiz generation failed: {e}"
-        )
+        st.error(f"""
+        Quiz generation failed.
+
+        Error:
+        {str(e)}
+        """)
 
         return []
 st.markdown("""
@@ -496,8 +517,11 @@ label {
 
 
 df["score"] = pd.to_numeric(df["score"], errors="coerce")
-with open("data/quiz_data.json") as f:
-    quiz_data = json.load(f)
+if os.path.exists("data/quiz_data.json"):
+    with open("data/quiz_data.json") as f:
+        quiz_data = json.load(f)
+else:
+    quiz_data = []
 
 if "analyze" not in st.session_state:
     st.session_state.analyze = False
@@ -511,11 +535,6 @@ strong_topics = pd.Series(dtype=float)
 # -------------------------------
 API_URL = "http://127.0.0.1:5001"
 
-
-client = OpenAI(
-    base_url="https://openrouter.ai/api/v1",
-)
-
 if "analyze" not in st.session_state:
     if "quiz_questions" not in st.session_state:
         st.session_state.quiz_questions = []
@@ -526,78 +545,219 @@ if "analyze" not in st.session_state:
 # -------------------------------
 # SIDEBAR
 # -------------------------------
-st.sidebar.markdown("""
-<h2 style='color:white;'>Student Dashboard</h2>
-<hr style='border:1px solid gray'>
-""", unsafe_allow_html=True)
 
 # -------------------------------
-# 🔐 LOGIN SYSTEM
+# 🔐 LOGIN + REGISTRATION SYSTEM
 # -------------------------------
 
-st.sidebar.subheader("🔐 Student Login")
+USER_FILE = "data/users.csv"
+COMMON_PASSWORD = "IBM"
 
-# Initialize session state
+def load_users():
+    try:
+        return pd.read_csv(USER_FILE)
+    except FileNotFoundError:
+        users = pd.DataFrame(columns=[
+            "student_id",
+            "name",
+            "password",
+            "learning_style"
+        ])
+        users.to_csv(USER_FILE, index=False)
+        return users
+
+def save_users(users):
+    users.to_csv(USER_FILE, index=False)
+
+users_df = load_users()
+
 if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
 
 if "student_id" not in st.session_state:
     st.session_state.student_id = None
 
-COMMON_PASSWORD = "IBM"
-
-# -------------------------------
-# SHOW LOGIN FORM ONLY IF LOGGED OUT
-# -------------------------------
+if "student_name" not in st.session_state:
+    st.session_state.student_name = ""
 
 if not st.session_state.logged_in:
 
-    entered_id = st.sidebar.text_input(
-        "Student ID"
-    )
+    st.markdown("""
+    <style>
+    [data-testid="stSidebar"] {
+        display: none;
+    }
 
-    entered_password = st.sidebar.text_input(
-        "Password",
-        type="password"
-    )
+    [data-testid="collapsedControl"] {
+        display: none;
+    }
 
-    st.sidebar.caption("Demo Password: IBM")
+    .block-container {
+        max-width: 560px;
+        padding-top: 7rem;
+    }
 
-    # -------------------------------
-    # LOGIN BUTTON
-    # -------------------------------
+    .app-title {
+        text-align: center;
+        font-size: 44px;
+        font-weight: 800;
+        color: #2563eb;
+        margin-bottom: 8px;
+    }
 
-    if st.sidebar.button("Login"):
+    .app-subtitle {
+        text-align: center;
+        font-size: 17px;
+        color: #64748b;
+        margin-bottom: 30px;
+    }
 
-        try:
+    .login-note {
+        text-align: center;
+        color: #64748b;
+        font-size: 14px;
+        margin-top: 15px;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
-            entered_id = int(entered_id)
+    st.markdown("""
+    <div class="app-title">Your Personal Learning App</div>
+    <div class="app-subtitle">
+        Login or register to start your personalized learning journey
+    </div>
+    """, unsafe_allow_html=True)
 
-            if entered_password == COMMON_PASSWORD:
+    login_tab, register_tab = st.tabs(["Login", "Register"])
 
-                st.session_state.logged_in = True
-                st.session_state.student_id = entered_id
+    with login_tab:
+        login_id = st.text_input(
+            "Student ID",
+            placeholder="Enter your student ID",
+            key="login_id"
+        )
 
-                st.rerun()
+        login_password = st.text_input(
+            "Password",
+            type="password",
+            placeholder="Enter password",
+            key="login_password"
+        )
 
-            else:
+        if st.button("Login", use_container_width=True):
 
-                st.toast(
-                    "Invalid Password"
-                )
+            try:
+                login_id_int = int(login_id)
 
-        except ValueError:
+                user_match = users_df[
+                    (users_df["student_id"] == login_id_int) &
+                    (users_df["password"] == login_password)
+                ]
 
-            st.toast(
-                "Student ID must be numeric"
-            )
+                # fallback for old users using IBM password
+                old_user_exists = not students_df[
+                    students_df["student_id"] == login_id_int
+                ].empty
+
+                if not user_match.empty:
+                    st.session_state.logged_in = True
+                    st.session_state.student_id = login_id_int
+                    st.session_state.student_name = user_match.iloc[0]["name"]
+                    st.rerun()
+
+                elif old_user_exists and login_password == COMMON_PASSWORD:
+                    st.session_state.logged_in = True
+                    st.session_state.student_id = login_id_int
+                    st.session_state.student_name = f"Student {login_id_int}"
+                    st.rerun()
+
+                else:
+                    st.error("Invalid Student ID or Password")
+
+            except ValueError:
+                st.error("Student ID must be numeric")
+
+    with register_tab:
+        reg_name = st.text_input(
+            "Full Name",
+            placeholder="Enter your name",
+            key="reg_name"
+        )
+
+        reg_id = st.text_input(
+            "Create Student ID",
+            placeholder="Example: 101",
+            key="reg_id"
+        )
+
+        reg_password = st.text_input(
+            "Create Password",
+            type="password",
+            placeholder="Create password",
+            key="reg_password"
+        )
+
+        reg_style = st.selectbox(
+            "Preferred Learning Style",
+            ["Visual", "Audio-Visual", "Kinesthetic"],
+            key="reg_style"
+        )
+
+        if st.button("Register", use_container_width=True):
+
+            try:
+                reg_id_int = int(reg_id)
+
+                already_exists = not users_df[
+                    users_df["student_id"] == reg_id_int
+                ].empty
+
+                if already_exists:
+                    st.error("This Student ID already exists. Please login.")
+
+                elif reg_name.strip() == "" or reg_password.strip() == "":
+                    st.error("Name and password are required.")
+
+                else:
+                    new_user = {
+                        "student_id": reg_id_int,
+                        "name": reg_name,
+                        "password": reg_password,
+                        "learning_style": reg_style
+                    }
+
+                    users_df = pd.concat(
+                        [users_df, pd.DataFrame([new_user])],
+                        ignore_index=True
+                    )
+
+                    save_users(users_df)
+
+                    st.session_state.logged_in = True
+                    st.session_state.student_id = reg_id_int
+                    st.session_state.student_name = reg_name
+
+                    st.success("Registration successful.")
+                    st.rerun()
+
+            except ValueError:
+                st.error("Student ID must be numeric")
+
+    st.markdown("""
+    <div class="login-note">
+        Existing demo users can login using password: IBM
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.stop()
 
 # -------------------------------
-# SESSION VALUES
+# LOGGED-IN USER DETAILS
 # -------------------------------
 
 login_success = st.session_state.logged_in
 student_id = st.session_state.student_id
+
 # -------------------------------
 # STUDENT HISTORY
 # -------------------------------
@@ -606,37 +766,23 @@ if student_id:
 
     student_history = students_df[
         students_df["student_id"] == student_id
-    ]
+    ].copy()
 
 else:
 
     student_history = pd.DataFrame()
-# -------------------------------
-# LOGGED-IN VIEW
-# -------------------------------
 
-if login_success:
+st.sidebar.markdown(f"""
+<h2>Student Dashboard</h2>
+<p>Welcome, <b>{st.session_state.student_name or 'Student'}</b></p>
+<hr>
+""", unsafe_allow_html=True)
 
-    st.sidebar.success(
-        f"Logged in as Student {student_id}"
-    )
-
-    if st.sidebar.button("Logout"):
-
-        st.session_state.logged_in = False
-        st.session_state.student_id = None
-
-        st.rerun()
-
-# -------------------------------
-# PROTECT DASHBOARD
-# -------------------------------
-
-if not login_success:
-
-    st.warning("Please login to access dashboard")
-
-    st.stop()
+if st.sidebar.button("Logout"):
+    st.session_state.logged_in = False
+    st.session_state.student_id = None
+    st.session_state.student_name = ""
+    st.rerun()
 score = st.sidebar.slider(
     "Score",
     0,
@@ -714,7 +860,7 @@ Smart AI system for adaptive learning & performance tracking
 topic_scores = pd.Series(dtype=float)
 
 # -------------------------------
-# 📊 Topic Performance (USE USER DATA ONLY)
+# Topic Performance (USE USER DATA ONLY)
 # -------------------------------
 st.subheader(" Topic Performance")
 
@@ -785,7 +931,6 @@ if not students_df.empty and len(students_df) > 0:
         X_scaled = scaler.transform(X)
 
         students_df["cluster"] = kmeans.predict(X_scaled)
-
 
         # -----------------------------------
         # FIND CLUSTER MEAN SCORES
@@ -868,7 +1013,7 @@ if student_id and not students_df.empty and topic != "All Topics":
                 font-weight:800;
                 margin-bottom:10px;
             '>
-            🏆 Your Rank in {topic} topic:
+            Your Rank in {topic} topic:
             <span style='color:{rank_color};'>
             {student_rank} / {total_students}
             </span>
@@ -887,12 +1032,8 @@ if student_id and not students_df.empty and topic != "All Topics":
             y_values = topic_ranks["score"]
 
             # Line graph
-            ax_rank.plot(
-                x_values,
-                y_values,
-                marker='o',
-                linewidth=3
-            )
+            ax_rank.plot(x_values, y_values, marker='o', linewidth=3, label="Score")
+            ax_rank.legend()
 
             # Highlight current student
             student_row = topic_ranks[
@@ -957,9 +1098,6 @@ if student_id and not students_df.empty and topic != "All Topics":
             # Remove top/right borders
             ax_rank.spines['top'].set_visible(False)
             ax_rank.spines['right'].set_visible(False)
-
-            # Legend
-            ax_rank.legend()
 
             st.pyplot(fig_rank)
 
@@ -1029,7 +1167,7 @@ if st.session_state.analyze:
         students_df = pd.concat([students_df, pd.DataFrame([new_row])], ignore_index=True)
         save_students(students_df)
 
-    # 🔁 REFRESH FILTERED DATA AFTER SAVE
+    # REFRESH FILTERED DATA AFTER SAVE
     if student_id:
         if topic == "All Topics":
             filtered_df = students_df[
@@ -1043,7 +1181,7 @@ if st.session_state.analyze:
                 (students_df["topic"] == topic)
             ]
     # -------------------------------
-    # 🔍 WEAK TOPIC DETECTION 
+    # WEAK TOPIC DETECTION 
     # -------------------------------
 
     if not filtered_df.empty:
@@ -1107,7 +1245,7 @@ if st.session_state.analyze:
     """, unsafe_allow_html=True)
 
     # -------------------------------
-    # 🎯 QUIZ RECOMMENDATION LOGIC
+    # QUIZ RECOMMENDATION LOGIC
     # -------------------------------
     recommended_quizzes = []
 
@@ -1130,7 +1268,7 @@ if st.session_state.analyze:
                 recommended_quizzes.append(quiz_copy)
                 
     # -------------------------------
-    # 🔥 HEATMAP DATA
+    # HEATMAP DATA
     # -------------------------------
     heatmap_data = filtered_df.pivot_table(
         index="topic",
@@ -1139,7 +1277,7 @@ if st.session_state.analyze:
         aggfunc="mean"
     )
     # -------------------------------
-    # 🔥 TABS
+    # TABS
     # -------------------------------
     tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
         "Overview",
@@ -1150,7 +1288,7 @@ if st.session_state.analyze:
         "Achievements & Badges"
     ])
     # -------------------------------
-    # 📊 TAB 1: OVERVIEW
+    # TAB 1: OVERVIEW
     # -------------------------------
     with tab1:
         st.subheader("Student Overview")
@@ -1183,7 +1321,7 @@ if st.session_state.analyze:
         ]
 
     # -------------------------------
-    # 🧠 TAB 2: AI INSIGHTS
+    # TAB 2: AI INSIGHTS
     # -------------------------------
     with tab2:
 
@@ -1194,7 +1332,7 @@ if st.session_state.analyze:
         """, unsafe_allow_html=True)
 
         # -----------------------------------
-        # 📊 AI Learner Performance Overview
+        # AI Learner Performance Overview
         # -----------------------------------
 
         st.subheader("AI Learner Performance Overview")
@@ -1232,15 +1370,36 @@ if st.session_state.analyze:
             st.pyplot(fig2)
 
         # -----------------------------------
-        # 🧠 AI LEARNING INSIGHT
+        # AI LEARNING INSIGHT
         # -----------------------------------
-        if student_id and not student_history.empty:
-            latest_student = student_history.iloc[-1]
-            current_group = latest_student.get(
-                "learner_group",
-                "Consistent Learner"
-            )
-            latest_score = latest_student["score"]
+        student_data = students_df[
+            students_df["student_id"] == student_id
+        ].copy() if student_id else pd.DataFrame()
+
+        if student_id and not student_data.empty:
+
+            student_data["score"] = pd.to_numeric(student_data["score"], errors="coerce")
+
+            avg_score = student_data["score"].mean()
+            min_score = student_data["score"].min()
+            max_score = student_data["score"].max()
+            latest_score = student_data.iloc[-1]["score"]
+
+            # clean NaN handling
+            if pd.isna(avg_score):
+                avg_score = 0
+            if pd.isna(min_score):
+                min_score = 0
+
+            # AI-style classification (history + consistency)
+            if avg_score >= 85 and min_score >= 70 and latest_score >= 75:
+                current_group = "Advanced Learner"
+
+            elif avg_score >= 60:
+                current_group = "Consistent Learner"
+
+            else:
+                current_group = "Struggling Learner"
             # -----------------------------------
             # Smart Override Based on Score
             # -----------------------------------
@@ -1284,7 +1443,7 @@ if st.session_state.analyze:
                 """)
 
             # -----------------------------------
-            # 📌 Priority Topics
+            # Priority Topics
             # -----------------------------------
 
             st.subheader("Priority Topics")
@@ -1312,7 +1471,7 @@ if st.session_state.analyze:
                 st.success("No priority topics detected.")
 
         # -----------------------------------
-        # ⚠️ Weak Topics
+        # Weak Topics
         # -----------------------------------
 
         st.subheader("Weak Topics")
@@ -1330,7 +1489,7 @@ if st.session_state.analyze:
             st.success("No weak topics detected")
 
         # -----------------------------------
-        # ✅ Strong Topics
+        # Strong Topics
         # -----------------------------------
 
         st.subheader("Strong Topics")
@@ -1344,7 +1503,7 @@ if st.session_state.analyze:
             st.info("No strong topics yet")
         
         # -------------------------------
-        # ⚖️ WEAK vs STRONG DISTRIBUTION
+        # WEAK vs STRONG DISTRIBUTION
         # -------------------------------
         st.markdown("<h2 style='text-align:center;'> Weak vs Strong Distribution</h2>", unsafe_allow_html=True)
         weak_count = len(weak_topics)
@@ -1360,7 +1519,7 @@ if st.session_state.analyze:
         with col2:
             st.pyplot(fig)
     # -------------------------------
-    # 📈 TAB 3: ANALYTICS
+    # TAB 3: ANALYTICS
     # -------------------------------
     with tab3:
         st.markdown("""
@@ -1370,9 +1529,9 @@ if st.session_state.analyze:
         """, unsafe_allow_html=True)
         
         # -------------------------------
-        # 🏆 TOP PERFORMERS
+        # TOP PERFORMERS
         # -------------------------------
-        st.markdown("<h2 style='text-align:center;'>🏆 Top 10 Performers</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='text-align:center;'>Top 10 Performers</h2>", unsafe_allow_html=True)
         if not students_df.empty:
             top_students = students_df.groupby("student_id")["score"].mean().nlargest(10)
             fig, ax = plt.subplots(figsize=(5,3))
@@ -1381,7 +1540,7 @@ if st.session_state.analyze:
                 top_students.values,
                 color=["#6366f1", "#22c55e", "#f59e0b", "#ef4444", "#3b82f6"]
             )
-            ax.set_title("Top 5 Students", fontsize=10)
+            ax.set_title("Top 10 Students", fontsize=10)
             ax.set_xlabel("Student ID", fontsize=8)
             ax.set_ylabel("Score", fontsize=8)
             col1, col2, col3 = st.columns([1,2,1])
@@ -1390,25 +1549,64 @@ if st.session_state.analyze:
         else:
             st.info("No student data available")
         # -------------------------------
-        # 🎨 Learning Style Distribution
+        # Learning Style Distribution
         # -------------------------------
         st.subheader("Learning Style Distribution")
 
         if "learning_style" in students_df.columns:
+
             style_counts = students_df["learning_style"].value_counts()
+
+            # Default: no explode
+            explode = [0] * len(style_counts)
+
+            # Highlight user's learning style
+            if student_id:
+
+                user_style = students_df[
+                    students_df["student_id"] == student_id
+                ]["learning_style"].iloc[-1]
+
+                # find index of user style
+                if user_style in style_counts.index:
+                    idx = list(style_counts.index).index(user_style)
+                    explode[idx] = 0.15   # 👈 pop-out effect
+
             fig3, ax3 = plt.subplots()
+
             ax3.pie(
                 style_counts,
                 labels=style_counts.index,
-                autopct='%1.1f%%'
+                autopct='%1.1f%%',
+                explode=explode,        # 🔥 HERE IS THE MAGIC
+                shadow=True,            # optional: makes it more 3D-like
+                startangle=90
             )
-           
+
             st.pyplot(fig3)
+
+            # Optional label under chart
+            if student_id:
+                st.markdown(
+                    f"""
+                    <div style="
+                        margin-top:10px;
+                        padding:10px;
+                        border-radius:10px;
+                        background:rgba(59,130,246,0.1);
+                        border-left:4px solid #3b82f6;
+                    ">
+                    You are here: <b>{user_style}</b>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+
         else:
             st.warning("No learning_style data available")
         
         # -------------------------------
-        # 📚 SUBJECT PERFORMANCE
+        # SUBJECT PERFORMANCE
         # -------------------------------
         st.markdown("<h2 style='text-align:center;'> Subject-wise Performance</h2>", unsafe_allow_html=True)
 
@@ -1428,10 +1626,10 @@ if st.session_state.analyze:
         else:
             st.info("No subject data available")
         
-        st.markdown("<h2 style='text-align:center;'>📊 Overall score by students</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='text-align:center;'>Overall score by students</h2>", unsafe_allow_html=True)
         avg_scores = students_df.groupby("student_id")["score"].mean()
         st.bar_chart(avg_scores)
-        st.markdown("<h2 style='text-align:center;'>📋 Your Past Records</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='text-align:center;'>Your Past Records</h2>", unsafe_allow_html=True)
         if not student_history.empty:
             st.dataframe(
                 student_history.style
@@ -2001,9 +2199,13 @@ if st.session_state.analyze:
         # Best Topic Detection
         # -----------------------------------
 
-        best_topic_row = student_badge_data.loc[
-            student_badge_data["score"].idxmax()
-        ]
+        if not student_badge_data.empty:
+            best_topic_row = student_badge_data.loc[
+                student_badge_data["score"].idxmax()
+            ]
+        else:
+            st.warning("No data for badges")
+            st.stop()
 
         best_topic = best_topic_row["topic"]
         best_score = best_topic_row["score"]
@@ -2019,7 +2221,7 @@ if st.session_state.analyze:
             st.balloons()
 
             st.success(
-                f"🏅 Gold Top Performer in {best_topic} 🎉"
+                f"🏅 Gold Top Performer in {best_topic} "
             )
 
         elif best_score >= 75:
@@ -2031,13 +2233,13 @@ if st.session_state.analyze:
         elif best_score >= 50:
 
             st.info(
-                f"👍 Good Progress in {best_topic}"
+                f"Good Progress in {best_topic}"
             )
 
         else:
 
             st.warning(
-                f"🚀 Keep Improving in {best_topic}"
+                f"Keep Improving in {best_topic}"
             )
 
         # -----------------------------------
@@ -2060,19 +2262,19 @@ if st.session_state.analyze:
         average_score = student_badge_data["score"].mean()
 
         if average_score >= 70:
-            badges.append("📚 Consistency Master Badge")
+            badges.append("Consistency Master Badge")
 
         # Hardworking Badge
         avg_attempts = student_badge_data["attempts"].mean()
 
         if avg_attempts >= 3:
-            badges.append("🔥 Hardworking Learner Badge")
+            badges.append("Hardworking Learner Badge")
 
         # Dedicated Learner Badge
         avg_time = student_badge_data["time_spent"].mean()
 
         if avg_time >= 60:
-            badges.append("⏳ Dedicated Learner Badge")
+            badges.append("Dedicated Learner Badge")
 
         # -----------------------------------
         # Display Badges
